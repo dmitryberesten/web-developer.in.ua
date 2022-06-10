@@ -9,36 +9,59 @@
 </head>
 
 <body>
-    <header>
-        <h1>Фронтенд довідник</h1>
-        <ul>
-            <li><a href="">Головна</a></li>
-            <li><a href="">Статті</a></li>
-            <li><a href="">Факти</a></li>
-            <li><a href="">Про нас</a></li>
+    <header class="main-header">
+        <div class="main-header__logo-wrapper">
+            <a class="main-header__logo-link" href="index.html">
+                <picture>
+                    <source>
+                    <source>
+                    <img class="main-header__logo" src="" alt="Логотип та посилання на головну сторінку">
+                </picture>
+            </a>
+        </div>
+        <ul class="main-header__list">
+            <li class="main-header__item">
+                <a class="main-header__link" href="">Головна</a>
+            </li>
+            <li class="main-header__item">
+                <a class="main-header__link" href="">Статті</a>
+            </li>
+            <li class="main-header__item">
+                <a class="main-header__link" href="">Факти</a>
+            </li>
+            <li class="main-header__item">
+                <a class="main-header__link" href="">Про нас</a>
+            </li>
         </ul>
     </header>
 
-    <main>
-        <section>
-            <figure>
-                <img src="../source/img/meme/1.jpg" alt="дівчина спить" width="540" loading="lazy">
-                <figcaption>Джерело: https://life.pravda.com.ua/images/doc/2/1/21180f2-memi-son---14-.jpg</figcaption>
-            </figure>
-            <div>
-                <h2>Мені важко працювати після вихідних. Що робити?</h2>
-                <p>Боремось зі згадками про шашлики.</p>
-                <div>
-                    <span>
-                        <a href="">Статті</a>
-                    </span>
-                    <ul>
-                        <li>14 травня 2022</li>
-                    </ul>
-                </div>
-
+    <main class="main-wrapper">
+        <div class="index-title-wrapper">
+            <div class="index-title-wrapper__main-title-text-wrapper">
+                <h1 class="main-title-text">Фронтенд довідник</h1>
             </div>
-        </section>
+            <section class="index-main-block">
+                <figure class="index-main-block__figure ">
+                    <img class="index-main-block__photo" src="../source/img/meme/1.jpg" alt="дівчина спить" width="540" loading="lazy">
+                    <figcaption class="index-main-block__figcaption">Джерело: https://life.pravda.com.ua/images/doc/2/1/21180f2-memi-son---14-.jpg
+                    </figcaption>
+                </figure>
+                <div class="index-main-block__description">
+                    <h2 class="index-main-block__title">Мені важко працювати після вихідних. Що робити?</h2>
+                    <p class="index-main-block__info">Боремось зі згадками про шашлики.</p>
+                    <div class="index-main-block__wrapper">
+                        <span class="index-main-block__span">
+                            <a class="index-main-block__link" href="">Статті</a>
+                        </span>
+                        <ul class="index-main-block__list">
+                            <li class="index-main-block__item">14 травня 2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Кінець розмітки БЕМ -->
 
         <section>
             <h2>Свіжі статті</h2>
