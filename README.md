@@ -1,2 +1,2 @@
 # www.frontend-dovidnyk.ua
-A guide for everyone who studies the frontend. Articles, examples, tips. Ukrainian service. Dmitry Beresten.
+Фронтенд довідник для всіх, хто вивчає веб розробку. Статті, приклади, поради. Український сервіс. Дмитро Берестень.
