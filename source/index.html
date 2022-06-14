@@ -2,388 +2,413 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Голова</title>
-    <link rel="stylesheet" href="../source/css/style.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Голова</title>
+  <link rel="stylesheet" href="../source/css/style.min.css">
+  <link rel="preload" href="../fonts/TTNormsPro-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/TTNormsPro-ExtraBold.woff" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="main-header__logo-wrapper">
-            <a class="main-header__logo-link" href="index.html">
-                <picture>
-                    <source>
-                    <source>
-                    <img class="main-header__logo" src="../source/img/logo/logo.PNG" width="100px" alt="Логотип та посилання на головну сторінку">
-                </picture>
-            </a>
+  <header class="main-header">
+    <div class="main-header__logo-wrapper">
+      <a class="main-header__logo-link" href="index.html">
+        <picture>
+          <source>
+          <source>
+          <img class="main-header__logo" src="../source/img/logo/logo.PNG" width="100px"
+            alt="Логотип та посилання на головну сторінку">
+        </picture>
+      </a>
+    </div>
+    <ul class="main-header__list">
+      <li class="main-header__item">
+        <a class="main-header__link" href="">Головна</a>
+      </li>
+      <li class="main-header__item">
+        <a class="main-header__link" href="">Статті</a>
+      </li>
+      <li class="main-header__item">
+        <a class="main-header__link" href="">Факти</a>
+      </li>
+      <li class="main-header__item">
+        <a class="main-header__link" href="">Про нас</a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="index-title-wrapper">
+      <div class="index-title-wrapper__main-title-text-wrapper">
+        <h1 class="main-title-text">Фронтенд довідник</h1>
+      </div>
+      <section class="index-main-block">
+        <figure class="index-main-block__figure ">
+          <img class="index-main-block__photo" src="../source/img/meme/1.jpg" alt="дівчина спить" width="540"
+            loading="lazy">
+          <figcaption class="index-main-block__figcaption">Джерело:
+            https://life.pravda.com.ua/images/doc/2/1/21180f2-memi-son---14-.jpg
+          </figcaption>
+        </figure>
+        <div class="index-main-block__description">
+          <h1 class="index-main-block__title">Мне сложно работать после выходных. Что делать?</h1>
+          <p class="index-main-block__info">Боремось зі згадками про шашлики.</p>
+          <div class="index-main-block__wrapper">
+            <span class="index-main-block__span">
+              <a class="index-main-block__link" href="">Статті</a>
+            </span>
+            <ul class="index-main-block__list">
+              <li class="index-main-block__item">14 травня 2022</li>
+            </ul>
+          </div>
         </div>
-        <ul class="main-header__list">
-            <li class="main-header__item">
-                <a class="main-header__link" href="">Головна</a>
-            </li>
-            <li class="main-header__item">
-                <a class="main-header__link" href="">Статті</a>
-            </li>
-            <li class="main-header__item">
-                <a class="main-header__link" href="">Факти</a>
-            </li>
-            <li class="main-header__item">
-                <a class="main-header__link" href="">Про нас</a>
-            </li>
-        </ul>
-    </header>
+      </section>
+    </div>
 
-    <main class="main-wrapper">
-        <div class="index-title-wrapper">
-            <div class="index-title-wrapper__main-title-text-wrapper">
-                <h1 class="main-title-text">Фронтенд довідник</h1>
+
+    <section class="new-articles">
+      <h2 class="new-articles__title">Свіжі статті</h2>
+      <div class="new-articles__wrapper">
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
             </div>
-            <section class="index-main-block">
-                <figure class="index-main-block__figure ">
-                    <img class="index-main-block__photo" src="../source/img/meme/1.jpg" alt="дівчина спить" width="540" loading="lazy">
-                    <figcaption class="index-main-block__figcaption">Джерело: https://life.pravda.com.ua/images/doc/2/1/21180f2-memi-son---14-.jpg
-                    </figcaption>
-                </figure>
-                <div class="index-main-block__description">
-                    <h2 class="index-main-block__title">Мені важко працювати після вихідних. Що робити?</h2>
-                    <p class="index-main-block__info">Боремось зі згадками про шашлики.</p>
-                    <div class="index-main-block__wrapper">
-                        <span class="index-main-block__span">
-                            <a class="index-main-block__link" href="">Статті</a>
-                        </span>
-                        <ul class="index-main-block__list">
-                            <li class="index-main-block__item">14 травня 2022</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-
-        <section class="new-articles">
-            <h2 class="new-articles__title">Свіжі статті</h2>
-            <div class="new-articles__wrapper">
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="new-articles__block">
-                    <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540" loading="lazy">
-                    <div>
-                        <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
-                        <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
-                        <div class="new-articles__info-bottom">
-                            <span class="new-articles__title-bottom">
-                                <a class="new-articles__link" href="">Статті</a>
-                            </span>
-                            <ul class="new-articles__list">
-                                <li class="new-articles__item">14 травня 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-
-
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
             </div>
-        </section>
-    </main>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="new-articles__block">
+          <img class="new-articles__image" src="../source/img/meme/2.jpg" alt="ноутбук та робоча атмосфера" width="540"
+            loading="lazy">
+          <div>
+            <h3 class="new-articles__small-title">Мені важко працювати після вихідних. Що робити?</h3>
+            <p class="new-articles__info-paragraph">Боремось зі згадками про шашлики.</p>
+            <div class="new-articles__info-bottom">
+              <span class="new-articles__title-bottom">
+                <a class="new-articles__link" href="">Статті</a>
+              </span>
+              <ul class="new-articles__list">
+                <li class="new-articles__item">14 травня 2022</li>
+              </ul>
+            </div>
+          </div>
+        </article>
 
-    <footer class="main-footer">
-        <a href="">
-            <img src="" alt="LOGO">
-        </a>
-        <ul class="main-footer__list">
-            <li class="main-footer__item"><a class="main-footer__item-link" href="">Головна</a></li>
-            <li class="main-footer__item"><a class="main-footer__item-link" href="">Статті</a></li>
-            <li class="main-footer__item"><a class="main-footer__item-link" href="">Факти</a></li>
-            <li class="main-footer__item"><a class="main-footer__item-link" href="">Контаки</a></li>
-        </ul>
-    </footer>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <a href="">
+      <img src="" alt="LOGO">
+    </a>
+    <ul class="main-footer__list">
+      <li class="main-footer__item"><a class="main-footer__item-link" href="">Головна</a></li>
+      <li class="main-footer__item"><a class="main-footer__item-link" href="">Статті</a></li>
+      <li class="main-footer__item"><a class="main-footer__item-link" href="">Факти</a></li>
+      <li class="main-footer__item"><a class="main-footer__item-link" href="">Контаки</a></li>
+    </ul>
+  </footer>
 </body>
 
 </html>
