@@ -8,3 +8,23 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("../fonts/TTNormsPro-Regular.woff2"),
+    url("../fonts/TTNormsPro-Regular.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("../fonts/TTNormsPro-Medium.woff2"),
+    url("../fonts/TTNormsPro-Medium.woff");
+  font-display: swap;
+}
+
