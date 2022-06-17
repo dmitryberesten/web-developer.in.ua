@@ -1,9 +1,33 @@
-// @import "../source/sass/fonts";
+@import "../variables-mixins.scss";
+@import "../fonts.scss";
 
-body { background: rgb(43, 205, 175); }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: "TT Norms Pro", Arial, sans-serif;
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 15px;
+  // line-height: 24px;
+  color: $body-color;
+
+  background-color: $main-bg;
+}
+
+
+// body { background: rgb(43, 205, 175); }
 
 h1 {
   font-weight: 800;
-  font-size: 48px;
-  font-family: "TT Norms Pro", sans-serif;
+  font-size: 58px;
+  // font-family: "TT Norms Pro", sans-serif;
 }
