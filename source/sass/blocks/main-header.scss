@@ -1,8 +1,23 @@
 .main-header {
+
   background-color: aqua;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__list {
     background-color: rgb(226, 114, 137);
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__logo {
+    border-radius: 50%;
   }
 
 }
