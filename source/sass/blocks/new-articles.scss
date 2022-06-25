@@ -1,6 +1,17 @@
 .new-articles {
 
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   &__block {
-    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 5%);
+    margin: 20px;
   }
 }

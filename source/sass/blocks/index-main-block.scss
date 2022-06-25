@@ -1,11 +1,9 @@
 .index-main-block{
 
-  // &__title {
-  //   font-weight: 700;
-  //   font-size: 500px;
-  //   font-family: "TT Norms Pro", Arial, Helvetica, sans-serif;
-  // }
-
+  display: flex;
+  flex-direction: row;
+  width: 80%;
   background-color: darkorchid;
+  margin: 0 auto;
 
 }
