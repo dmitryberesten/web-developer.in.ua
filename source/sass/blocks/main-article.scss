@@ -1,7 +1,60 @@
 .main-article {
-
+  background-color: white;
   &__wrapper {
-    width: 70%;
+    width: 60%;
     margin: auto;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 54px;
+
+
+  }
+
+  &__paragraph {
+    font-size: 21px;
+    font-weight: 400px;
+    line-height: 32px;
+    font-style: normal;
+  }
+
+  &__header-two {
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 80px;
+  }
+
+  &__header-three {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: -10px;
+  }
+
+  &__list {
+    font-size: 21px;
+    line-height: 32px;
+    list-style-type: circle;
+  }
+
+  &__item {
+    margin-top: 15px;
+  }
+
+  &__list--ol {
+    font-size: 21px;
+    line-height: 32px;
+    list-style-type: decimal;
+  }
+
+  &__figure {
+    margin-bottom: 70px;
+  }
+
+  &__figcaption {
+    font-style: italic;
+    color: gray;
+    font-size: 15px;
   }
 }
