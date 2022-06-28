@@ -47,5 +47,8 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "boxicons": "^2.1.2"
+  }
 }
