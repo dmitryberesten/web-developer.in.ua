@@ -1,7 +1,22 @@
 .blog-card {
-background-color: cyan;
-width: 300px;
-height: auto;
+background-color: white;
+max-width: 300px;
+min-height: 200px;
 margin: 10px;
 
+&__info {
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration: none;
+  padding: 0px 10px 0px 10px;
+}
+
+&__link {
+  text-decoration: none;
+}
+
+&__text {
+  font-size: 16px;
+  line-height: 22px;
+}
 }

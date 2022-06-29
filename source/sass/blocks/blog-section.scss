@@ -1,13 +1,28 @@
 .blog-section {
   &__wrap{
-    background-color: rgb(221, 186, 97);
-    margin: auto;
-    width: 700px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $main-bg;
+    margin: 0 auto;
+    width: 100%;
     margin-top: 100px;
+    // margin-bottom: 100px;
   }
 
   &__wrap-inner {
     display: flex;
     flex-direction: row;
+  }
+
+  &__header {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
   }
 }
