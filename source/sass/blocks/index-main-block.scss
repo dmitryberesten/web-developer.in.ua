@@ -3,8 +3,11 @@
   display: flex;
   flex-direction: row;
   width: 80%;
-  outline: 3px solid violet;
-  margin: 0 auto;
+  // outline: 3px solid violet;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
 
   &__figcaption {
     font-style: italic;

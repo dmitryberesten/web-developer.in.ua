@@ -1,5 +1,6 @@
 .main-article {
   background-color: white;
+  border-radius: 50px;
   &__wrapper {
     width: 60%;
     margin: auto;
@@ -13,12 +14,18 @@
 
   }
 
+  &__paragraph-wrapper {
+
+
+  }
   &__paragraph {
     font-size: 21px;
     font-weight: 400px;
     line-height: 32px;
     font-style: normal;
+    margin-top: -10px;
   }
+
 
   &__header-two {
     font-size: 30px;
