@@ -1,0 +1,20 @@
+.article-wrapper {
+  width: 700px;
+  margin: 0 auto;
+
+  &__list {
+    background-color: aqua;
+    padding-left: 0;
+  }
+
+  &__list > li {
+    margin-bottom: 10px;
+  }
+
+  &__image--panda {
+    display: block;
+    width: 600px;
+    margin: auto;
+  }
+}
+
