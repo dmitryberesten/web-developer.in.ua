@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Jim+Nightshade');
+@import url('https://fonts.googleapis.com/css?family=Assistant:300');
+// body {
+//   min-height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+.generate {
+  margin: 0 auto;
+  padding: 30px;
+}
+
+#quotation {
+  // font-family: 'Jim Nightshade', script;
+  font-size: 5vmin;
+  line-height: 1.2;
+  hanging-punctuation: first;
+
+}
+
+#source {
+  font-family: 'Assistant', sans-serif;
+  font-size: 4vmin;
+  text-indent: 4vmin;
+  color: rgba(0,0,0,0.6);
+}
+
+button {
+  font-family: 'Assistant', sans-serif;
+  display: block;
+  padding: 2rem;
+  outline: none;
+  font-size: 2rem;
+  background: none;
+  border: 1px solid rgba(0,0,0,0.6);
+  margin: 20px auto;
+
+}
