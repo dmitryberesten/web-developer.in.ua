@@ -62,7 +62,7 @@ const quotes = [
 
 function randomQuote() {
   let random = quotes[Math.floor(Math.random() * quotes.length)];
-  quotation.innerText = `“${random.quote}.”`;
+  quotation.innerText = `“${random.quote}”`;
   // source.innerText = random.source;
 }
 
