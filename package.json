@@ -49,6 +49,7 @@
   },
   "type": "module",
   "dependencies": {
-    "boxicons": "^2.1.2"
+    "boxicons": "^2.1.2",
+    "jquery": "^3.6.0"
   }
 }
