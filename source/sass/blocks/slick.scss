@@ -40,10 +40,11 @@
 }
 
 .slick-track {
+  display: flex;
+  align-items: flex-start;
   position: relative;
   left: 0;
   top: 0;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
 
@@ -100,8 +101,9 @@
 }
 
 .slider {
+  margin-top: 30px;
   position: relative;
-  // padding: 0 130px;
+  padding: 0 100px;
 
   .slick-arrow {
     position: absolute;
@@ -133,7 +135,7 @@
       margin: 0 10px;
 
     }
-    
+
     .slick-active {
       button {
         background-color: black;
@@ -148,6 +150,19 @@
       background-color: #fff;
       border-radius: 50%;
     }
+  }
+
+  .slider__image {
+    width: 200px;
+    height: auto;
+  }
+
+}
+
+.sliderbig {
+
+  .sliderbig__item {
+    text-align: center;
   }
 
 
