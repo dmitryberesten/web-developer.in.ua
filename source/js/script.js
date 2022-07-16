@@ -2,14 +2,14 @@ $(document).ready(function(){
   $('.slider').slick({
     dots: true,
     adaptiveHeight: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 2000,
     easing: 'ease',
     infinite: true, // отмена/включение бесконечной прокрутки
     initialSlide: 0, // с какого начать слайда
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 3500,
     pauseOnFocus: true,
     pauseOnHover: true,
     pauseOnDotsHover: true,
@@ -22,8 +22,7 @@ $(document).ready(function(){
     rows: 1,
     slidesPerRow: 1,
     vertical: false,
-    verticalSwiping: true,
-    asNavFor: ".sliderbig",
+    verticalSwiping: false,
     responsive: [
       {
         breakpoint: 768,
@@ -40,11 +39,5 @@ $(document).ready(function(){
     ],
     mobileFirst: true
   });
-
-  $('.sliderbig').slick({
-    arrows: false,
-    fade: true, // slideshow
-    asNavFor: ".slider"
-  })
 
 });

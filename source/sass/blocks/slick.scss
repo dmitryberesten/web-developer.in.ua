@@ -107,12 +107,14 @@
 
   .slick-arrow {
     position: absolute;
-    top: 50%;
-    margin: -30px 0 0 0;
+    top: 30%;
+    // margin: 30px 0 0 0;
     z-index: 10;
     font-size: 0;
     width: 100px;
     height: 100px;
+    border: none;
+    cursor: pointer;
   }
 
   .slick-arrow.slick-prev {
@@ -133,7 +135,6 @@
     li {
       list-style-type: none;
       margin: 0 10px;
-
     }
 
     .slick-active {
@@ -145,15 +146,16 @@
 
     button {
       font-size: 0;
-      width: 10px;
-      height: 10px;
+      width: 20px;
+      height: 20px;
       background-color: #fff;
       border-radius: 50%;
+      cursor: pointer;
     }
   }
 
   .slider__image {
-    width: 200px;
+    width: 400px;
     height: auto;
   }
 
