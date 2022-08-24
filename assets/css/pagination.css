@@ -1,0 +1,55 @@
+
+/* Pagination */
+ul.pagination {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+ul.pagination li {
+  display: inline-block;
+  padding-left: 0;
+  vertical-align: middle;
+}
+ul.pagination li > .page {
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-bottom: 0;
+  border-radius: 0.375em;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 2em;
+  line-height: 2em;
+  margin: 0 0.125em;
+  min-width: 2em;
+  padding: 0 0.5em;
+  text-align: center;
+}
+ul.pagination li > .page.active {
+  background-color: #3668e8;
+  color: #ffffff !important;
+}
+ul.pagination li > .page.active:hover {
+  background-color: #f67878;
+}
+ul.pagination li > .page.active:active {
+  background-color: #f45c5c;
+}
+ul.pagination li:first-child {
+  padding-right: 0.75em;
+}
+ul.pagination li:last-child {
+  padding-left: 0.75em;
+}
+@media screen and (max-width: 480px) {
+  ul.pagination li:nth-child(n + 2):nth-last-child(n + 2) {
+    display: none;
+  }
+  ul.pagination li:first-child {
+    padding-right: 0;
+  }
+}
+
+

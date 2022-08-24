@@ -1,0 +1,19 @@
+
+/* Box */
+.box {
+  border-radius: 0.375em;
+  border: solid 7px rgba(20, 169, 228, 0.75);
+  margin-bottom: 2em;
+  padding: 1.5em;
+}
+.box > :last-child,
+.box > :last-child > :last-child,
+.box > :last-child > :last-child > :last-child {
+  margin-bottom: 0;
+}
+.box.alt {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
