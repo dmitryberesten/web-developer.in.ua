@@ -53,7 +53,7 @@
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   background-color: #f5f6f7;
-  font-size: 0.9em;
+  font-size: 1em;
   position: relative;
   width: 26em;
 }
@@ -68,7 +68,7 @@
 #sidebar > .inner > * {
   border-bottom: solid 2px rgba(210, 215, 217, 0.75);
   margin: 0 0 3.5em 0;
-  padding: 0 0 3.5em 0;
+  padding: 0 0 1.5em 0;
 }
 #sidebar > .inner > * > :last-child {
   margin-bottom: 0;

@@ -9,7 +9,7 @@
 }
 #banner h1 {
   margin-top: -0.125em;
-  /* background-color: #f45c5c; */
+  font-size: 3em;
 }
 #banner .content {
   -moz-flex-grow: 1;
@@ -21,6 +21,7 @@
   -ms-flex-shrink: 1;
   flex-shrink: 1;
   width: 50%;
+  font-size: 1em;
 }
 #banner .image {
   -moz-flex-grow: 0;

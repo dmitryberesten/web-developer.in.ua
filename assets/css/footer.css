@@ -2,8 +2,13 @@
 #footer .copyright {
   color: #9fa3a6;
   font-size: 0.9em;
+  text-align: center;
 }
 #footer .copyright a {
   color: inherit;
+}
+
+.footer-text {
+  font-size: 2em;
 }
 
