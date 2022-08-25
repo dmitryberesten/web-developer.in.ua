@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>5 HTML-трюків</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+					<ul class="icons">
+						<li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+									class="label">Telegram</span></a></li>
+						<li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+									class="label">Facebook</span></a></li>
+						<li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+								class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+						<li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+									class="label">Instagram</span></a></li>
+						<li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+									class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Content -->
+				<section class="section-article">
+					<header class="main">
+						<h1>5 HTML-трюків, про які ніхто не говорить</h1>
+					</header>
+
+					<span class="image main"><img src="/assets/articles/html/5html-tricks.webp"
+							alt="html code" /></span>
+					<p class="photo-src">Джерело фото:
+						https://www.udacity.com/blog/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg.webp</p>
+
+					<p>Усі веб-розробники широко використовують мову HTML, незалежно від того, який фреймворк або серверна
+						мова використовується.
+						Фреймворки та мови програмування можуть приходити та відходити, але мова HTML нікуди не подінеться. Але,
+						незважаючи на таке широке
+						використання, все ще є теги та властивості, про які більшість розробників не знають.</p>
+					<p>І, хоча існують різні механізми створення шаблонів, такі як Pug, вам все ж таки необхідно добре
+						розбиратися в HTML. На
+						мій погляд, краще використовувати HTML, коли це можливо, замість досягнення тієї ж
+						функціональності за допомогою
+						JavaScript, хоча я визнаю, що написання HTML може втомлювати.</p>
+					<p>Незважаючи на те, що багато розробників щодня використовують HTML, вони не намагаються
+						відточувати свою навичку і тому
+						не застосовують деякі з фіч HTML, що рідко обговорюються.</p>
+
+					<hr class="major" />
+
+					<h2>1. Ліниве завантаження зображення</h2>
+					<p>Ліниве завантаження зображень може підвищити продуктивність та швидкість відображення вашого сайту. Ліниве завантаження запобігає негайному завантаженню зображень, які насправді не потрібні. Як
+					правило, зображення
+					починає завантажуватися, коли ви скролите сторінку і наближаєтеся до нього. Іншими словами, зображення завантажується,
+					коли користувач скролить сторінку і зображення стає
+					видимим, інакше воно не
+					завантажується. Цього легко досягти за допомогою звичайного HTML.
+					</p>
+
+					<p>Все, що вам потрібно зробити, - це додати властивість loading="lazy" у тег img. <br> Після додавання властивості ваш елемент має виглядати приблизно так:</p>
+
+					<p>
+						<code> &lt;img src="image.png" loading="lazy" alt="…" width="200" height="200"&gt;</code>
+					</p>
+
+					<h2>2. Автокомпліт</h2>
+
+					<p>Отримання підказок прямо у рядку, коли ви намагаєтеся щось знайти, – справді крута фішка.
+
+						У наші дні автокомпліт досить поширений, і ви, мабуть, помічали його на таких сайтах, як Google
+						і Facebook.
+
+						Ви можете використовувати JavaScript для реалізації автокомпліту, встановивши прослуховувач
+						подій поля введення і потім
+						зіставляти слова, що шукають, з визначеними варіантами.
+
+						Однак HTML також дозволяє відображати набір визначених варіантів, використовуючи тег
+						<code>&lt;datalist&gt;</code>
+
+						Пам'ятайте, що атрибут ID цього тега повинен збігатися з атрибутом тега list input.
+					</p>
+
+					<p class="code-wrapper">
+
+						<code>&lt;label for="country">Choose your country from the list:&lt;/label&gt;</code><br>
+
+						<code>&lt;input list="countries" name="country" id="country"&gt;</code><br>
+
+						<code>&lt;datalist id="countries"&gt;</code><br>
+
+						<code>&lt;option value="UK"&gt;</code><br>
+
+						<code>&lt;option value="Germany"&gt;</code><br>
+
+						<code>&lt;option value="USA"&gt;</code><br>
+
+						<code>&lt;option value="Japan"&gt;</code><br>
+
+						<code>&lt;option value="India"&gt;</code><br>
+
+						<code>&lt;/datalist&gt;</code><br>
+
+					</p>
+
+					<h2>3. Picture</h2>
+
+					<p>Ви коли-небудь стикалися з проблемою, коли зображення збільшувалися не так, як ви очікували? Я
+						багато разів.
+						Зазвичай це відбувається, коли ви намагаєтеся створити сайт галереї або використовуєте велике
+						зображення та відображаєте
+						його у вигляді мініатюри.
+						При зміні ширини viewport'a можна помітити, що деякі зображення не масштабуються вгору і вниз,
+						як очікувалося.
+						На щастя, HTML дає розробникам можливість досить легко виправити це, використовуючи тег
+						<code>&lt;picture&gt;</code> , що дозволяє додавати
+						кілька зображень, що відповідають різній ширині.
+						Ваш код буде виглядати приблизно так:</p>
+
+					<p></p>
+
+					<p class="code-wrapper">
+						<!-- <code>&lt;&gt;</code> -->
+
+							<code>&lt;picture&gt;</code><br>
+							
+								<code>&lt;source media="(min-width:768px)" srcset="med_flag.jpg"&gt;</code><br>
+							
+								<code>&lt;source media="(min-width:495px)" srcset="small_flower.jpg"&gt;</code><br>
+							
+								<code>&lt;img src="high_flag.jpg" alt="Flags" style="width:auto;"&gt;</code><br>
+							
+							<code>&lt;/picture&gt;</code><br>
+					</p>
+
+					<p>
+						Як бачите, ми вказали мінімальну ширину, при якій має відображатись певне зображення.
+						
+						Цей тег дуже схожий на теги <code>&lt;audio&gt;</code> та <code>&lt;video&gt;</code>.
+					</p>
+
+					<h2>4. Базова URL</h2>
+
+					<p>Це один із моїх улюблених тегів при створенні карти сайту.
+					
+					Цей тег стане в нагоді, коли у вас є багато посилальних тегів, що перенаправляють на певну URL-адресу, і всі URL-адреси
+					починаються з однієї базової адреси.
+					
+					Наприклад, якщо я хочу вказати URL-адресу на Twitter Ілона Маска та Білла Гейтса, початок URL-адреси (домена) буде таким
+					же, а те, що слідує за ним, буде їх відповідними ідентифікаторами.
+					
+					Зазвичай мені доводиться двічі вставляти посилання з тим самим доменним ім'ям.
+					
+					Однак у HTML є тег
+					<code>&lt;base&gt;</code> , який дозволяє вам встановити базову URL-адресу, як показано нижче:</p>
+
+					<p class="code-wrapper">
+						<!-- <code>&lt;&gt;</code> -->
+					
+						<code>&lt;head&gt;</code><br>
+					
+						<code>&lt;base href="https://www.twitter.com/" target="_blank"&gt;</code><br>
+					
+						<code>&lt;/head&gt;</code><br>
+					
+						<code>&lt;body&gt;</code><br>
+					
+						<code>&lt;img src="elonmusk" alt="Elon Musk"&gt;</code><br>
+
+						<code>&lt;a href="BillGates">Bill Gate&lt;/a&gt;</code><br>
+
+						<code>&lt;/body&gt;</code><br>
+					</p>
+
+					<p>
+						Наведений вище код згенерує зображення з посиланням на <b>https://www.twitter.com/elonmusk</b>  і посилальний тег, що
+						перенаправляє на <b>https://www.twitter.com/billgates</b> .
+						
+						Тег
+						<code>&lt;base&gt;</code>  повинен мати або "href", або "target"-атрибути.
+					</p>
+
+
+					<h2>5. Оновлення документа</h2>
+
+					<p>
+						Якщо ви бажаєте перенаправити користувача на іншу сторінку після періоду бездіяльності або навіть відразу, ви можете
+						легко це зробити, використовуючи простий HTML.
+						Ви могли помітити цю фічу, коли відкривали певні сайти та бачили щось на кшталт «Ви будете перенаправлені через 5
+						секунд».
+						Ця поведінка вбудована в HTML, і ви можете використовувати її за допомогою тега
+						<code>&lt;meta&gt;</code> та встановлення http-Equiv=«refresh» у нього:
+					</p>
+
+					<p class="code-wrapper">
+						<code>&lt;meta http-Equiv="refresh" content="4; URL='https://google.com'/&gt;</code><br>
+					</p>
+
+					<p>
+						Тут властивість <code>&lt;content&gt;</code> вказує час у секундах, після якого має відбутися перенаправлення.
+						
+						Варто зазначити, що, хоча Google стверджує, що відноситься до цієї форми редиректу так само, як і до інших редиректів,
+						використовувати цей тип редиректів нерозумно, якщо це дійсно не потрібно.
+						
+						Тому використовуйте його лише у певних випадках, наприклад, для редиректу після значної бездіяльності.
+					</p>
+
+					<h2>Висновок</h2>
+
+					<p>
+						HTML та CSS – досить потужні інструменти, і ви можете створювати фантастичні веб-сайти, використовуючи їх.
+						
+						Однак, незважаючи на інтенсивне використання цих двох мов, багато розробників не особливо захоплюються ними.
+						
+						Таких порад і прийомів багато, крім тих, якими я поділився з вами, і, безумовно, варто спробувати їх у своєму проекті.
+						
+			
+						
+						Щоб навчитися чогось і опанувати цю навичку, потрібний час, відданість справі і практика, і HTML – не виняток.
+					</p>
+
+					<p class="article-info"> <b>Джерело:</b>  <span class="span-link">https://javascript.plainenglish.io/5-html-tricks-nobody-is-talking-about-a0480104fe19</span>  <br>
+					<b>Переклад українською мовою:</b>	 Аліна Берестень <br>
+					<b>Адміністратор:</b>	 Дмитро Берестень
+					</p>
+
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<!-- Search -->
+				<!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Меню</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Головна</a></li>
+						<li><a href="articles.html">Статті</a></li>
+						<li><a href="generic.html">Загальна</a></li>
+						<li><a href="elements.html">Елементи</a></li>
+						<li>
+							<span class="opener">Підменю</span>
+							<ul>
+								<li><a href="#">Lorem Dolor</a></li>
+								<li><a href="#">Ipsum Adipiscing</a></li>
+								<li><a href="#">Tempus Magna</a></li>
+								<li><a href="#">Feugiat Veroeros</a></li>
+							</ul>
+						</li>
+		
+						<li><a href="#">Відео</a></li>
+						<li><a href="#">Лайфхаки</a></li>
+						<li><a href="#">Блог</a></li>
+		
+						<!-- <li>
+													<span class="opener">Another Submenu</span>
+													<ul>
+														<li><a href="#">Lorem Dolor</a></li>
+														<li><a href="#">Ipsum Adipiscing</a></li>
+														<li><a href="#">Tempus Magna</a></li>
+														<li><a href="#">Feugiat Veroeros</a></li>
+													</ul>
+												</li> -->
+						<li><a href="#">Цікавинки</a></li>
+						<li><a href="#">Генератор</a></li>
+						<li><a href="#">Про нас</a></li>
+					</ul>
+				</nav>
+		
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Ante interdum</h2>
+					</header>
+					<div class="mini-posts">
+						<article>
+							<a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+							<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+							<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+							<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+						</article>
+					</div>
+					<ul class="actions">
+						<li><a href="#" class="button">Більше</a></li>
+					</ul>
+				</section>
+		
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Зв'язатись</h2>
+					</header>
+					<p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви можете
+						написати адміністратору в зручний для вас спосіб.</p>
+					<ul class="contact">
+						<li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a></li>
+						<li class="icon brands fa-instagram"><a
+								href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+						<li class="icon solid fa-home">Київ, Україна!</li>
+					</ul>
+				</section>
+		
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; Всі права захищені. <br><br> <span
+							class="footer-text">web-developer.in.ua</span> <br><br> <a href="https://github.com/dmitryberesten"
+							class="icon brands fa-github"> dmitryberesten</a>.
+				</footer>
+		
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="/../assets/js/jquery.min.js"></script>
+	<script src="/../assets/js/browser.min.js"></script>
+	<script src="/../assets/js/breakpoints.min.js"></script>
+	<script src="/../assets/js/util.js"></script>
+	<script src="/../assets/js/main.js"></script>
+
+</body>
+
+</html>

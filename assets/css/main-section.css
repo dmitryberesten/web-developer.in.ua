@@ -15,13 +15,16 @@
   padding: 0 6em 0.1em 6em;
   margin: 0 auto;
   max-width: 110em;
+  
 }
 #main > .inner > section {
   padding: 6em 0 4em 0;
   border-top: solid 2px rgba(210, 215, 217, 0.75);
+  
 }
 #main > .inner > section:first-of-type {
   border-top: 0 !important;
+  
 }
 @media screen and (max-width: 1680px) {
   #main > .inner {
@@ -52,4 +55,23 @@
 .center {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.section-article p {
+  font-size: 1.2em;
+  /* color: black; */
+}
+
+.photo-src {
+  font-style: italic;
+  font-size: 1em !important;
+  text-align: center;
+}
+
+.span-link {
+   font-style: italic;
+}
+  
+.article-info {
+  /* color: lightgray; */
 }

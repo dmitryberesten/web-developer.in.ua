@@ -42,7 +42,8 @@
   width: 100%;
 }
 .image.main img {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 a.image {
