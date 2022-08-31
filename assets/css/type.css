@@ -205,6 +205,24 @@ a:hover strong {
   color: inherit;
 }
 
+.article-link {
+  text-decoration: none;
+  text-transform: none;
+  border-bottom: none;
+  color: inherit;
+  display: flex;
+  padding: 5px;
+}
+
+.article-link h3 {
+  margin-bottom: 5px;
+}
+
+.article-link:hover {
+  outline: dotted 1px;
+  border-radius: 10px;
+} 
+
 strong,
 b {
   color: #3d4449;
