@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>9 можливостей</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>9 недооцінених можливостей CSS</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/css/9-possibilities/9-possibilities.JPG"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото:
+                        https://bit.ly/3RcV759</p>
+
+                    <p>За більше як 20 років свого існування CSS став стандартом стилізації веб-сторінок. Продовжують
+                        виходити нові
+                        специфікації (Наприклад, CSS4), що додають нові круті можливості: анімації, трансформації, нові
+                        одиниці виміру. В швидкому світі веб-розробки ми часто пропускаємо повз себе багато важливих
+                        функцій. Сьогодні ми поговоримо про те, що
+                        заслуговує уваги, але чомусь майже не використовується розробниками.</p>
+
+                    <hr class="major" />
+
+                    <h2>1. Функція calc()</h2>
+
+                    <p>calc() це, напевно, найкрутіша фіча в цьому списку. Вона робить можливим перенесення таких
+                        висловів в CSS-код: "я хочу
+                        щоб елемент займав всю ширину мінус 20 пікселів"</p>
+
+                    <p class="code-wrapper">
+                        <code>
+                            .box {
+                            width: calc( 100% - 20px );
+                            }
+                        </code>
+                    </p>
+
+                    <p>Схоже на який препроцесор, але насправді це вбудована можливість CSS, в якій використовується вже
+                        відрендерені розміри
+                        елементу (що неможливо при використанні препроцесорів).</p>
+
+                    <hr class="major" />
+
+                    <h2>2. Медіа-запити для екрану та сенсору</h2>
+
+                    <p>На жаль, поки що такі медіа-запити погано підтримуються браузерами (~70%). Зазвичай для
+                        адаптивної верстки
+                        використовують медіа-запити ширини екрану, але вже є можливість визначити чим користувач
+                        здійснює керування сторінкою.
+                        Вони дозволяють вам запитати у браузера: "цей користувач використовує свій палець чи мишку?".
+                    </p>
+
+                    <p class="code-wrapper">
+                        <code>
+                            @media( pointer: coarse) { }
+                        </code>
+                    </p>
+
+                    <p>
+                        Можливі значення: <br>
+                        <b>none</b> - в даному пристрої не передбачено вказівника. <br>
+
+                        <b>coarse</b> - вказівник з обмеженою точністю. Це можуть бути тачскріни чи Xbox'овський Kinect.
+                        <br>
+
+                        <b>fine</b> - точний вказівник. Наприклад, мишка, тачпад, графічний планшет.
+                    </p>
+
+                    <h2>Підтримка</h2>
+
+                    <p>Вона лишає бажати кращого, але все ж позитивні зрушення є. Так Webkit, Blink та Edge вже
+                        підтримують цю можливість, а от
+                        Gecko/Firefox ще ні.</p>
+
+                    <hr class="major" />
+
+                    <h2>3. Змінна currentColor</h2>
+
+                    <p>Додана в CSS3, ця вбудована змінна вказує на... поточний колір (color) елементу!</p>
+
+                    <p class="code-wrapper">
+                        .card { <br>
+                        color: #333333; <br>
+                        } <br>
+                        .card--error { <br>
+                        color: #ff0000; <br>
+                        } <br>
+                        .card__guts { <br>
+                        border-top-color: currentColor;<br>
+                        }
+                    </p>
+
+                    <p>
+                        <i> <b>Michael Wong</b> зробив важливе зауваження. Не слід використовувати цю змінну там, де колір і
+                        так каскадно успадковується. В
+                        своєму прикладі я допустив помилку, <code>border-top-color</code>  і так матиме колір батьківського елементу.
+                        Тому використовуйте цю
+                        змінну на інших властивостях, наприклад, <code>background</code>.
+                        </i>
+
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>4. Псевдоселектори :valid, :invalid та :empty</h2>
+
+                    <p>
+                        Ці псевдоселектори використовуються при стилізації валідованих форм. Більшість нових інпутів можуть бути валідними чи
+                        невалідними, залежно від їх типу. Наприклад, input типу "email" з якимось випадковим текстом буде відображати стилі з
+                        псевдокласом <code>:invalid</code> . І це все вже вбудовано в браузер!
+                    </p>
+
+                    <p class="code-wrapper">
+                        <code>input:valid { color: green; }</code> <br>
+                        <code>input:invalid { color: red; }</code>
+                    </p>
+
+                    <p>Псевдоклас <code>:empty</code>  спрацьовує на елементах, що не мають всередині себе нічого (працює не тільки з формами). Тепер в
+                    шаблонах вам не потрібно писати додаткову логіку для відображення і приховання <code>&lt;h1&gt;{name}&lt;/h1&gt;</code> .</p>
+
+                    <p class="code-wrapper">
+                       <code>h1:empty { display: none; }</code>
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>5. Лічильники</h2>
+
+                    <p>Вам потрібен нумерований список, але ви не хочете (або не можете) використовувати елемент <code>&lt;ol&gt;&lt;/ol&gt;</code> ? <br> Не хочете
+                        використовувати для цього JS? І не потрібно, це все можна зробити на CSS.</p>
+
+                        <p class="code-wrapper">
+                            .shelf { <br> counter-reset: books; <br> } <br>
+                            .shelf__book { <br> counter-increment: books; <br> } <br>
+                            .shelf__book::before { <br>
+                            content: "Book " counter(books) " of 10."; <br>
+                            }
+                        </p>
+
+                        <p>Так, іноді CSS виглядає кумедним, і це один з таких випадків. Тут немає оператора для з'єднання стрічок, просто поставте
+                        між ними пробіл.</p>
+
+                        <hr class="major" />
+                        
+                        <h2>6. Більш передбачувані таблиці</h2>
+
+                        <p>
+                        За умовчуванням ширина стовпця в таблиці вираховується після рендерингу таблиці, таким чином на неї впливають всі
+                        елементи в стовпці. Додання <code>table-layout:fixed</code> змусить браузер встановлювати ширину стовпця опираючись на перший елемент
+                        в ньому. Це швидше і робить таблиці більш керованими.
+                        </p>
+
+                        <p class="code-wrapper">
+                            .grid { <br>
+                            table-layout: fixed; <br>
+                            }
+                        </p>
+
+                        <hr class="major" />
+                        
+                        <h2>7. Селектор за сусіднім елементом</h2>
+
+                        <p>Селектор за сусіднім елементом є азами, які вчить кожен новачок. Але вони чомусь майже зовсім не використовуються. А
+                        даремно, з ними можна дуже легко стилізувати форми та надписи до них, і все без JS.</p>
+
+                        <p class="code-wrapper">
+                            [type="checkbox"] + label { <br>
+                           &nbsp; font-weight: normal; <br>
+                            } <br>
+                            [type="checkbox"]:checked + label { <br>
+                           &nbsp; font-weight: bold; <br>
+                            } <br>
+                            [required]:valid + span { <br>
+                                &nbsp; color: green; <br>
+                                 } <br>
+                            [required]:invalid + span { <br>
+                                &nbsp; color: red; <br>
+                                } <br>
+                        </p>
+
+                        <hr class="major" />
+                        
+                        <h2>8. Алгебраїчні вирази в nth-child()</h2>
+
+                        <p>Селектори з <code>nth-child()</code> дуже зручні для прибирання рамки з останнього елементу, чи організації чергування стилів для
+                        різних рядків таблиці. Але це лише невелика частина того, що можна з ним робити.
+                        
+                        Згадайте трошки алгебри і ви зможете виділити кожен четвертий елемент починаючи з першого:</p>
+
+                        <p class="code-wrapper">
+                            .book:nth-child(4n+1) { <br> &nbsp; color: red; <br> }
+                        </p>
+
+                        <p>чи кожен третій починаючи з другого:</p>
+
+                        <p class="code-wrapper">
+                            .book:nth-child(3n-1) { <br> &nbsp; color: blue; <br> }
+                        </p>
+
+                        <hr class="major" />
+                        
+                        <h2>9. Анімація елементів з animation-fill-mode</h2>
+
+                        <p>Зазвичай, після відображення анімації, елементу слід запам'ятовувати свої поточні характеристики і не відновлюватися до
+                        тих, що були до анімації. Коли ви хочете саме такої поведінки в ваших стилях — просто використовуйте <code>animation-fill-mode</code> 
+                        на потрібному елементі.</p>
+
+                        <p class="code-wrapper">
+                            @keyframes slideIn { <br>
+                            &nbsp;0% { transform: translateX(-100%); } <br>
+                            &nbsp;100% { transform: translateX(0); } <br>
+                            } <br><br>
+                            
+                            .slideIn { <br>
+                            &nbsp;animation-name: slideIn; <br>
+                            &nbsp;animation-duration: .25s; <br>
+                            &nbsp;animation-fill-mode: forwards; <br>
+                            }
+                        </p>
+
+                    <p class="article-info"> <b>Джерело:</b> <span
+                            class="span-link">https://bit.ly/3RobqMa</span>
+                        <br>
+                        <b>Переклад українською мовою:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+
+</body>
+
+</html>
