@@ -46,6 +46,15 @@
   margin: 0 auto;
 }
 
+.image-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-adaptive {
+  width: 90%;
+}
+
 a.image {
   overflow: hidden;
 }
