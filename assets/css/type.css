@@ -108,6 +108,7 @@ body {
 ol,
 ul {
   list-style: none;
+  font-size: 1rem;
 }
 
 blockquote,

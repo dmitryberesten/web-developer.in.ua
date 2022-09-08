@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Покращуємо Git</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Покращуємо процес роботи з Git</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/git/improving-git/improving-git.png"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото:
+                        https://images4.alphacoders.com/985/985805.png</p>
+
+                    <p>Уявіть: вас викликали, щоб розібратися з інцидентом у продакшені. Покопавшись, ви встановили,
+                        який коміт зламав код. Ви
+                        вирішуєте відкотити ці зміни:</p>
+
+                    <p class="code-wrapper">
+                        <code>
+                                    $ git revert 1a2b3c
+                                </code>
+                    </p>
+
+                    <p>На жаль, у результаті з'являється новий баг! Виявляється, у цьому старому «зламаному» коміті був
+                        прихований код, від
+                        якого залежала інша частина кодової бази. І після відкату змін сайт все одно залишився у
+                        неробочому стані. Як уникнути таких ситуацій? Щоб відповісти на це запитання, спочатку потрібно
+                        зрозуміти, як з'являються такі комміти.</p>
+
+                    <hr class="major" />
+
+                    <h2>Звичайний процес роботи з Git</h2>
+
+                    <p>Давайте розглянемо, як найчастіше відбувається робота з Git під час створення нової функції:</p>
+
+                    <ol>
+                        <li>1. Ви створюєте нову гілку з main.</li>
+                        <li>2. Зберігаючи свою роботу та виправляючи зустріті баги, ви робите комміти.</li>
+                        <li>3. Коли з функцією покінчено, робите пул-реквест.</li>
+                        <li>4. Коли пул-реквест схвалений, робите мерж гілки в main.</li>
+                    </ol> <br>
+
+                    <p>Ця процедура, напевно, вам знайома. Багатьох нас навчали працювати з Git саме таким чином. Але
+                        такий підхід має два
+                        слабкі місця.</p>
+
+                    <p> <b>По-перше</b> , якщо ви робите коміти у ході справи, деякі з них можуть містити незакінчені
+                        варіанти роботи. Це робить відкат
+                        досить ризикованим. <br>
+
+                        <b>По-друге</b> , це може ускладнити перевірку пул-реквестів. Припустимо, вас попросили
+                        перевірити новий пул-реквест. Автор
+                        зазначив, що, крім додавання нової фічі, він також виправив баг, що не має до неї відношення.
+                    </p>
+
+                    <p>
+                        Пул-реквест містить зміни у десятках файлів. Перегляд усіх комітів окремо не дає розуміння, які
+                        зміни відносяться до
+                        виправлення бага, а які до нової фічі. Крім того, ви помітили кілька змін, які начебто взагалі
+                        ніяк не пов'язані з
+                        описом пул-реквеста. Зрозуміло, перевірка цього пул-реквесту буде нешвидкою.
+
+                        А наскільки було б краще, якби кожен коміт стосувався лише однієї зміни! Але це важко досягти,
+                        коли ви в процесі
+                        розробки. Постійне виляння в сторони та переписування окремих частин – невід'ємна частина
+                        процесу. Наша робота рідко
+                        буває лінійною, і це відбивається на наших коммітах.
+                    </p>
+
+                    <p>
+                        Як же нам зробити нашу історію комітів охайною та легко читаною, враховуючи при цьому
+                        нелінійність процесу розробки?
+                        Для цього ми можемо покращити базовий процес роботи з Git, внесши невеликі зміни.
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>Покращений процес роботи з Git</h2>
+
+                    <p>В основі наступного підходу лежить робочий процес мого колеги Дена Вендорфа. Його робота з Git
+                        побудована на ключовому
+                        принципі: <b>спочатку робиш роботу, а комміти підчищаєш потім.</b> </p>
+
+                    <p>Перевага цього підходу в тому, що ви поділяєте власне розробку та написання комітів.
+
+                        У результаті ми отримуємо послідовність логічно згрупованих комітів, кожен із яких стосується
+                        лише однієї основної
+                        зміни в коді. Таким чином історія комітів стає чистішою, а пул-реквести перевіряються швидше та
+                        легше.
+
+                        Поліпшений робочий процес можна розбити на три кроки.</p>
+
+                    <h2>Крок 1. Вносимо зміни</h2>
+
+                    <p>Тут, в принципі, все залишається, як за звичайного робочого процесу. Починаємо зі створення нової
+                        гілки та вносимо до
+                        неї потрібні зміни.
+
+                        На цьому етапі не варто приділяти багато уваги написанню змістовних повідомлень комітів. Вони
+                        все одно не увійдуть до
+                        підсумкового пул-реквесту. Поки що буде достатньо простого work in progress (WIP), або
+                        будь-якого іншого повідомлення.
+                        Наприклад: "WIP: Started building new model" ("Робота ведеться: розпочато створення нової
+                        моделі").
+
+                        Призначення цих комітів — не загубитися у виконаній роботі та окреслити її спільні напрямки.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/git/improving-git/1.jpg" alt="">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/ZueVSEo
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>На цьому етапі нормально залишати кодову базу в зламаному стані або комітити сирі фічі. Все це
+                        буде підчищено пізніше.</p>
+
+                    <h2>Крок 2. Скидання</h2>
+
+                    <p>Коли закінчите вносити зміни, можна буде зайнятися підготовкою до їх упорядкування. Для цього
+                        запускаємо наступну
+                        команду:</p>
+
+                    <p class="code-wrapper">
+                        $ git reset origin/main
+                    </p>
+
+                    <p>Без додаткових аргументів git reset не змінює робоче дерево, тому ваш код буде в безпеці. Але
+                        оскільки ви скидаєте все
+                        до давнішого коміту, git status буде показувати всі зміни, які ви зробили з початку роботи над
+                        функцією. Це ніби ви
+                        зробили всю потрібну роботу з кодом, але не робили жодних WIP-коммітів.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/git/improving-git/2.jpg" alt="">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/ZueVSEo
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Не бійтеся скидати коміти! Ви завжди можете повернути їх. Кожен зроблений вами коміт залишається
+                        у папці <b>.git</b> , навіть
+                        після застосування <b>reset</b>. Це тільки здається, що вони зникають, насправді вони на місці
+                        просто заховані.
+
+                        Якщо ви хочете повернутися до коміту, на якому все працювало, <b>git reflog</b> покаже вам
+                        таймлайн усіх коммітів, на які ви
+                        посилалися у своєму локальному репозиторії, навіть між гілками. Запустіть <b>git reflog</b> , щоб знайти
+                        коміт, до якого хочете
+                        повернутися, а потім <b>git reset &lt;commit-sha&gt;</b>. Ця команда переведе HEAD поточної
+                        гілки на цей коміт. Тепер ми готові робити нові коміти.</p>
+
+                    <h3>Крок 3. Робимо нові, логічно згруповані коміти</h3>
+
+                    <p>Тепер перегляньте всі файли, які ви змінили. Чи можна щось логічно згрупувати? Наприклад, усі
+                        оновлення залежностей або
+                        зміни, що стосуються конкретної моделі. Тут немає якогось єдино правильного методу угруповання,
+                        ви робите це на власний
+                        смак. Додайте вибрані файли до стейджингу та зробіть коміт з описом змін.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/git/improving-git/3.jpg" alt="">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/ZueVSEo
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Якщо ви змінювали небагато файлів, можна обійтися одним комітом. Але найчастіше поділ змін на
+                        окремі коміти, що добре
+                        прочитуються, легко простежуються, полегшує перевірку пул-реквеста.
+
+                        Що, якщо в одному файлі є низка змін, які мають входити до різних груп? Ви можете помістити в
+                        стейджинг частину файлу за
+                        допомогою git add --patch (або git add -p). Деякі редактори коду також дозволяють поміщати в
+                        стейджинг діапазон змін, а
+                        не файл.</p>
+
+                    <p>На цьому етапі потрібно стежити, щоб кодова база була в робочому вигляді. Пам'ятайте, що головна
+                        мета впорядкування
+                        комітів – домогтися стану, коли відкат якихось змін не ламає код в інших місцях.
+
+                        Зробивши один із нових комітів, сховайте зміни, які не потрапили до комміту та стейджингу, за
+                        допомогою git stash.
+                        Після цього перевірте, чи все працює.</p>
+
+                    <p>Якщо виявиться, що до коміта потрібно включити ще якийсь файл, виконайте git stash pop, щоб
+                        повернути заховані зміни,
+                        потім додайте в стейджинг пропущений файл (git add) і виконайте git commit --amend . Останній
+                        коміт буде замінено новим,
+                        з тим самим описом. Він включатиме і старий коміт, і зміну, яку ви щойно внесли.</p>
+
+                    <h2>Підсумковий результат</h2>
+
+                    <p>Розділивши свою роботу на логічно згруповані коміти, ви будете готові зробити пул-реквест!
+                        Підсумковий результат -
+                        набір змін, які ваш колега зможе переглянути коміт за коммітом.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/git/improving-git/4.jpg" alt="">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/ZueVSEo
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Перевага такої роботи з Git у тому, що враховується звичайна плинність завдань і водночас є
+                        можливість підтримувати
+                        порядок в історії репозиторію.</p>
+
+                    <p class="article-info"> <b>Джерело:</b> <span class="span-link">https://goo.su/C4CB</span>
+                        <br>
+                        <b>Переклад українською мовою:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+
+</body>
+
+</html>
