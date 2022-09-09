@@ -111,6 +111,14 @@ ul {
   font-size: 1rem;
 }
 
+.list-margin-bottom li {
+  margin-bottom: 10px;
+}
+
+.list-margin-bottom :last-child{
+  margin-bottom: 0;
+}
+
 blockquote,
 q {
   quotes: none;
