@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>10 порад Git</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>10 корисних порад по роботі з Git</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/git/10-git-tips/10-git-tips.webp"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото:
+                        https://goo.su/BijO8</p>
+
+                    <p>Git – безкоштовна розподілена система контролю версій з відкритим кодом. Вона була створена для
+                        управління як
+                        маленькими, так і дуже великими проектами.
+
+                        Якщо ви тільки починаєте працювати з Git, вам доведеться навчитися багатьом корисним командам та
+                        прийомам. У цій статті
+                        ми зібрали десятку порад, дотримання яких допоможе покращити ваші робочі процеси.</p>
+
+                    <h2>1. Псевдоніми (аліаси) Git</h2>
+
+                    <p>Створюйте власні псевдоніми для довгих команд, якими часто користуєтесь. <br> Це заощадить вам
+                        трохи
+                        часу.</p>
+
+                    <p class="code-wrapper">
+                        git config --global alias.co checkout <br><br>
+                        git config --global alias.ci commit <br><br>
+                        git config --global alias.br branch <br><br>
+                    </p>
+
+                    <p>Замість того, щоб набирати <b>git checkout master</b> , ви можете набрати тільки <b>git co
+                            master</b>. <br>
+
+                        Редагувати команди можна безпосередньо у файлі ~/.gitconfig:</p>
+
+                    <p class="code-wrapper">
+                        [alias] <br>
+                        co = checkout<br>
+                        ci = commit<br>
+                        br = branch<br>
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>2. Порівняння комітів</h2>
+
+                    <p>Побачити різницю між комітами чи різними версіями одного й того ж файлу можна за допомогою
+                        команди <b>git diff</b> .
+
+                        Якщо хочете порівняти той самий файл у різних комітах, запустіть наступну команду:</p>
+
+                    <p class="code-wrapper">
+                        git diff $start_commit..$end_commit -- path/to/file
+                    </p>
+
+                    <p>Порівняння змін між двома комітами:</p>
+
+                    <p class="code-wrapper">
+                        git diff $start_commit..$end_commit
+                    </p>
+
+                    <p>
+                        Ці команди відкривають перегляд diff прямо у терміналі. Якщо ви віддаєте перевагу більш
+                        візуальним інструментам, можна
+                        використовувати <b>git difftool</b>. Для візуального порівняння відмінностей є корисний
+                        інструмент перегляду та редагування –
+                        Meld.
+
+                        Налаштування Meld:
+                    </p>
+
+                    <p class="code-wrapper">
+                        git config --global diff.tool git-meld
+                    </p>
+
+                    <p>Як почати переглядати diff-и:</p>
+
+                    <p class="code-wrapper">
+                        git difftool $start_commit..$end_commit -- path/to/file
+                    </p>
+
+                    <p>
+                        Або:
+                    </p>
+
+                    <p class="code-wrapper">
+                        git difftool $start_commit..$end_commit
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>3. Ховаємо зміни, які не увійшли до коміту</h2>
+
+
+                    <p>Якщо ви працюєте над якоюсь фічею, і раптом доводиться терміново вносити зміни до того самого
+                        проекту, ви можете
+                        зіткнутися з проблемою. Ви не хочете комітити незакінчену фічу, але й втратити всі зміни теж не
+                        хотілося б. Рішення на
+                        цей випадок - тимчасово прибрати ці зміни з очей геть за допомогою команди <b>git stash</b>.
+                    </p>
+
+                    <p>
+                        Команда <b>git stach</b> ховає зміни, після чого ви отримуєте чисту робочу директорію та
+                        можливість переключитися на нову
+                        гілку. Там можна вносити потрібні зміни, не роблячи перед цим безглуздих снапшотів для
+                        збереження поточного стану.
+
+                        Коли внесете всі свої термінові редагування і будете готові повернутися до тієї фічі, над якою
+                        працювали, запустіть
+                        наступну команду:</p>
+
+                    <p class="code-wrapper">
+                        git stash pop
+                    </p>
+
+                    <p>Усі зміни відновляться. <br>
+
+                        Якщо ці зміни більше не потрібні і ви хочете очистити стек вашої "схованки", запустіть наступну
+                        команду:</p>
+
+                    <p class="code-wrapper">
+                        git stash drop
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>4. Робіть pull частіше</h2>
+
+                    <p>Щоб уникнути серйозних конфліктів частіше витягуйте зміни з гілки master у свою гілку. Таким
+                        чином, можна буде
+                        вирішувати будь-які конфлікти на ранніх стадіях. В результаті мерж ваших гілок у master
+                        проходитиме легше.</p>
+
+                    <hr class="major" />
+
+                    <h2>5. Автодоповнення команд</h2>
+
+                    <p>Використовуючи скрипти completion, можна швидко створити команди для bash, tcsh і zsh. Тоді при
+                        наборі <b>git pull</b>
+                        достатньо набрати <b>git p</b> і натиснути <b>Tab</b>. Ви побачите список усіх команд, що починаються
+                        на <b>p</b>:</p>
+
+                    <ul class="code-wrapper">
+                        <li>pack-objects -- create packed archive of objects</li>
+                        <li>pack-redundant -- find redundant pack files</li>
+                        <li>pack-refs -- pack heads and tags for efficient repository access</li>
+                        <li>parse-remote -- routines to help parsing remote repository access parameters</li>
+                        <li>patch-id -- compute unique ID for a patch</li>
+                        <li>prune -- prune all unreachable objects from the object database</li>
+                        <li>prune-packed -- remove extra objects that are already in pack files</li>
+                        <li>pull -- fetch from and merge with another repository or local branch</li>
+                        <li>push -- update remote refs along with associated objects</li>
+                    </ul>
+                    <br>
+                    <p>Щоб вивести всі доступні команди, введіть <b>git</b> і натисніть <b>Tab + Tab</b> .</p>
+
+                    <hr class="major" />
+
+                    <h2>6. Встановіть .gitignore глобально</h2>
+
+                    <p>Якщо ви не бажаєте випадково відправити в коміт файли типу .DS_Store або swp-файли Vim, ви можете
+                        налаштувати файл
+                        .gitignore глобально.
+
+                        Створення файлу:</p>
+
+                    <p class="code-wrapper">
+                        touch ~/.gitignore
+                    </p>
+
+                    <p>Потім запускаєте:</p>
+
+                    <p class="code-wrapper">
+                        git config --global core.excludesFile ~/.gitignore
+                    </p>
+
+                    <p>Або вручну додаєте наступне у ваш ~/.gitconfig:</p>
+
+                    <p class="code-wrapper">
+                        [core] <br>
+                        excludesFile = ~/.gitignore
+                    </p>
+
+                    <p>Ви можете скласти список речей, які Git має ігнорувати. <br> Дізнатися більше можна в документації по
+                        gitignore.</p>
+
+                    <hr class="major" />
+
+                    <h2>7. Видаляйте локальні гілки, видалені з віддаленого репозиторію, при fetch/pull</h2>
+
+                    <p>Напевно, у вашому локальному репозиторії є купа гілок, яких більше немає у віддаленому. Щоб
+                        видалити їх у кожному
+                        fetch/pull, виконайте таку команду:</p>
+
+                    <p class="code-wrapper">
+                        git config --global fetch.prune true
+                    </p>
+
+                    <p>Або вручну додайте наступні рядки у файл ~/.gitconfig:</p>
+
+                    <p class="code-wrapper">
+                        [fetch] <br>
+                        prune = true
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>8. Використовуйте git blame більш ефективно</h2>
+
+                    <p>Git blame дуже зручна команда для пошуку автора змін в окремих рядках коду. Команда має різні
+                        позначки, що дозволяють
+                        вивести різну інформацію:</p>
+
+                    <ul class="code-wrapper">
+                        <li>git blame -w # ignores white space</li>
+                        <li>git blame -M # ignores moving text</li>
+                        <li>git blame -C # ignores moving text into other files</li>
+                    </ul>
+
+                    <hr class="major" />
+
+                    <h2>9. Аліас HEAD</h2>
+
+                    <p>Символ @ - те саме, що і HEAD. Його дуже зручно використовувати при rebase:</p>
+
+                    <p class="code-wrapper">
+                        git rebase -i @~2
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>10. Скидання змін у файлах</h2>
+
+                    <p>Ви змінюєте свій код, коли раптом розумієте, що внесені вами зміни не є чудовими, і ви хочете їх
+                        скинути. Замість того,
+                        щоб натиснути «Скасувати» все, що ви редагували, ви можете скинути свої файли до HEAD гілки</p>
+
+                    <p class="code-wrapper">
+                        git reset --hard HEAD
+                    </p>
+
+                    <p>Або якщо ви хочете скинути один файл:</p>
+
+                    <p class="code-wrapper">
+                        git checkout HEAD -- path/to/file
+                    </p>
+
+                    <p>Тепер, якщо ви вже внесли зміни, але все ще хочете повернутися назад, ви можете скористатися:</p>
+
+                    <p class="code-wrapper">
+                        git reset --soft HEAD~1
+                    </p>
+
+                    <p>Сподіваємось Вам допомогла ця стаття :)</p>
+
+
+                    <p class="article-info"> <b>Джерело:</b> <span class="span-link">https://goo.su/q1UZ</span>
+                        <br>
+                        <b>Переклад українською мовою:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+
+</body>
+
+</html>
