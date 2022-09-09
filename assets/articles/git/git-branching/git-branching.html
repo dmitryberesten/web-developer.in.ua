@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Розгалуження Git</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Ефективна стратегія розгалуження Git, про яку має знати кожен розробник</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/git/git-branching/git-branching.png"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото:
+                        https://goo.su/r8KGnt</p>
+
+                        <p>Якою має бути основна гілка: master, develop чи щось ще? Погляньмо на стратегію розгалуження Git, з якою ви можете бути
+                        ще не знайомі.</p>
+
+                        <h2>На які питання має відповідати стратегія розгалуження?</h2>
+
+                        <ol>
+                            <li>1. На якій гілці треба створювати feature гілку?</li>
+                            <li>2. Після завершення коду в якій гілці потрібно створювати MR (Merge Request) / PR (Pull Request) для перевірки і
+                            тестування коду?</li>
+                            <li>3. З якою гілкою зливати цю feature гілку після завершення тестування та аналізу?</li>
+                        </ol> <br>
+
+                        <h2>Важливі речі, які має вирішувати стратегія розгалуження</h2>
+
+                        <ul>
+                            <li>1. Гілка, на якій ви створюєте функціональну гілку, має бути стабільною у продакшні.</li>
+                            <li>2. Не можна зливати код з помилками або непротестований код із продакшн гілкою (гілка, звідки ви робите деплой).</li>
+                            <li>3. У процесі злиття вашого коду з продакшн-гілкою ви маєте зіткнутися з мінімальною кількістю конфліктів злиття.</li>
+                        </ul> <br>
+
+                        <p>Мета стратегії розгалуження полягає в тому, щоб підвищити стабільність коду та продуктивність розробників та уникнути
+                        зайвих конфліктів.
+                        
+                        Я не зачіпатиму всіх типів стратегій розгалуження, але я назву кращу, яка застосовується найчастіше.
+                        
+                        У ній використовуються гілки master, develop і feature.</p>
+
+                        <h3>master</h3>
+
+                        <ul>
+                            <li>1. Ми називаємо її продакшн гілкою. У ній є добре протестований стабільний код.</li>
+                            <li>2. З цієї гілки мав відбутися попередній реліз, і наступний також має бути з неї.
+                            </li>
+                            <li>3. У нас можуть бути пайплайни для релізу з цієї гілки (тобто щоразу, коли відбувається чергове злиття в цю гілку,
+                            автоматично запускається пайплайн, який робить збір та деплой ПЗ на наші робочі сервери).
+                            </li>
+                            <li>4. Вона повинна приймати злиття тільки з гілкою develop.</li>
+                        </ul> <br>
+
+                        <h3>develop</h3>
+
+                        <ul>
+                            <li>1. Гілка на нижньому по відношенню до master рівні.</li>
+                            <li>2. Розробник, який починає працювати над якоюсь функцією, створює нову гілку з цієї гілки.
+                            </li>
+                            <li>3. Після завершення розробки/тестування/аналізу коду розробник створює MR/PR на ту саму гілку, оскільки саме з цієї гілки
+                            ми збиратимемо наступний реліз.
+                            </li>
+                            <li>4. Для того, щоб зарелізувати стан проекту в цій гілці, ми робимо мерж у гілку master.</li>
+                        </ul> <br>
+
+                        <h3>feature</h3>
+
+                        <ul>
+                            <li>1. Гілка, що створюється з develop для роботи над запланованою на наступний випуск функцією.</li>
+                            <li>2. Зазвичай у цій гілці працює один розробник.
+                            </li>
+                        </ul> <br>
+                        
+                        <p>Поділ на ці три типи гілки допомагає уникати непотрібних конфліктів та підвищує продуктивність команди.</p>
+
+                        <hr class="major" />
+
+                        <h2>Тестування QA</h2>
+
+                        <p>Однак, ми пропустили одну річ: тестування QA.
+                        
+                        На якій гілці його робити? Інакше кажучи, яку гілку слід розгорнути середовищу QA?
+                        
+                        Найпростіший підхід: мати середовище QA на гілці розробки (тобто сервери QA будуть розгорнуті зі збіркою, що
+                        випускається з гілки develop). А після завершення тестування та контролю якості створюється MR/PR у гілку master.</p>
+
+                        <p>Стратегія з 2 гілками:</p>
+
+                        <p>
+                        <figure>
+                            <img class="image-center img-adaptive" src="/assets/articles/git/git-branching/1.jpeg" alt="">
+                            <figcaption class="photo-src">
+                                Джерело:
+                                https://goo.su/bcMofmU
+                            </figcaption>
+                        </figure>
+                        </p>
+
+                        <h3>Плюси</h3>
+
+                        <ul>
+                            <li>1. Кожна зміна може бути протестована до релізу через єдину збірку/розгортання (тобто, тестування окремих функцій може
+                            бути проведено за один раз для всіх функцій).</li>
+                            <li>2. Після тестування функцій ця гілка найбільше підходить для регресійного тестування, оскільки для наступного випуску у ній
+                            вже заплановані зміни.
+                            </li>
+                        </ul> <br>
+
+                        <h3>Мінуси</h3>
+
+                        <ul>
+                            <li>1. Якщо у змінах в одній із feature гілок є баг, то тестування та QA буде заблоковано та забере багато часу у команди.</li>
+                        </ul> <br>
+
+                        <hr class="major" />
+                        
+                        <h2>Варіанти рішення</h2>
+
+                        <h3>Перше рішення</h3>
+
+                        <p>Зачекати, поки автор feature-гілки виправить проблему. Злити її з гілкою develop, знову розгорнути в середовищі QA і
+                        відновити тестування. Але це недоцільний варіант, оскільки ми не знаємо, скільки часу знадобиться на виправлення того чи
+                        іншого бага. Крім цього:</p>
+
+                        <ul>
+                            <li>1. Це втрата часу для команди QA.</li>
+                            <li>2. Блокування релізів, якщо реліз може пройти навіть без цієї функції.
+                            </li>
+                            <li>3. Топтання на місці у гілці develop, якщо QA виявляє баги у кількох функціях.</li>
+                        </ul> <br>
+
+                        <h3>Друге рішення</h3>
+
+                        <p>Скасувати зміни цієї функції та продовжити тестування. Такий підхід ефективніший з точки зору продуктивності команди,
+                        проте для автора feature-гілки він може бути болючим. Скасування змін призведе до створення нового коміту, що
+                        спричинить скасування всіх змін від цих розробників у цій гілці. А якщо вони спробують після виправлення багів злити її
+                        назад, Git буде використовувати для злиття з develop тільки нові коміти виправлень, оскільки старіші коміти вже
+                        знаходяться в історії комітів develop.
+                        
+                        Щоб вирішити цю проблему, розробнику потрібно скасувати коміт скасування.</p>
+
+                        <h3>Третє рішення</h3>
+
+                        <p>Третім і найпростішим рішенням буде примусово запушити master у develop, заново злити решту гілок feature і заново
+                        запустити QA.
+                        
+                        Для продуктивності команди я порекомендував би другий шлях.</p>
+
+                        <h3>Найкращий підхід</h3>
+
+                        <p>Всю цю проблему можна вирішити наступним чином: створити ще одне гілку QA для тестування. В ідеалі QA має
+                        оновлюватися разом із develop.
+                        
+                        Таким чином з'явиться додатковий крок, і весь функціональний цикл виглядатиме так:</p>
+
+                        <ul>
+                            <li>1. Починаєте нову гілку з develop.</li>
+                            <li>2. Після розробки та тестування створюєте PR/MR на QA для аналізу коду.
+                            </li>
+                            <li>3. Після аналізу коду зливаєте її з гілкою QA.</li>
+                            <li>4. QA проводить тестування функції і після тесту ви створюєте MR/PR на develop.</li>
+                            <li>5. Проводьте другий раунд аналізу (для спокою) та зливаєте вашу гілку безпосередньо в develop, оскільки вона вже
+                            проаналізована та протестована.</li>
+                            <li>6. Як тільки develop готова до релізу (тобто всі feature гілки злиті), QA запускає складання для проведення регресійного
+                            тестування. Цей білд можна запустити у створеному середовищі QA.</li>
+                        </ul> <br>
+
+                        <p>Стратегія з 3 гілками:</p>
+
+                        <p>
+                        <figure>
+                            <img class="image-center img-adaptive" src="/assets/articles/git/git-branching/2.jpeg" alt="">
+                            <figcaption class="photo-src">
+                                Джерело:
+                                https://goo.su/PC91M
+                            </figcaption>
+                        </figure>
+                        </p>
+
+                        <h3>Переваги цього підходу</h3>
+
+                        <p>Незважаючи на те, що цей підхід зовні дуже схожий на попередній і, на перший погляд, додавання ще однієї гілки не має
+                        особливих переваг, він допоможе збільшити продуктивність таким чином:</p>
+
+                        <ul>
+                            <li>1. Ви можете проводити тестування функцій на гілці QA, регресійне тестування на стабільній гілці develop після злиття всіх
+                            функцій, які заплановані в поточному випуску.</li>
+                            <li>2. Гілка develop завжди буде стабільна, а будь-який розробник зможе пустити від неї свою гілку feature у будь-який час.</li>
+                            <li>3. Ви не засмічуватимете історію комітів у гілці develop.</li>
+                            <li>4. Якщо у QA з'являться проблеми з будь-якою гілкою feature, ви зможете їх вирішити і провести без скасування змін, якщо ця
+                            функція є незалежною від інших.</li>
+                            <li>5. Патч (hotfix): у разі будь-якої проблеми з продуктом почніть гілку з master, виправте проблему і зарелізуйте.</li>
+                        </ul> <br>
+
+                    <p>Сподіваємось Вам допомогла ця стаття :)</p>
+
+                    <p class="article-info"> <b>Джерело:</b> <span class="span-link">https://goo.su/DprgoQU</span>
+                        <br>
+                        <b>Переклад українською мовою:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+
+</body>
+
+</html>

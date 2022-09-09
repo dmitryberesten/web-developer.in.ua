@@ -26,6 +26,12 @@
 .icon.solid:before {
   font-weight: 900;
 }
+.icon.light:before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+}
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
 }
