@@ -108,7 +108,7 @@ body {
 ol,
 ul {
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .list-margin-bottom li {
@@ -166,6 +166,7 @@ input,
 select,
 textarea {
   color: #7f888f;
+  /* color: black; */
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
