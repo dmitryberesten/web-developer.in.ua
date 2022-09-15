@@ -1,0 +1,31 @@
+.paragraph-scroll {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 0;
+}
+
+.fixed-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#updown {
+  height: 3.5em;
+  width: 100px;
+  position: fixed;
+  top: 2em;
+  right: 1px;
+  cursor: pointer;
+}
+
+#updown.up::before {
+  content: "Вгору ⇑";
+  background-color: #3668e8;
+  color: #fff;
+  padding: 15px;
+  border-radius: 0.375em;
+  font-size: 1rem;
+}
