@@ -233,6 +233,13 @@ a:hover strong {
   border-radius: 10px;
 } 
 
+.link-size {
+  font-size: 1.4rem;
+  text-align: center;
+  display: block;
+  border: none;
+}
+
 strong,
 b {
   color: #3d4449;
