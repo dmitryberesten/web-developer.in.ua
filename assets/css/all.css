@@ -2417,6 +2417,10 @@ readers do not read off random characters that represent icons */
   content: "\f005";
 }
 
+/* .fa-star::before {
+  content: "\f3ff";
+} */
+
 .fa-repeat::before {
   content: "\f363";
 }

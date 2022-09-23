@@ -3720,9 +3720,9 @@
 .fa-stamp:before {
   content: "\f5bf";
 }
-.fa-star:before {
+/* .fa-star:before {
   content: "\f005";
-}
+} */
 .fa-star-and-crescent:before {
   content: "\f699";
 }
