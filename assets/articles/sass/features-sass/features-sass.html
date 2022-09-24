@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Особливості SASS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Особливості SASS</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/sass/features-sass/1.png"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: https://goo.su/R6Xan</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>SASS — це метамова на основі CSS, призначена для збільшення рівня абстракції CSS коду та
+                        спрощення файлів каскадних
+                        таблиць стилю.</p>
+
+                    <p>SASS надає більше можливостей і свободи при написанні CSS для створення сайтів. Це як програмна
+                        мова всередині CSS. Ви
+                        можете використовувати щось подібне до функцій зі змінними, логічно структурувати ваш код
+                        (структурованість стилів і
+                        класів).</p>
+
+                    <p>SASS має два синтаксиса. Новий основний синтаксис відомий як "SCSS" (SassyCSS), розширений
+                        синтаксис CSS3. Це означає,
+                        що кожен чинний стиль CSS3 валідний в SCSS також. SCSS файли мають розширення ".scss"</p>
+
+                    <p>Другий, більш старий синтаксис відомий як SASS. Натхненний стислістю HAML, він призначений для
+                        тих, хто віддає перевагу
+                        лаконічності CSS. Замість фігурних дужок і крапок з комою, використовуються відступи. SASS
+                        синтаксис вже не є основним
+                        на даний момент, але він надалі буде підтримуватися. Файли з SASS синтаксисом використовують
+                        розширення ".sass".</p>
+
+                    <h2>SASS vs SCSS</h2>
+
+                    <p class="code-wrapper">
+                        <b>//SASS</b> <br>
+                        .content <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid red <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: black <br><br>
+
+                        .border <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px
+                    </p>
+
+                    <p class="code-wrapper">
+                        <b>//SCSS</b> <br>
+                        .content { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid red; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: black; <br>
+                        } <br><br>
+
+                        .border { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px;
+                        }
+                    </p>
+
+                    <p>Особисто я рекомендую використовувати SCSS синтаксис, бо він більш читабельний і зрозумілий. Як
+                        видно, синтаксис SCSS
+                        нічим не відрізняється від синтаксису CSS. Але при цьому він має масу корисних можливостей, які
+                        можуть полегшити життя
+                        верстальщика.</p>
+
+                    <h2>Можливості SASS</h2>
+
+                    <ul>
+                        <li>&#129138; Variables (Змінні)</li>
+                        <li>&#129138; Nesting (Вкладеність)</li>
+                        <li>&#129138; Mixins (Міксини)</li>
+                        <li>&#129138; Selector Inheritance (Наслідування правил селекторів)</li>
+                    </ul><br>
+
+                    <h2>Variables (Змінні)</h2>
+
+                    <p>Скрізь використовуєте один колір? Вам необхідно зробити деякі розрахунки висоти, ширини або
+                        розміру тексту? SASS
+                        підтримує змінні, а також основні математичні операції і безліч корисних функцій.</p>
+
+                    <p class="code-wrapper">
+                        $color = #000; <br>
+                        $spacing = 10px; <br>
+                        .content { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid red; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: $color; <br>
+                        } <br><br>
+                        .border { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: $spacing; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: $spacing; <br>
+                        }
+                    </p>
+
+                    <h2>Nesting (Вкладеність)</h2>
+
+                    <p>SASS може уникнути повторення селекторів шляхом вкладення їх один в одного. Так само працює з
+                        властивостями.</p>
+
+                    <p class="code-wrapper">
+                        .content { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 2em 0; <br>
+                        p { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;text-align: right; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        } <br> <br>
+
+                        body{ <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: $color <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font: { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;family: serif; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weight: bold; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size: 1.2em; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        }
+                    </p>
+
+                    <h2>Mixins(Міксини)</h2>
+
+                    <p>Міксини дозволяють повторно використовувати цілі шматки CSS, їх селектори і властивості, ще більш корисно, аніж змінні.
+                    Ви навіть можете задати аргументи. Грубо кажучи, міксини - це CSS "функції".</p>
+
+                    <p class="code-wrapper">
+                        @mixin table { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;th { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;td, th {padding: 2px} <br>
+                        } <br><br>
+                        
+                        @mixin left($dist) { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;float: left; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: $dist; <br>
+                        } <br><br>
+                        
+                        #data { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;@include left(10px); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;@include table; <br>
+                        }
+                    </p>
+
+                    <h2>Selector Inheritance (Наслідування правил селекторів)</h2>
+
+                    <p>Sass може успадковувати стилі примінені до певного селектору без дублювання CSS властивостей.</p>
+
+                    <p class="code-wrapper">
+                        .error { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px #f00; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: #fdd; <br>
+                        } <br><br>
+                        
+                        .warning { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.3em; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold; <br>
+                        } <br><br>
+                        
+                        .badError { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;@extend .error; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border-width: 3px; <br>
+                        }
+                    </p>
+
+                    <h2>Компіляція SASS в CSS</h2>
+
+                    <p>Якщо у вас є файли (SCSS або SASS), в яких ви пишете на Sass. Браузери не розуміють такий синтаксис. Браузери розуміють
+                    тільки CSS, отже, нам потрібно передати наші стилі в форматі CSS. Для цього наші sass/scss потрібно скомпілювати. Найпростіший спосіб це розширення вашого редактора яке вміє компілювати код. </p>
+
+                    <p>Бажаємо успіхів!</p>
+
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/iKeURKU</span>
+                        <br>
+                        <b>Редактор:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
