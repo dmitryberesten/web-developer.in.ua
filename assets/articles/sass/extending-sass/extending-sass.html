@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Розширення SASS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Розширення CSS за допомогою SASS</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/sass/extending-sass/1.png"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: https://goo.su/OXzBTuz</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>Написання CSS само по собі весело, але коли таблиця стилів стає величезною, то стає і складно її
+                        обслуговувати. І ось в
+                        такому випадку нам допоможе препроцесор. Sass дозволяє використовувати функції недоступні в
+                        самому CSS, наприклад,
+                        змінні, вкладеність, міксини, успадкування та інші приємні речі, які повертають зручність
+                        написання CSS.
+                        Як тільки Ви починаєте користуватися Sass, препроцесор обробляє ваш Sass-файл і зберігає його як
+                        простий CSS-файл, який
+                        Ви зможете використати на будь-якому сайті.</p>
+
+                    <h2>Змінні</h2>
+
+                    <p>Думайте про змінні, як про спосіб зберігання інформації, яку ви хочете використовувати протягом
+                        написання всіх стилів
+                        проекту. Ви можете зберігати в змінних колір, стеки шрифтів або будь-які інші значення CSS,
+                        які ви хочете
+                        використовувати. Щоб створити змінну в Sass потрібно використовувати символ $. Розглянемо
+                        приклад:</p>
+
+                    <h3>СИНТАКСИС SCSS</h3>
+
+                    <p class="code-wrapper">
+                        $font-stack: Helvetica, sans-serif;<br>
+                        $primary-color: #333; <br><br>
+
+                        body {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font: 100% $font-stack;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: $primary-color;<br>
+                        }
+                    </p>
+
+                    <h3>СИНТАКСИС SASS</h3>
+
+                    <p class="code-wrapper">
+                        $font-stack: Helvetica, sans-serif <br>
+                        $primary-color: #333 <br><br>
+
+                        body <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font: 100% $font-stack <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: $primary-color
+                    </p>
+
+                    <p>Коли Sass обробляється, він приймає значення, задані нами в $ font-stack і $ primary-color і
+                        вставляє їх в звичайному
+                        CSS-файлі в тих місцях, де ми вказували змінні як значення. Таким чином змінні стають
+                        найпотужнішою можливістю,
+                        наприклад, при роботі з фірмовими кольорами, використовуваними на всьому сайті.</p>
+
+                    <h3>СИНТАКСИС CSS</h3>
+
+                    <p class="code-wrapper">
+                        body {  <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; font: 100% Helvetica, sans-serif; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; color: #333; <br>
+                        }
+                    </p>
+
+                    <h2>Вкладення</h2>
+
+                    <p>При написанні HTML, Ви, напевно, помітили, що він має чітку вкладену і візуальну ієрархію. З CSS це не так.
+                    Sass дозволить вам вкладати CSS селектори таким же чином, як і у візуальній ієрархії HTML. Але пам'ятайте, що надмірна
+                    кількість вкладень робить ваш документ менш читабельним, що вважається поганою практикою.
+                    Щоб зрозуміти що ми маємо на увазі, наведемо типовий приклад стилів навігації на сайті:</p>
+
+                    <h3>СИНТАКСИС SCSS</h3>
+
+                    <p class="code-wrapper">
+                    nav { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;ul { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 0; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style: none; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br> <br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;li { display: inline-block; } <br> <br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;a { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: block; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 6px 12px; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    }
+                    </p>
+
+                    <h3>СИНТАКСИС SASS</h3>
+
+                    <p class="code-wrapper">
+                        nav <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; ul <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 0 <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 0 <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style: none <br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; li <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: inline-block <br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; a <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: block <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 6px 12px <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none
+                    </p>
+
+                    <p>Ви помітили, що селектори ul, li, і a є вкладеними в селектор nav? Це відмінний спосіб зробити ваш CSS-файл більш
+                    читабельним. Коли ви сгенеруєте CSS-файл, то на виході ви отримаєте щось на зразок цього:</p>
+
+                    <h3>СИНТАКСИС CSS</h3>
+
+                    <p class="code-wrapper">
+                        nav ul { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;list-style: none; <br>
+                        } <br><br>
+                        
+                        nav li { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block; <br>
+                        } <br><br>
+                        
+                        nav a { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: block; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 6px 12px; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br>
+                        }
+
+                    </p>
+
+                    <p>Бажаємо успіхів!</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/iMDMvHB</span>
+                        <br>
+                        <b>Редактор:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
