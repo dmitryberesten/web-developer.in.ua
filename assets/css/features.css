@@ -216,6 +216,7 @@
   position: relative;
   top: 0.05em;
 }
+
 .features-articles article .icon:after {
   -moz-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);

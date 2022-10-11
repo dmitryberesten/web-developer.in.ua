@@ -119,6 +119,12 @@ ul {
   margin-bottom: 0;
 }
 
+.no-reset-list {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
 blockquote,
 q {
   quotes: none;
