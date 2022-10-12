@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Адаптивний Bootstrap</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Використання css фреймворку Bootstrap для адаптивної верстки</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/bootstrap/bootstrap-responsive/1.png"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: https://goo.su/j5Rlw</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>Від автора: CSS фреймворки багато в чому спрощують завдання верстки сайтів, тому що дозволяють не писати стилі елементів
+                    самостійно, а вибирати з вже існуючих. Давайте розглянемо їх переваги.</p>
+
+                    <h2>Фреймворки у верстці</h2>
+
+                    <p>Сьогодні способів верстки сайту існує набагато більше, ніж раніше. Стандартний метод полягає в тому, щоб самостійно
+                    прописувати всі властивості елементів. Таким чином, можна відтворити будь-який дизайн. Єдиний недолік, це тривалість
+                    розробки. Для реалізації деяких шаблонів тільки у файлах стилів потрібно написати тисячі рядків коду і якщо все це
+                    робити самостійно, то це займе дуже багато часу.</p>
+
+                    <h2>Bootstrap</h2>
+
+                    <p>CSS фреймворк Bootstrap дозволяє дуже сильно заощадити час на розробку, тому що ви витрачаєте час тільки на роботу з
+                    html і прописування потрібних класів, а також на вивчення самого фреймворка. Відповідно, ті, хто знає Bootstrap дуже
+                    добре, можуть зробити шаблон в 3-5 разів швидше звичайного. І плюси фреймворку не обмежуються тільки швидкістю
+                    розробки.</p>
+
+                    <p>Ймовірно, ви розумієте, що сьогодні величезну роль відіграє адаптивність, тобто вміння шаблону змінюватися під різні
+                    екрани. Це зручно як для користувачів, які переглядають ваш ресурс, так і для пошукових машин,
+                    які з недавніх пір ставлять адаптивні сайти вище в пошуку.</p>
+
+                    <p>Відповідно, сьогодні практично відпав попит на фіксовані шаблони, всі переходять на адаптивні, а щоб їх навчитись
+                    робити, потрібно вручну писати медіа-запити. Якщо ж використовувати Bootstrap, то реалізувати адаптивність легше завдяки
+                    вбудованим можливостям фреймворка. Те ж саме стосується і кросбраузерності, тобто однакового відображення сайту в різних
+                    браузерах.</p>
+
+                    <p>На офіційному сайті Bootstrap ви можете його скачати, а також налаштувати під себе, вибравши тільки ті компоненти, які
+                    вам потрібні. Що ж, я хотів би згадати і про деякі <b>мінуси цього інструменту</b>, хоча в цілому вони не повинні вас лякати:</p>
+
+                    <ul class="no-reset-list">
+                        <li><b>Великий розмір файлів.</b> В css файлах фреймворку дуже багато коду, так що навіть його мініфікована версія буде важити не
+                        так вже й мало. Втім, на реальну швидкість сайту це сильно не вплине.</li>
+                        <li>Також я хотів би згадати, що з допомогою Bootstrap <b>навряд чи вийде</b> зробити абсолютно будь-який шаблон і відтворити
+                        будь-який дизайн. Справа в тому, що Bootstrap це набір готових стилів і компонентів. І це не мінус, це просто
+                        необхідність.</li>
+                        <li>Відповідно, якщо вам потрібно щось дійсно супер унікальне, то, швидше за все, <b>доведеться переписувати Bootstrap</b>,
+                        додавати в нього щось нове і змінювати існуюче. Це теж має право на життя, але іноді легше буде зробити з нуля,
+                        особливо в екзотичних випадках.</li>
+                    </ul>
+
+                    <p>Тут я згадаю ще <b>один явний плюс</b> – відкритість коду. Ви можете переписати Bootstrap під свої потреби і ніхто вам нічого
+                    не скаже.</p>
+
+                    <h2>Як навчитися верстати за допомогою Bootstrap</h2>
+
+                    <p>Як ви розумієте, цей інструмент для верстки пропонує досить багато переваг, тому він і є найпопулярнішим і багато
+                    веб-розробників сьогодні його використовують. Якщо ви займаєтеся версткою, то теж повинні бути зацікавлені в його
+                    використанні. Подивіться вакансії по верстці сайтів, і ви виявите, що чи не в кожній другій потрібні знання Bootstrap.</p>
+
+                    <p>Необхідно щоб були хоча б базові знання HTML і CSS, і при належній
+                    старанності ви зможете легко навчитися працювати з фреймворком.</p>
+
+                    <p>Я можу з упевненістю сказати, що Bootstrap є найкращим css фремворком на даний момент, і ймовірно, ще довго буде
+                    залишатися таким. Також він є найпопулярнішим.</p>
+
+                    <h2>Як відбувається робота</h2>
+
+                    <p>По суті, вам всього лише потрібно знати назви стильових класів, в яких містяться потрібні правила для ваших елементів.
+                    Наприклад, якщо вам потрібно зробити блок плаваючим і притиснути до правого краю, то використовуйте клас pull-right,
+                    який потрібно прописати потрібному елементу. У фреймворку є купа готових стилів для кольору, позиції, поведінки на
+                    сторінці і т. д.</p>
+
+                    <p>Практично єдине, що вам доведеться вказувати самим, це розміри різних блоків. Для цього вам потрібно буде створити
+                    окремий css-файл, в який писати відповідні стилі. Але я вже наперед можу сказати, що їх буде небагато. У бутстрапі є
+                    навіть набори стилів, які відповідають за колір елемента. Звичайно, їх не дуже багато, але в цілому ви можете ними
+                    користуватися, або ж додати свої. Я вже говорив, що код повністю відкритий для редагування, так що отримавши фреймворк
+                    ви можете вирізати з нього зайве, або навпаки, додати купу свого – ніхто вам нічого не скаже.</p>
+
+                    <p>З допомогою бутстрапа ви економите масу часу на розробку, тому користуватися ним дуже мудро, якщо ви створюєте прості за
+                    дизайном веб-ресурси, і вникнути в роботу з ним дуже легко, тому беріться за його вивчення, якщо відчуваєте, що подібний
+                    інструмент вам потрібний в роботі. По суті, Bootstrap створений як css фреймворк для адаптивної та кросбраузерної
+                    верстки, що дуже актуально в наші дні. Користуйтеся його перевагами :)</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/vrEt8</span>
+                        <br>
+                        <b>Редактор:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
