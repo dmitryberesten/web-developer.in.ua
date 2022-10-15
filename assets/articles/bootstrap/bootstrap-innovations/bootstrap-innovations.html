@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Нововведення Bootstrap 5</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Вийшов Bootstrap 5: оцінюємо головні нововведення</h1>
+                    </header>
+
+                    <span class="image main"><img
+                            src="/assets/articles/bootstrap/bootstrap-innovations/bootstrap-icons.png"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: https://goo.su/wvGRJ</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>Bootstrap - найпопулярніший у світі CSS-фреймворк з відкритим вихідним кодом, розроблений
+                        командою Twitter. До його нової п'ятої версії внесено відразу кілька критично важливих змін.</p>
+
+                    <p>До випуску Bootstrap 5 пройшло кілька альфа- і бета-версій. У результаті нова версія зазнала
+                        серйозних змін, включаючи відмову від підтримки Internet Explorer (IE) та залежності jQuery.
+                        </p>
+
+                    <h2>1. Відмова від jQuery</h2>
+
+                    <p>Більше Bootstrap не підтримує бібліотеку jQuery. Натомість команда розробників покращила
+                        підтримку бібліотеки JavaScript.
+                        Загалом залежність від jQuery не була в Bootstrap чимось поганим. Навпаки, поява jQuery
+                        радикально змінила спосіб використання JavaScript. Це спростило написання завдань на JavaScript,
+                        які в іншому випадку вимагали багато рядків коду.</p>
+
+                    <p>Попри ці переваги команда вирішила завершити підтримку. Причина: зниження розміру вихідних файлів
+                        та зменшення часу завантаження сторінки, що робить Bootstrap перспективним інструментом.
+
+                        Вихідний файл зменшився на 85 КБ, що дуже важливо, адже Google вважає, що фактор часу завантаження
+                        сторінки для мобільних пристроїв є дуже важливим. За потреби jQuery все одно можна
+                        використовувати. Всі плагіни JavaScript залишаються доступними.</p>
+
+                    <h2>2. Настроювані властивості CSS</h2>
+
+                    <p>Від Internet Explorer відмовилися, а значить, тепер розробники можуть використовувати властивості
+                        CSS, що настроюються, як хочуть і коли хочуть. Проблема IE була в тому, що він не підтримує
+                        кастомні CSS.
+
+                        Відповідно, CSS custom properties роблять CSS більш гнучким та програмованим. Для запобігання
+                        появі конфліктів із сторонніми CSS використовується префікс -bs.</p>
+
+                    <p>Усього доступно два типи змінних: кореневі та компонентні. Що стосується першого класу, то доступ
+                        до них можна отримати скрізь, де завантажено Bootstrap CSS. Ці змінні знаходяться у файлі
+                        root.scss і є частиною скомпілованих файлів dist. Що ж до другого класу, ці змінні локальні
+                        в окремих компонентах. Вони допомагають уникнути випадкового успадкування стилів у таких
+                        компонентах, як вкладені таблиці.</p>
+
+                    <h2>3. Поліпшена система сіток (Grid)</h2>
+
+                    <p>Оскільки при переході з 3 на 4 версію виникли деякі проблеми, v5 зберігає більшу частину системи
+                        сіток, а не повністю оновлює її. Ось деякі зміни:</p>
+
+                    <ul class="no-reset-list">
+                        <li>Замість gutter запровадили нові класи g* для вказівки відступів між осередками.</li>
+                        <li>Також було включено класи вертикального інтервалу.</li>
+                        <li>Стовпці більше не мають дефолтного значення position: relative.</li>
+                    </ul>
+
+                    <h2>4. Поліпшена документація</h2>
+
+                    <p>Розробники додали більше інформації про фреймворк, особливо про його налаштування. У п'ятій
+                        версії покращений зовнішній вигляд та вдосконалене налаштування. Ймовірно, сайт, де
+                        використовується Bootstrap 5, не так легко буде визначити, що він застосовує цю технологію.</p>
+
+                    <p>Розробники додали більше гнучкості в налаштування, щоб сайти не були схожими один на одного. Тему
+                        четвертої версії доопрацювали, додали контент та фрагменти коду для розробки поверх Sass
+                        (популярний препроцесор CSS). Розширена палітра кольорів, користуватися якою тепер простіше.
+                        Зроблено додаткову роботу з покращення колірного розмаїття.</p>
+
+                    <h2>5. Управління формою</h2>
+
+                    <p>Розробники покращили елементи управління формою, input groups та інші компоненти.
+
+                        У попередній версії елементи керування формою використовувалися як доповнення до дефолтних
+                        інструментів браузера. V5 це окрема група елементів управління, включаючи перемикачі, прапорці і
+                        т.п. Зроблено це для того, щоб надати їм однакового вигляду та поведінки в різних браузерах.
+
+                        Нові елементи більше не мають непотрібної розмітки, розробники скористалися стандартними та
+                        логічними функціями.</p>
+
+                    <h2>6. Додавання API-утиліт</h2>
+
+                    <p>Тут розробники Bootstrap не оригінальні, бібліотеки утиліт додали раніше, наприклад, творці
+                        CSS-бібліотеки Tailwind CSS. Команда Bootstrap додала можливість використання утиліт ще у 4
+                        версії, там це було організовано з використанням глобальних класів $enable-*. У новій версії
+                        розробники вирішили перейти на API, нову мову та синтаксис у Sass. Все це дає можливість
+                        створювати власні утиліти, зберігаючи при цьому можливість видаляти або змінювати дефолтні.
+
+                        Для покращення організації процесу роботи деякі утиліти з 4 версії перемістили до Helpers.</p>
+
+                    <h2>7. Нова бібліотека іконок</h2>
+
+                    <p>Ще одне приємне нововведення — додавання відкритої бібліотеки іконок, що містить понад 1300
+                        елементів. Оскільки бібліотека відкрита, користувачі можуть модифікувати іконки на свій смак.
+
+                        Оскільки це зображення SVG, їх можна швидко масштабувати та модифікувати, а також стилізувати за
+                        допомогою CSS.</p>
+
+                    <h2>Дещо ще:</h2>
+
+                    <p>Окрім зазначених нововведень, команда представила ще кілька:</p>
+
+                    <ul class="no-reset-list">
+                        <li>Новий логотип. Іронізуючи над цим досягненням, самі розробники помістили новинку на перше
+                            місце у списку.</li>
+                        <li>Новий компонент offcanvas. Він поставляється з фоном, body scroll і розміщенням. Компоненти
+                            offcanvas можна розмістити з різних сторін від viewport. Налаштовуються параметри за
+                            допомогою атрибутів даних або JavaScript API.</li>
+                        <li>.Accordion, заснований на .card, замінили реалізацією .accordion без .card. Новинка все ж
+                            таки використовує плагін Collapse JavaScript, але з кастомними HTML і CSS.</li>
+                    </ul>
+
+                    <p>Завантажити Bootstrap 5 можна з офіційної сторінки фреймворку.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/ORyfZmB</span>
+                        <br>
+                        <b>Переклад:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
