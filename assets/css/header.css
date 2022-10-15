@@ -47,4 +47,10 @@
   }
 }
 
+@media screen and (max-width: 440px) {
+  .main-heading {
+    font-size: 2.2em !important;
+  }
+}
+
 
