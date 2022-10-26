@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Інструменти JavaScript, про які незаслужено мало говорять</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розроблено</strong> від Дмитра Берестеня</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Інструменти JavaScript, про які незаслужено мало говорять</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/js/js-tools/1.png" alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: https://goo.su/PMAw</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>У програмуванні, і особливо JavaScript, регулярно з'являються нові бібліотеки, технології,
+                        підходи. Деколи буває складно встежити за тим, що відбувається. Я викладаю JavaScript і за
+                        обов'язком служби тримаю руку на пульсі. У цій статті я розгляну зручні інструменти JavaScript,
+                        про які ви не могли знати.</p>
+
+                    <h2>Не такі вже відомі методи console</h2>
+
+                    <p>Деколи корисно заглянути в документацію на щось широко відоме. Іноді там можна знайти дуже цікаві
+                        речі! Поряд з усіма знайомими <code>console.log()</code> і <code>console.dir()</code> є ще
+                        кілька зручних методів, які варто знати.</p>
+
+                    <h2>Метод console.time()</h2>
+
+                    <p>Щоб підрахувати тривалість операції, можна використати метод <code>console.time()</code>. Він
+                        приймає як аргумент унікальне ім'я таймера. Потім таймер можна зупинити за допомогою
+                        <code>console.timeEnd()</code>. Час, який минув між цими двома викликами, буде виведений у
+                        консоль.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/js/js-tools/2.webp" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/ZIClf
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Можна запускати до 10 000 різних таймерів одночасно, а також виводити поточне значення таймера,
+                        не зупиняючи його за допомогою <code>console.timeLog(<name>)</code>.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/js/js-tools/3.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/roti
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Метод console.count()</h2>
+
+                    <p>Цей метод виводить у консоль кількість разів, яку він був викликаний. Він не був би такий
+                        корисний, якби не приймав ім'я лічильника як аргумент.
+
+                        Можна зробити скільки завгодно лічильників. Вам більше не потрібно турбуватися про те, де
+                        зберігати всі ці тимчасові змінні.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/js/js-tools/4.webp" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/TIw2mq
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Метод console.table()</h2>
+
+                    <p><code>console.table(&lt;data&gt;)</code> дозволяє вивести в консоль дані у вигляді гарної
+                        таблички. Цінність у тому, що він приймає дані у найрізноманітніших форматах: працюють і прості
+                        масиви, і масиви в масивах, і масиви об'єктів, і купа інших варіантів.
+
+                        Цей метод не стандартизований і може працювати по-різному залежно від середовища, в якому ви
+                        запускаєте код. Десь він може й не працювати зовсім. Однак це не скасовує його корисності при
+                        налагодженні.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/js/js-tools/5.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/L68cLw
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Метод console.group()</h2>
+
+                    <p>Цей інструмент JavaScript може стати в нагоді тим, хто любить оформляти не тільки сайти, а й
+                        повідомлення в консолі. <code>console.group()</code> зсуває всі наступні повідомлення в консолі
+                        трохи праворуч, візуально відокремлюючи блоки один від одного. Скасувати зсув можна за допомогою
+                        методу <code>console.groupEnd()</code>. Конкретне відображення зсуву залежить від середовища, що
+                        може додавати свої деталі реалізації. Наприклад, у Google Chrome ці групи можна згортати та
+                        задавати їм довільні імена за допомогою першого аргументу:
+                        <code>console.group('MyGroup')</code>.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive" src="/assets/articles/js/js-tools/6.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            https://goo.su/mi1V
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Модуль cluster в Node.js</h2>
+
+                    <p>Напевно, одне з найчастіших застосувань Node.js – це написання веб-серверів. Для цього завдання
+                        event loop, на основі якого побудовано Node.js, підходить ідеально. Але цей підхід має свої
+                        обмеження: наприклад, неможливість використання кількох ядер процесора. Однак у вбудованій
+                        бібліотеці Node.js є рішення і для таких ситуацій модуль <b>cluster</b>.</p>
+
+                    <p>Цей модуль дозволяє легко створити кілька дочірніх процесів, які будуть використовувати один і
+                        той же серверний порт. Операційна система розподілить їх за різними ядрами процесора. Так ви
+                        можете використовувати ресурси комп'ютера на максимум.
+
+                        Звісно, ​​нічого не дається безкоштовно. Використання cluster накладає певні обмеження на
+                        структуру вашого сервера: більше не вийде використовувати стан, що зберігається в пам'яті, тому
+                        що кожен дочірній процес має свою власну пам'ять. Натомість ми отримуємо можливість легко
+                        врівноважувати навантаження без використання додаткових програм, таких як nginx.</p>
+
+                    <p>І хоча основне призначення кластера - це управління додатками, що працюють з мережею, його,
+                        звичайно, можна використовувати і для будь-яких інших програм, які хочуть працювати відразу на
+                        кількох ядрах процесора.</p>
+
+                    <h2>Модуль vm в Node.js і isolated-vm</h2>
+
+                    <p>Іноді виникає потреба запускати недовірений код. Наприклад, нам у Bootcamp потрібно автоматично
+                        перевіряти код, написаний студентами під час перевірочних робіт. У таких ситуаціях було б класно
+                        налаштувати все так, щоб код не міг натворити щось погане в системі перевірки.
+
+                        Перше, що спадає на думку в такі моменти, це різні механізми захисту на рівні операційної
+                        системи. Обговорення їх використання та налаштування виходить за межі цієї статті.</p>
+
+                    <p>Друге, про що ви можете згадати, це вбудований у Node.js модуль vm. Він дозволяє створювати
+                        ізольовані контексти всередині однієї програми. На жаль, сила vm обмежується ізоляцією
+                        контексту. Він не призначений для запуску потенційно шкідливого коду, про що прямим текстом
+                        сказано в перших рядках документації.
+
+                        Я пропоную вам у таких випадках розглянути npm-модуль isolated-vm, який вирішує майже всі
+                        проблеми, пов'язані з ізоляцією недовіреного JavaScript-коду. Цей модуль дозволяє забезпечити
+                        справжню ізоляцію та контроль пам'яті, що споживається. Він багатопотоковий і, що найголовніше,
+                        використовується в кількох великих проектах, а отже, добре випробуваний на практиці.</p>
+
+                    <p>З погляду продуктивності теж все добре, тому що він використовує систему ізоляції, вбудовану в
+                        V8, за допомогою якої ізолюється JavaScript-код різних сайтів. За допомогою isolated-vm можна
+                        ізолювати не лише недовірений код, а й код, який потенційно вразливий, або якщо ви не впевнені в
+                        його якості. Що, втім, не скасовує рекомендації запускати такий код окремою машиною.</p>
+
+                    <h2>Модуль inspector в Node.js</h2>
+
+                    <p>Ще один інструмент JavaScript - профайлер. Знайти його можна у Chrome DevTools у вкладці
+                        Performance. Цей інструмент дозволяє зібрати докладну інформацію про те, як виконувався ваш код.
+                        Скільки часу зайняло виконання кожної функції. Як і що виконувалося. Як виділялася та
+                        звільнялася пам'ять. Коли запускався збирач сміття та як це впливало на швидкість виконання.</p>
+
+                    <p>Але часто буває складно розібратися у величезному масиві інформації, яку ми отримуємо після
+                        профілювання. У такому разі корисно знати, що профайлер можна запускати ще програмно! Таким
+                        чином можна дуже тонко контролювати момент початку та закінчення профілювання та отримувати саму
+                        релевантну інформацію.
+
+                        Такий спосіб можна використовувати для тимчасового вмикання профільника навіть на продакшені.
+                        Головне не забудьте, що він дуже сильно навантажує процесор.</p>
+
+                    <p>Бажаємо успіхів!</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/443TRRy</span>
+                        <br>
+                        <b>Переклад:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Search -->
+                <!-- <section id="search" class="alt">
+											<form method="post" action="#">
+												<input type="text" name="query" id="query" placeholder="Search" />
+											</form>
+										</section> -->
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/../index.html">Головна</a></li>
+                        <li><a href="/../articles.html">Статті</a></li>
+                        <li><a href="/../generic.html">Загальна</a></li>
+                        <li><a href="/../elements.html">Елементи</a></li>
+                        <li>
+                            <span class="opener">Підменю</span>
+                            <ul>
+                                <li><a href="#">Lorem Dolor</a></li>
+                                <li><a href="#">Ipsum Adipiscing</a></li>
+                                <li><a href="#">Tempus Magna</a></li>
+                                <li><a href="#">Feugiat Veroeros</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Відео</a></li>
+                        <li><a href="#">Лайфхаки</a></li>
+                        <li><a href="#">Блог</a></li>
+
+                        <li><a href="#">Цікавинки</a></li>
+                        <li><a href="#">Генератор</a></li>
+                        <li><a href="#">Про нас</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Ante interdum</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic07.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic08.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="/../images/pic09.jpg" alt="" /></a>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Більше</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої навчальної платформи - ви
+                        можете
+                        написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://github.com/dmitryberesten" class="icon brands fa-github"> dmitryberesten</a>.
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
