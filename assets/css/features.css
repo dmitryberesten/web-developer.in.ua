@@ -86,6 +86,7 @@
 }
 .features article .content > :last-child {
   margin-bottom: 0;
+  color: #7f888f;
 }
 @media screen and (max-width: 980px) {
   .features {

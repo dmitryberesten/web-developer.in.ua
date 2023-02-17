@@ -17,3 +17,8 @@
   padding: 0;
 }
 
+.block-article {
+  text-decoration: none;
+  color: black !important;
+  border: none;
+}
