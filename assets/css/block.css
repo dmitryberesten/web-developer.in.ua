@@ -2,3 +2,9 @@ h1 {
     /* background-color: blue; */
 }
 
+.text_center {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+}
+
