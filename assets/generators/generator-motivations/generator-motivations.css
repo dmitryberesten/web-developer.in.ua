@@ -1,0 +1,30 @@
+#random-phrase {
+    display: flex;
+    flex-direction:column;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1px auto;
+    /* position: absolute; */
+    padding: 15px;
+    font-size: 1.3em;
+    font-style: italic;
+    border: 1px solid #ddd;
+  }
+  
+  #random-phrase #phrase {
+    text-align: center;
+  }
+  
+  #random-phrase #author {
+
+    text-align: center;
+  }
+  
+  #next-quote {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    padding: 0px 35px;
+    border: 1px solid #ddd;
+  }
