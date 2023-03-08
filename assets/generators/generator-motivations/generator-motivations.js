@@ -1,9 +1,19 @@
-document.getElementById("next-quote").addEventListener("click", function() {
-   
-    let quote = quotes[ Math.floor( Math.random() * quotes.length ) ];
-    let phrase = document.querySelector("#phrase");
-    let author = document.querySelector("#author");
 
-    phrase.innerHTML = quote[0];
-    author.innerHTML = quote[1];  
-});
+
+function getRandomQuote() {
+  let randomNumber = Math.floor(Math.random() * quotes.length);
+  let randomQuote = quotes[randomNumber];
+  return randomQuote;
+}
+
+function renderQuote() {
+  let quotes = getRandomQuote();
+  let quoteContainer = document.getElementById("quote-box");
+  let quoteString = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}`;
+
+  quoteContainer.innerHTML = quoteString;
+}
+
+document
+  .getElementById("loadQuote")
+  .addEventListener("click", renderQuote);

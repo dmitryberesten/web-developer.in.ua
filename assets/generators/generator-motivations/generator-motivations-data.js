@@ -1,31 +1,20 @@
 let quotes = [
-    [
-        "Благородные люди, друг друга любя,      \
-        Видят горе других, забывают себя.        \
-        Если чести и блеска зеркал ты желаешь, — \
-        Не завидуй другим, — и возлюбят тебя.",
-
-        "&copy; Омар Хайям"
-    ],
-
-    [
-        "Добродетель мудрецов напоминает собой путешествие в дальннюю страну \
-        и восхождение на вершину: идущие                                     \
-        в дальнюю страну начинают свой путь с первого шага;                  \
-        восходящие на вершину начинают с подножия горы.",
-
-        "&copy; Конфуций"
-    ],
-
-    [
-        "Если вы хотите успеха, а готовитесь к поражению, то вы получите как раз то, к чему готовитесь.",
-
-        "&copy; Флоренс Шин"
-    ],
-
-    [
-        "Мы – рабы своих привычек. измени свои привычки, изменится твоя жизнь.",
-
-        "&copy; Роберт Кийосаки"
-    ]
-];
+    {
+      quote:
+        "Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.",
+      source: "Dr. Seuss",
+    },
+    {
+      quote: "This too, shall pass.",
+      source: "Anonymous",
+    },
+    {
+      quote: "Keep your eyes on the stars and your feet on the ground.",
+      source: "Theodore Roosevelt",
+    },
+    {
+      quote:
+        "The only person you should try to be better than is the person you were yesterday.",
+      source: "Anonymous",
+    },
+  ];
