@@ -1,4 +1,4 @@
-#quote-box {
+#joke-box {
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -9,16 +9,16 @@
   border: 1px solid #ddd;
 }
 
-.quote {
-  text-align: center;
-}
-
-.source {
+.joke {
   text-align: center;
   margin-bottom: 0;
 }
 
-#loadQuote {
+.source {
+  text-align: center;
+}
+
+#loadJoke {
   display: block;
   margin-right: auto;
   margin-left: auto;
