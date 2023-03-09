@@ -1,0 +1,29 @@
+#meme-box {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1px auto;
+  padding: 15px;
+  font-size: 1.3em;
+  border: 1px solid #ddd;
+}
+
+.meme {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.source {
+  text-align: center;
+}
+
+#loadMeme {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0px 35px;
+  border: 1px solid #ddd;
+}
