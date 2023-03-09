@@ -1,5 +1,3 @@
-
-
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * quotes.length);
   let randomQuote = quotes[randomNumber];
@@ -9,7 +7,7 @@ function getRandomQuote() {
 function renderQuote() {
   let quotes = getRandomQuote();
   let quoteContainer = document.getElementById("quote-box");
-  let quoteString = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}`;
+  let quoteString = `<p class="quote"><b>${quotes.quote}</b></p><p class="source">${quotes.source}`;
 
   quoteContainer.innerHTML = quoteString;
 }
