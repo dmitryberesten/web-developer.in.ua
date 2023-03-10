@@ -1,80 +1,152 @@
 let memes = [
   {
-    src: "./album/about-us.JPG",
+    src: "./album/1.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/2.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/3.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/4.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/5.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/6.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/7.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/8.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/9.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/10.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/11.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/12.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/13.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/14.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/15.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/16.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/17.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/18.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/19.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/20.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/21.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/22.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/23.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/24.png",
   },
   {
-    src: "./album/about-us.JPG",
+    src: "./album/25.png",
   },
   {
-    src: "https://fakty.com.ua/wp-content/uploads/2016/11/21/00-e1479746930639-768x472.jpg",
+    src: "./album/26.png",
+  },
+  {
+    src: "./album/27.png",
+  },
+  {
+    src: "./album/28.png",
+  },
+  {
+    src: "./album/29.png",
+  },
+  {
+    src: "./album/30.png",
+  },
+  {
+    src: "./album/31.png",
+  },
+  {
+    src: "./album/32.png",
+  },
+  {
+    src: "./album/33.png",
+  },
+  {
+    src: "./album/34.png",
+  },
+  {
+    src: "./album/35.png",
+  },
+  {
+    src: "./album/36.png",
+  },
+  {
+    src: "./album/37.png",
+  },
+  {
+    src: "./album/38.png",
+  },
+  {
+    src: "./album/39.png",
+  },
+  {
+    src: "./album/40.png",
+  },
+  {
+    src: "./album/41.png",
+  },
+  {
+    src: "./album/42.png",
+  },
+  {
+    src: "./album/43.png",
+  },
+  {
+    src: "./album/44.png",
+  },
+  {
+    src: "./album/45.png",
+  },
+  {
+    src: "./album/46.png",
+  },
+  {
+    src: "./album/47.png",
+  },
+  {
+    src: "./album/48.png",
+  },
+  {
+    src: "./album/49.png",
+  },
+  {
+    src: "./album/50.png",
   },
 ];

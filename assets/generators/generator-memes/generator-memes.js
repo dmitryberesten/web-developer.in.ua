@@ -7,7 +7,7 @@ function getRandomMeme() {
 function renderMeme() {
   let memes = getRandomMeme();
   let memeContainer = document.getElementById("meme-box");
-  let memeString = `<img src="${memes.src}">`;
+  let memeString = `<img src="${memes.src}" class="src">`;
 
   memeContainer.innerHTML = memeString;
 }
