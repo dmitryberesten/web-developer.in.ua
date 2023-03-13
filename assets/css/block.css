@@ -1,10 +1,42 @@
-h1 {
-    /* background-color: blue; */
-}
-
 .text_center {
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
 }
 
+.image-preview {
+    border-radius: 20px;
+    box-shadow: 0 0 4px 1px #3668e8;
+}
+
+.color-logo {
+    color: red;
+}
+
+.center-text__desc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hr-custom {
+    margin-bottom: 3em;
+    padding-bottom: 3em 0;
+    border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+}
+
+.info-text {
+    color: #3668e8;
+}
+
+.center-div {
+    /* display: block; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
