@@ -359,3 +359,7 @@
     font-size: 1.25rem;
   }
 }
+
+.features article .radius::after {
+  border-radius: 50%;
+}

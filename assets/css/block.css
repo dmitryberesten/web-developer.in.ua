@@ -31,3 +31,31 @@
 .info-text {
     color: #3668e8;
 }
+
+.description-video {
+    margin-top: 2em;
+}
+
+.height-video {
+    box-sizing: border-box;
+    height: 620px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .height-video {
+        height: 390px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .height-video {
+        height: 290px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .height-video {
+        height: 190px;
+    }
+}
