@@ -365,7 +365,7 @@
 }
 
 /* ANIMATION */
-.article-link .block-article .rotate-center:hover {
+.rotate-center:hover {
   -webkit-animation: rotate-center 0.6s ease-in-out both;
   animation: rotate-center 0.6s ease-in-out both;
 }
