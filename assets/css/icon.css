@@ -1,10 +1,10 @@
-
 /* Icon */
 .icon {
   text-decoration: none;
   border-bottom: none;
   position: relative;
 }
+
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -17,22 +17,26 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
-.icon > .label {
+
+.icon>.label {
   display: none;
 }
+
 .icon:before {
   line-height: inherit;
 }
+
 .icon.solid:before {
   font-weight: 900;
 }
+
 .icon.light:before {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 600;
   font-display: block;
 }
+
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
 }
-

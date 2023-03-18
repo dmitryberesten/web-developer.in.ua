@@ -126,8 +126,7 @@ button:disabled,
   margin-top: 4em;
 }
 
-/* .button:hover {} */
-
+/* ANIMATION */
 .pulsate-fwd,
 .button:hover {
   -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
@@ -165,5 +164,36 @@ button:disabled,
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+
+.scale-up-center,
+.menu-item__btn:hover {
+  -webkit-animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
