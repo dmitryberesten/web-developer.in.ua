@@ -59,3 +59,21 @@
   border: 3px solid white;
 }
 /* -------------CUSTOM-SCROLLBAR-[END]------------- */
+
+/* -------------CUSTOM-SELECTION-[START]------------- */
+h1::selection {
+  color: #3668e8;
+}
+
+h2::selection {
+  color: #3668e8;
+}
+
+h3::selection {
+  color: #3668e8;
+}
+
+p::selection {
+  color: #3668e8;
+}
+/* -------------CUSTOM-SELECTION-[END]------------- */
