@@ -37,7 +37,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-  background-color: rgba(245, 106, 106, 0.05);
+  background-color: rgba(106, 152, 245, 0.05);
 }
 
 input[type="submit"]:active,
