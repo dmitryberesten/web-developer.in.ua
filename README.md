@@ -4,7 +4,7 @@
   
   
   
-## Головна сторінка:
+<center>## Головна сторінка:<center/>
 ![1](https://user-images.githubusercontent.com/87872240/230664983-81999461-78c5-4c34-9586-eadb808dd5bd.png)
 
 ## Статті:
