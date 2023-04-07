@@ -1,5 +1,5 @@
 <h1 align="center">www.web-developer.in.ua </h1>
-Навчальна платформа для всіх, хто вивчає веб розробку. Статті, приклади, поради. Український сервіс. Автор Дмитро Берестень. 
+Освітня платформа для всіх, хто вивчає веб розробку. Статті, приклади, поради. Український сервіс. Автор Дмитро Берестень. 
 <br><br/>  
   
   
@@ -17,7 +17,7 @@
 ![4](https://user-images.githubusercontent.com/87872240/230665101-27ee1d3a-193a-4ab6-afa0-c5c64f34f0c4.png)
 
 Наприклад сервіси:
-![5](https://user-images.githubusercontent.com/87872240/230665141-2ed1fa86-c3d2-448c-9add-c2e2298834b0.png)
+![5](https://user-images.githubusercontent.com/87872240/230676044-60b83907-2b6f-4963-ab68-a323af9483ca.png)
 
 Подкасти:
 ![6](https://user-images.githubusercontent.com/87872240/230665178-d57bc709-96df-4490-9e37-855e0c184ddd.png)
