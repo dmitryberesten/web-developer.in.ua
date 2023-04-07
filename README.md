@@ -21,4 +21,4 @@
 ![6](https://user-images.githubusercontent.com/87872240/230665178-d57bc709-96df-4490-9e37-855e0c184ddd.png)
 
 Генератор мемів:
-![7](https://user-images.githubusercontent.com/87872240/230665195-7f684053-db9a-4a7a-b7aa-fd2e35faab05.png)
+![7](https://user-images.githubusercontent.com/87872240/230665715-a3728def-d781-4e41-afca-59379d6d15c2.png)
