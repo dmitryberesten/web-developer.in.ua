@@ -6,7 +6,6 @@
  <h2 align="center">Головна сторінка:</h2>
 ![1](https://user-images.githubusercontent.com/87872240/230677349-78926432-fee9-4595-beeb-1e04cf50e267.png)
 
-## Статті:
 ![2](https://user-images.githubusercontent.com/87872240/230665544-682ce9b5-e978-4806-a0d1-b5c738a20f22.png)
 
 ## Відео-уроки:
