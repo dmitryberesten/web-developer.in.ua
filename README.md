@@ -6,7 +6,7 @@
 ![1](https://user-images.githubusercontent.com/87872240/230664983-81999461-78c5-4c34-9586-eadb808dd5bd.png)
 
 Статті:
-![2](https://user-images.githubusercontent.com/87872240/230665014-260fcb99-51de-4654-a4ef-38b54e9f084f.png)
+![2](https://user-images.githubusercontent.com/87872240/230665544-682ce9b5-e978-4806-a0d1-b5c738a20f22.png)
 
 Відео-уроки:
 ![3](https://user-images.githubusercontent.com/87872240/230665049-d60399c7-0af2-48dc-b527-f90b80865b8f.png)
