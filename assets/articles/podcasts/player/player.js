@@ -47,28 +47,30 @@
     const audio = document.getElementById(currentAudio);
     const percentage = (audio.currentTime / audio.duration).toFixed(3);
     progressBar.style.transition = "";
-    // console.log(audio.currentTime);
-
+  
     //set current time
-    const minute = Math.floor(audio.currentTime / 60);
+    const hour = Math.floor(audio.currentTime / 3600);
+    const minute = Math.floor(audio.currentTime / 60) % 60;
     const second = Math.floor(audio.currentTime % 60);
     const leftTime = audio.duration - audio.currentTime;
     currentTimeIndicator.innerHTML =
-      ("0" + minute).substr(-2) + ":" + ("0" + second).substr(-2);
-
+      ("0" + hour).substr(-2) + ":" + ("0" + minute).substr(-2) + ":" + ("0" + second).substr(-2);
+  
     //set left time
-    const leftMinute = Math.floor(leftTime / 60);
+    const leftHour = Math.floor(leftTime / 3600);
+    const leftMinute = Math.floor(leftTime / 60) % 60;
     const leftSecond = Math.floor(leftTime % 60);
-
     leftTimeIndicator.innerHTML =
-      ("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
-
+      ("0" + leftHour).substr(-2) + ":" + ("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
+  
     //set time bar
     progressBar.style.width = percentage * 100 + "%";
   }
+  
+  
 
   function showTime() {
-    timer = setInterval(() => changeBar(), 500);
+    timer = setInterval(() => changeBar(), 1000);
   }
 
   function nextMusic(mode) {
@@ -208,11 +210,13 @@
 
     //set current time
     audio.addEventListener("loadedmetadata", function () {
-      const leftMinute = Math.floor(audio.duration / 60);
+      const leftHour = Math.floor(audio.duration / 3600);
+      const leftMinute = Math.floor(audio.duration / 60) % 60;
       const leftSecond = Math.floor(audio.duration % 60);
-      currentTimeIndicator.innerHTML = "00:00";
+      currentTimeIndicator.innerHTML = "00:00:00";
+
       leftTimeIndicator.innerHTML =
-        ("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
+      ("0" + leftHour).substr(-2) + ":" + ("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
       progressBar.style.transition = "";
     });
 
