@@ -66,8 +66,6 @@
     //set time bar
     progressBar.style.width = percentage * 100 + "%";
   }
-  
-  
 
   function showTime() {
     timer = setInterval(() => changeBar(), 1000);

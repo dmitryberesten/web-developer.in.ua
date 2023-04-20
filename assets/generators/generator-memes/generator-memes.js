@@ -7,9 +7,25 @@ function getRandomMeme() {
 function renderMeme() {
   let memes = getRandomMeme();
   let memeContainer = document.getElementById("meme-box");
-  let memeString = `<img src="${memes.src}" class="src">`;
+  let memeImg = document.getElementById("meme-img");
+  memeImg.src = memes.src;
 
-  memeContainer.innerHTML = memeString;
+  let spinner = document.getElementById("spinner");
+  spinner.style.display = "none";
+
+  setTimeout(() => {
+    memeImg.classList.add("show");
+  }, 1000);
 }
 
-document.getElementById("loadMeme").addEventListener("click", renderMeme);
+document.getElementById("loadMeme").addEventListener("click", function () {
+  let spinner = document.getElementById("spinner");
+  spinner.style.display = "block";
+
+  let memeImg = document.getElementById("meme-img");
+  memeImg.classList.remove("show");
+
+  setTimeout(renderMeme, 1000);
+});
+
+window.addEventListener("load", renderMeme);

@@ -5,7 +5,7 @@
     <title>Генератор ІТ-мемів:</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="./generator-memes.css">
     <link rel="stylesheet" href="/../assets/css/main.css" />
 </head>
@@ -36,28 +36,30 @@
                     </ul>
                 </header>
 
-                <!-- Section -->
-                <section>
+                <section class="relative-block">
                     <header class="major">
                         <h2>Генератор ІТ-мемів:</h2>
                     </header>
-                    
+
                     <div id="meme-box">
-                        <p class="meme"></p>
-                        <img class="src" src="./album/1.png"/>
+                        <img id="meme-img" src="" class="src">
                     </div>
+
                     <button id="loadMeme">Генерувати</button>
-                    
+
+                    <div id="spinner"></div>
+
+
                 </section>
 
-        
+
             </div>
         </div>
 
         <!-- Sidebar -->
         <div id="sidebar">
             <div class="inner">
-                
+
                 <nav id="menu">
                     <header class="major">
                         <h2>Меню</h2>
@@ -121,8 +123,9 @@
                             <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
                         </article>
                         <article>
-                            <a href="../../articles/bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../articles/bootstrap/bootstrap-responsive/1.png" alt="" /></a>
+                            <a href="../../articles/bootstrap/bootstrap-responsive/bootstrap-responsive.html"
+                                class="image"><img src="../../articles/bootstrap/bootstrap-responsive/1.png"
+                                    alt="" /></a>
                             <a href="../../articles/bootstrap/bootstrap-responsive/bootstrap-responsive.html">
                                 <h3>Використання Bootstrap для адаптивної верстки</h3>
                             </a>
