@@ -26,3 +26,37 @@
   padding: 0px 35px;
   border: 1px solid #ddd;
 }
+
+#spinner {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border: 8px solid rgba(200, 232, 40, 0.815);
+  border-top-color: rgb(28, 60, 176);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fact-box {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
