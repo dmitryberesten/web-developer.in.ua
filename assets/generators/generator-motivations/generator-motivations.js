@@ -10,8 +10,20 @@ function renderQuote() {
   let quoteString = `<p class="quote"><b>${quotes.quote}</b></p><p class="source">${quotes.source}`;
 
   quoteContainer.innerHTML = quoteString;
+
+  let spinner = document.getElementById("spinner");
+  spinner.style.display = "block";
+
+  quoteContainer.classList.remove("show");
+
+  setTimeout(() => {
+    spinner.style.display = "none";
+    quoteContainer.classList.add("show");
+  }, 1000);
 }
 
-document
-  .getElementById("loadQuote")
-  .addEventListener("click", renderQuote);
+document.getElementById("loadQuote").addEventListener("click", function () {
+  renderQuote();
+});
+
+window.addEventListener("load", renderQuote);
