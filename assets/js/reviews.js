@@ -35,7 +35,7 @@ const reviews = [
   },
   {
     name: "Anton Bondar",
-    position: "Frontend Developer/React Developer",
+    position: "Frontend Developer",
     photo: "../../images/rewievs/6.jpg",
     review:
       "Круто!!!",
@@ -77,7 +77,7 @@ const reviews = [
   },
   {
     name: "Viktoriia Serkiz",
-    position: "Junior Front-end Developer (JS, React)",
+    position: "Junior Front-end Developer",
     photo: "../../images/rewievs/12.jpg",
     review:
       "Дуже крута ідея! Молодці)",
