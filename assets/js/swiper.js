@@ -12,7 +12,7 @@ nextButton.addEventListener("click", () => {
 
 // функція, яка генерує HTML-код для слайда
 function createSlide({ name, position, photo, review }) {
-  return `<div class="swiper-slide"> <img src="${photo}" alt="${name}" loading="lazy"> <h4>${name}</h4> <p>${position}</p> <p><i>${review}</i></p> </div> `;
+  return `<div class="swiper-slide"> <img src="${photo}" alt="${name}"> <h4>${name}</h4> <p>${position}</p> <p><i>${review}</i></p> </div> `;
 }
 
 // перемішуємо масив reviews
