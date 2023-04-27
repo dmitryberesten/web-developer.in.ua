@@ -97,7 +97,7 @@ const reviews = [
       "Дякую! Дуже круто!",
   },
   {
-    name: "Evgeniya Vazhina (Danilova)",
+    name: "Evgeniya Vazhina",
     position: "HR/L&D",
     photo: "../../images/rewievs/15.jpg",
     review:

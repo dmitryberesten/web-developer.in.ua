@@ -68,13 +68,13 @@
 @media screen and (max-width: 768px) {
     .swiper-button-prev::after {
         font-size: 25px;
-        padding-left: 0px;
+        padding-left: -10px;
 
     }
 
     .swiper-button-next::after {
         font-size: 25px;
-        padding-right: 0px;
+        padding-right: -10px;
     }
 }
 
