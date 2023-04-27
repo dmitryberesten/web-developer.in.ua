@@ -13,6 +13,10 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	
+
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -208,7 +212,24 @@
 							</ul>
 						</article>
 					</div>
+
 				</section>
+
+				<div>
+
+					<header class="major">
+						<h2>Відгуки:</h2>
+					</header>
+					
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+						</div>
+						<!-- <div class="swiper-pagination"></div> -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+
 
 			</div>
 		</div>
@@ -220,29 +241,42 @@
 						<h2>Меню</h2>
 					</header>
 					<ul>
-						<li class="menu-item__btn"><a href="index.html"><i class="fa-solid fa-house"></i> Головна</a></li>
-						<li class="menu-item__btn"><a href="articles.html"><i class="fa-regular fa-file-lines"></i> Статті</a></li>
-						<li class="menu-item__btn"><a href="./lessons.html"><i class="fa-solid fa-film"></i> Уроки</a></li>
-						<li class="menu-item__btn"><a href="./services.html"><i class="fa-solid fa-pen-ruler"></i> Cервіси</a></li>
-						<li class="menu-item__btn"><a href="./assets/articles/podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
+						<li class="menu-item__btn"><a href="index.html"><i class="fa-solid fa-house"></i> Головна</a>
+						</li>
+						<li class="menu-item__btn"><a href="articles.html"><i class="fa-regular fa-file-lines"></i>
+								Статті</a></li>
+						<li class="menu-item__btn"><a href="./lessons.html"><i class="fa-solid fa-film"></i> Уроки</a>
+						</li>
+						<li class="menu-item__btn"><a href="./services.html"><i class="fa-solid fa-pen-ruler"></i>
+								Cервіси</a></li>
+						<li class="menu-item__btn"><a href="./assets/articles/podcasts/podcasts.html"><i
+									class="fa-solid fa-podcast"></i>
 								Подкасти</a></li>
-						<li> 
-							<span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i> Генератори</span>
+						<li>
+							<span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
+								Генератори</span>
 							<ul>
-								<li class="menu-item__btn"><a href="./assets/generators/generator-memes/generator-memes.html"><i
+								<li class="menu-item__btn"><a
+										href="./assets/generators/generator-memes/generator-memes.html"><i
 											class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-								<li class="menu-item__btn"><a href="./assets/generators/generator-jokes/generator-jokes.html"><i
+								<li class="menu-item__btn"><a
+										href="./assets/generators/generator-jokes/generator-jokes.html"><i
 											class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-								<li class="menu-item__btn"><a href="./assets/generators/generator-motivations/generator-motivations.html"><i
+								<li class="menu-item__btn"><a
+										href="./assets/generators/generator-motivations/generator-motivations.html"><i
 											class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-								<li class="menu-item__btn"><a href="./assets/generators/generator-facts/generator-facts.html"><i
+								<li class="menu-item__btn"><a
+										href="./assets/generators/generator-facts/generator-facts.html"><i
 											class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
 							</ul>
 						</li>
-						<li class="menu-item__btn"><a href="./assets/articles/bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
+						<li class="menu-item__btn"><a href="./assets/articles/bloggers/bloggers.html"><i
+									class="fa-brands fa-youtube"></i>
 								Українські ІТ-ютубери</a></li>
-						<li class="menu-item__btn"><a href="./donate.html"><i class="fa-solid fa-hand-holding-dollar"></i> Донат</a></li>
-						<li class="menu-item__btn"><a href="./about-us.html"><i class="fa-solid fa-user-group"></i> Про нас</a></li>
+						<li class="menu-item__btn"><a href="./donate.html"><i
+									class="fa-solid fa-hand-holding-dollar"></i> Донат</a></li>
+						<li class="menu-item__btn"><a href="./about-us.html"><i class="fa-solid fa-user-group"></i> Про
+								нас</a></li>
 					</ul>
 				</nav>
 
@@ -323,6 +357,8 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/reviews.js"></script>
+	<script src="assets/js/swiper.js"></script>
 
 </body>
 
