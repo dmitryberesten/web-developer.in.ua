@@ -259,16 +259,106 @@
                     <p>Для кожного інтернаціоналізованого лейблу має бути відповідні entries, налаштовані для всіх мов.
                     </p>
 
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive"
+                            src="/assets/articles/react/react-internationalization/5.png" alt="стартап">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+
+                    <p><b>Порада:</b> <a
+                            href="https://next-intl-docs.vercel.app/docs/usage/typescript"><mark>next-intl</mark></a>
+                        надає <a href="https://next-intl-docs.vercel.app/docs/usage/typescript">TypeScript
+                            інтеграцію</a>, яка допомагає переконатися, що ви вказуєте лише валідні ключі.</p>
+
+                    <p>Тільки-но ви це зробили, то ми вже можемо відвідати іспанську версію вашого додатку додавши у
+                        кінці посилання <mark>/es</mark>.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive"
+                            src="/assets/articles/react/react-internationalization/6.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/gsvil
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Вже непогано!</p>
+
+                    <h2>Додаємо інтерактивність: динамічний порядок фотографій</h2>
+
+                    <p>За замовчуванням, Unsplash API повертає найпопулярніші фотографії. Але ми хочемо аби користувач
+                        мав змогу змінити
+                        порядок та отримати спочатку найновіші фотографії.</p>
+
+                    <p>Тут постає питання чи слід нам вдаватися до фетча даних на стороні клієнта, щоб ми могли
+                        реалізувати цю фічу за
+                        допомогою <mark>useState</mark>. Однак, це потребуватиме переносу усіх наших компонентів на
+                        сторону клієнта, що збільшить розмір
+                        нашого бандлу.</p>
+
+                    <p>Чи маємо ми альтернативу? Так. І ця можливість вже існує на просторах вебу достатньо довго - <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams">search
+                            parameters</a> (іноді
+                        називають query parameters). Нам підходить ця опція, оскільки параметри можна прочитати на
+                        сервері.</p>
+
+                    <p>Тож давайте трохи змінимо наш page-компонент, щоб отримати <mark>searchParams</mark> через
+                        пропси.</p>
+
+                    <pre>
+                            <code>
+<span class="code-blue">export default async function</span> <span class="code-green">Index</span>({searchParams}) {
+<span class="code-blue">const</span> orderBy = searchParams.orderBy || OrderBy.<span class="code-red">POPULAR</span>;
+                                
+<span class="code-blue">const</span> [/* ... */, photosRequest] = <span class="code-blue">await</span> Promise.<span class="code-green">all</span>([
+/* ... */,
+UnsplashApiClient.topics.<span class="code-green">getPhotos</span>({orderBy, /* ... */})
+]);
+                            </code>
+                        </pre>
+
+                        <p>Після цього, користувач може перейти до <mark>/?orderBy=latest</mark> та змінити порядок відображення фотографій.</p>
+
+                        <p>Аби спростити вибір значення search parameter для користувача, ми хочемо додати інтерактивний <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select елемент</a>.</p>
+
                         <p>
                         <figure>
-                            <img class="image-center img-adaptive" src="/assets/articles/react/react-internationalization/5.png" alt="стартап">
+                            <img class="image-center img-adaptive" src="/assets/articles/react/react-internationalization/7.png" alt="стартап">
                             <figcaption class="photo-src">
+                                Джерело:
+                                http://surl.li/gswin
                             </figcaption>
                         </figure>
                         </p>
 
+                        <p>Ми можемо відмітити компонент як <mark>'use client'</mark>; додати слухач подій та оброблювати подію “change” у <mark>select</mark> елементі. Тим
+                        не менш, ми хочемо залишити інтернаціоналізацію на стороні сервера, аби зменшити розмір бандла на клієнті.</p>
 
-                    <p><b>Порада:</b> <a href="https://next-intl-docs.vercel.app/docs/usage/typescript"><mark>next-intl</mark></a> надає <a href="https://next-intl-docs.vercel.app/docs/usage/typescript">TypeScript інтеграцію</a>, яка допомагає переконатися, що ви вказуєте лише валідні ключі.</p>
+                        <p>Подивимось на розмітку для нашого <mark>select</mark> елементу.</p>
+
+                        <pre>
+                            <code>
+&#8249;<span class="code-red">select</span>&#8250;
+    &#8249;<span class="code-red">option</span> <span class="code-green">value</span>="<span class="code-blue">popular</span>"&#8250;Popular&#8249;/<span class="code-red">option</span>&#8250;
+    &#8249;<span class="code-red">option</span> <span class="code-green">value</span>="<span class="code-blue">latest</span>"&#8250;Latest&#8249;/<span class="code-red">option</span>&#8250;
+&#8249;/<span class="code-red">select</span>&#8250;
+                            </code>
+                        </pre>
+
+
+
+
+
+
+
+
+
 
 
 
