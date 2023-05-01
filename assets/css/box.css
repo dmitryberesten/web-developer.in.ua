@@ -58,3 +58,23 @@
 .desc-top {
   margin-top: 2em;
 }
+
+mark {
+  background-color: #fff2ea !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.code-blue {
+  color: #0e82a9;
+}
+
+.code-green {
+  color: #2f9c0a;
+}
+
+.code-red {
+  color: #c92c2c;
+}
