@@ -323,26 +323,32 @@ UnsplashApiClient.topics.<span class="code-green">getPhotos</span>({orderBy, /* 
                             </code>
                         </pre>
 
-                        <p>Після цього, користувач може перейти до <mark>/?orderBy=latest</mark> та змінити порядок відображення фотографій.</p>
+                    <p>Після цього, користувач може перейти до <mark>/?orderBy=latest</mark> та змінити порядок
+                        відображення фотографій.</p>
 
-                        <p>Аби спростити вибір значення search parameter для користувача, ми хочемо додати інтерактивний <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select елемент</a>.</p>
+                    <p>Аби спростити вибір значення search parameter для користувача, ми хочемо додати інтерактивний <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select елемент</a>.
+                    </p>
 
-                        <p>
-                        <figure>
-                            <img class="image-center img-adaptive" src="/assets/articles/react/react-internationalization/7.png" alt="стартап">
-                            <figcaption class="photo-src">
-                                Джерело:
-                                http://surl.li/gswin
-                            </figcaption>
-                        </figure>
-                        </p>
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive"
+                            src="/assets/articles/react/react-internationalization/7.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/gswin
+                        </figcaption>
+                    </figure>
+                    </p>
 
-                        <p>Ми можемо відмітити компонент як <mark>'use client'</mark>; додати слухач подій та оброблювати подію “change” у <mark>select</mark> елементі. Тим
-                        не менш, ми хочемо залишити інтернаціоналізацію на стороні сервера, аби зменшити розмір бандла на клієнті.</p>
+                    <p>Ми можемо відмітити компонент як <mark>'use client'</mark>; додати слухач подій та оброблювати
+                        подію “change” у <mark>select</mark> елементі. Тим
+                        не менш, ми хочемо залишити інтернаціоналізацію на стороні сервера, аби зменшити розмір бандла
+                        на клієнті.</p>
 
-                        <p>Подивимось на розмітку для нашого <mark>select</mark> елементу.</p>
+                    <p>Подивимось на розмітку для нашого <mark>select</mark> елементу.</p>
 
-                        <pre>
+                    <pre>
                             <code>
 &#8249;<span class="code-red">select</span>&#8250;
     &#8249;<span class="code-red">option</span> <span class="code-green">value</span>="<span class="code-blue">popular</span>"&#8250;Popular&#8249;/<span class="code-red">option</span>&#8250;
@@ -351,200 +357,242 @@ UnsplashApiClient.topics.<span class="code-green">getPhotos</span>({orderBy, /* 
                             </code>
                         </pre>
 
-
-
-
-
-
-
-
-
-
-
-
-
-                    <span class="code-green"></span>
-                    <span class="code-blue"></span>
-                    <span class="code-red"></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <hr>
-                    <hr>
-                    <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <P>Коли нам хочеться дізнатися про складні речі, але отримати пояснення простою мовою, на допомогу
-                        приходить науковець. Майже без використання понять Virtual DOM, «іммутабельність», «життєвий
-                        цикл компонента» та «детермінований рендеринг» розповідаємо, що таке React, як він з'явився і в
-                        чому його плюси для бізнесу та команди.</P>
-
-                    <h2>&#9733; Що таке React?</h2>
-
-                    <p>Reaсt - це бібліотека, що відповідає за побудову інтерфейсу користувача сайту. Причому такого
-                        інтерфейсу, де є не лише текст, а й інтерактивні елементи, динаміка, різні події.
-
-                        Про що мова? Про можливість поставити лайк, наприклад. Або надіслати заповнену контактну форму.
-                        Або працювати з картами, напханими інфографікою. Або з адміністративною панеллю в
-                        інтернет-магазині, де товар, кошик і процес відправки платежу мають кілька станів.</p>
-
-                    <p>Отже, якщо одна дія користувача на сайті повинна призводити до якихось змін, то відбуватимуться
-                        ці зміни за певними сценаріями — тими самими скриптами. Щоб розробка сайту з великою кількістю
-                        JavaScript-коду йшла швидше та зручніше для розробника, використовують React.
-
-                        Чим складніший сайт, тим більш примарний шанс зробити його без використання React та його
-                        основних конкурентів — фреймворків Angular та Vue.js.</p>
-
-                    <h2>&#9733; У чому переваги додатків, написаних на React?</h2>
-                    <h3>&#8882; Знижується навантаження на сервер та час розробки</h3>
-                    <p>Підвищується продуктивність сайту: швидше відкриваються сторінки та відгукується дії користувачів
-                        інтерфейс. Якщо звичайна веб-програма на запит від браузера повертає йому HTML-розмітку з CSS,
-                        щоб браузер відмалював сторінку, то у разі додатків на React браузер спочатку завантажує набір
-                        скриптів, які виконуються на пристрої користувача. Це знімає навантаження із сервера та підвищує
-                        продуктивність.</p>
-
-                    <h3>&#8882; На React необов'язково розробляти весь сайт, якщо динамічні блоки займають лише малу
-                        частину</h3>
-                    <p>Поки статичні сторінки працюють як завжди, ми можемо зробити на React конкретний блок та вставити
-                        скрипти так, щоб вони виконувались лише в ньому. Є багато компаній, які переписують свій продукт
-                        на React.</p>
-
-                    <h3>&#8882; У порівнянні зі звичайними сайтами у сайтів на React чистіша архітектура</h3>
-                    <p>Чиста архітектура, в якій простіше виявляти та виправляти баги і яку простіше підтримувати.
-                        Розробник контролює потоки даних, розмітку та стилізацію та в ідеалі знайомий з патернами
-                        програмування, що дозволяють збирати програми швидше та гнучкіше.</p>
-
-                    <h3>&#8882; Якщо команди фронтенд та бекенд-розробки заздалегідь опишуть у документації формат
-                        отримання та відправлення даних</h3>
-                    <p>Вони можуть працювати паралельно: доки серверна частина розробляється, фронтенд-розробники на
-                        основі документації імітують дані, які приходитимуть із сервера.</p>
-
-                    <h2>&#9733; React та односторінкові додатки</h2>
-                    <p>Якщо навантаження знімається із сервера, то воно зростає на стороні користувача. Але статистика
-                        каже, що у клієнтських машин достатньо оперативної пам'яті для відтворення сторінок сайту на
-                        React у браузері. Однак, якщо потрібно отримати максимально швидкий відгук від інтерфейсу,
-                        використовують підхід SPA (Single Page Application). Його суть у тому, що весь сайт – це одна
-                        сторінка, яку React постійно перемальовує. Але не цілком.</p>
-
-                    <h3>Як зазвичай відбувається перехід зі сторінки на сторінку у простій програмі?</h3>
-
-                    <p>При переході на іншу сторінку користувач робить до неї запит на сервер і сервер повертає
-                        розмітку, стилі та файли скриптів (тобто HTML, CSS та JavaScript).
-
-                        У випадку SPA користувач, переходячи між розділами сайту, формально знаходиться на одній
-                        сторінці, але файли скриптів і стилі в нього вже є - залишається дотягнути те, чого не вистачає.
-                        Наприклад, якщо шапка сайту однакова на кожній сторінці, а змінився лише якийсь блок сторінки,
-                        то не потрібно знову малювати шапку.</p>
-
-                    <h2>&#9733; Які відомі сайти та додатки розроблені на React.js?</h2>
-                    <p>Мільярди людей щодня мають справу з результатами роботи React.js. Серед них:</p>
+                    <p>Ми можем розділити цю розмітку на дві частини:</p>
+
+                    <p><b>01</b> - рендер <mark>select</mark> елемент за допомогою інтерактивного Client Component</p>
+                    <p><b>02</b> - рендер інтернаціоналізованих <mark>option</mark> елементів за допомогою Server
+                        Component і передаємо їх як <mark>children</mark> до <mark>select</mark>
+                        елемента.</p>
+
+                    <p>Впровадимо <mark>select</mark> елемент на стороні клієнта.</p>
+
+                    <pre>
+                            <code>
+<span class="code-green">'use client'</span>;
+                                
+<span class="code-blue">import</span> {useRouter} <span class="code-blue">from</span> <span class="code-green">'next-intl/client'</span>;
+                                
+<span class="code-blue">export default function</span> <span class="code-green">OrderBySelect</span>({orderBy, children}) {
+    <span class="code-blue">const</span> router = <span class="code-green">useRouter</span>();
+                                
+    <span class="code-blue">function</span> <span class="code-green">onChange</span>(event) {
+        // The `useRouter` hook from `next-intl` automatically
+        // considers a potential locale prefix of the pathname.
+        router.<span class="code-green">replace</span>(<span class="code-green">'/?orderBy='</span> + event.target.value);
+    }
+                                
+    <span class="code-blue">return</span> (
+    &#8249;select defaultValue={orderBy} onChange={onChange}>
+        {children}
+    &#8249;/select>
+  );
+}
+                            </code>
+                        </pre>
+
+                    <p>Тепер, використаємо наш компонент у <mark>PhotoViewer</mark> і надамо локалізовані
+                        <mark>option</mark> елементи як <mark>children</mark>.
+                    </p>
+
+                    <pre>
+                            <code>
+<span class="code-blue">import</span> {useTranslations} <span class="code-blue">from</span> <span class="code-green">'next-intl'</span>;
+<span class="code-blue">import</span> OrderBySelect <span class="code-blue">from</span> <span class="code-green">'./OrderBySelect'</span>;
+                                
+<span class="code-blue">export default function</span> <span class="code-green">PhotoViewer</span>({orderBy, /* ... */}) {
+<span class="code-blue">const</span> t = <span class="code-green">useTranslations</span>(<span class="code-green">'PhotoViewer'</span>);
+                                
+<span class="code-blue">return</span> (
+  &#8249;>
+    {/* ... */}
+    &#8249;OrderBySelect orderBy={orderBy}>
+        &#8249;option value=<span class="code-green">"popular"</span>>{<span class="code-green">t</span>(<span class="code-green">'orderBy.popular'</span>)&#8249;/option>
+        &#8249;option value=<span class="code-green">"latest"</span>>{<span class="code-green">t</span>(<span class="code-green">'orderBy.latest'</span>)&#8249;/option>
+    &#8249;/OrderBySelect>
+  &#8249;/>
+ );
+}
+                            </code>
+                        </pre>
+
+                    <p>За допомогою цього паттерну розмітка для <mark>option</mark> елементів тепер генерується на
+                        сервері и передається до <mark>OrderBySelect</mark>,
+                        який оброблює подію “change” на стороні клієнта.</p>
+
+                    <p><b>Порада:</b> <i>Оскільки ми маємо зачекати на оновлену розмітку, яка генерується на сервері
+                            тільки но порядок змінюється, ми
+                            хочемо показати користувачу стан завантаження. React 18 має <a
+                                href="https://beta.reactjs.org/reference/react/useTransition">useTransition хук</a>,
+                            який інтегрується з Server Components. Це
+                            дозволить зробити недоступним (disable) <mark>select</mark> елемент доки чекаємо на
+                            відповідь з серверу.</i></p>
+
+                    <pre>
+                        <code>
+<span class="code-blue">import</span> {useRouter} <span class="code-blue">from</span> <span class="code-green">'next-intl/client'</span>;
+<span class="code-blue">import</span> {useTransition} <span class="code-blue">from</span> <span class="code-green">'react'</span>;
+                            
+<span class="code-blue">export default function</span> <span class="code-green">OrderBySelect</span>({orderBy, children}) {
+    <span class="code-blue">const</span> [isTransitioning, startTransition] = <span class="code-green">useTransition</span>();
+    <span class="code-blue">const</span> router = <span class="code-green">useRouter</span>();
+                            
+    <span class="code-blue">function</span> <span class="code-green">onChange</span>(event) {
+        <span class="code-green">startTransition</span>(() => {
+            router.<span class="code-green">replace</span>(<span class="code-green">'/?orderBy='</span> + event.target.value);
+        });
+    }
+                            
+    <span class="code-blue">return</span> (
+        &#8249;select disabled={isTransitioning} /* ... * />
+            {children}
+        &#8249;/select>
+    );
+}
+                        </code>
+                    </pre>
+
+                    <h2>Додаємо більше інтерактивності: пагінація</h2>
+
+                    <p>Той самий паттерн може бути використаний для пагінації за допомогою параметру пошуку
+                        <mark>page</mark>.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive"
+                            src="/assets/articles/react/react-internationalization/8.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/gtldz
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Зверніть увагу, що мови мають різні правила для використання десяткових і тисячних розділових
+                        знаків. Більш того, мови
+                        мають різні форми множини: якщо в англійській мові є лише граматична різниця між одним та
+                        нулем/багатьма елементами, то
+                        хорватська має окрему форму для «декількох» елементів.</p>
+
+                    <p><mark>next-intl</mark> використовує <a
+                            href="https://next-intl-docs.vercel.app/docs/usage/messages#rendering-of-messages">ICU
+                            syntax</a> який надає можливість зберегти усі тонкощі мови.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive"
+                            src="/assets/articles/react/react-internationalization/9.png" alt="стартап">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>На цей раз нам не треба відмічати компонент <mark>'use client'</mark>;. Замість того ми можемо
+                        впровадити звичайні <mark>a</mark> теги.</p>
+
+                    <pre>
+                        <code>
+<span class="code-blue">import</span> {ArrowLeftIcon, ArrowRightIcon} <span class="code-blue">from</span> <span class="code-green">'@heroicons/resolid'</span>;
+<span class="code-blue">import</span> {Link, useTranslations} <span class="code-blue">from</span> <span class="code-green">'next-intl'</span>;
+                            
+<span class="code-blue">export default function</span> <span class="code-green">Pagination</span>({pageInfo, orderBy}) {
+    <span class="code-blue">const</span> t = <span class="code-green">useTranslations</span>(<span class="code-green">'Pagination'</span>);
+    <span class="code-blue">const</span> totalPages = Math.<span class="code-green">ceil</span>(pageInfo.totalElements / pasize);
+                            
+    <span class="code-blue">function</span> <span class="code-green">getHref</span>(page) {
+        <span class="code-blue">return</span> {
+        // Since we're using `Link` from next-intl, a potential locale
+        // prefix of the pathname is automatically considered.
+        pathname: <span class="code-green">'/'</span>,
+        // Keep a potentially existing `orderBy` parameter.
+        query: {orderBy, page}
+      };
+    }
+                            
+    <span class="code-blue">return</span> (
+        &#8249;>
+            {pageInfo.page > <span class="code-red">1</span> && (
+            &#8249;Link aria-label={<span class="code-green">t</span>(<span class="code-green">'prev'</span>)} href={<span class="code-green">getHref</span>(papage - <span class="code-red">1</span>)}>
+                &#8249;ArrowLeftIcon />
+            &#8249;/Link>
+        )}
+        &#8249;p>{<span class="code-green">t</span>(<span class="code-green">'info'</span>, {...pageInfo, totalPages})}&#8249;/p>
+        {pageInfo.page &#8249; totalPages && ( &#824aria-label={<span class="code-green">t</span>(<span class="code-green">'prev'</span>)} href={<span  class="code-green">getHref</span>(pageInfo.page + <span class="code-red">1</span>)}>
+            &#8249;ArrowRightIcon />
+            &#8249;/Link>
+            )}
+        &#8249;/>
+      );
+    }
+                        </code>
+                    </pre>
+
+
+                    <h2>Підведемо підсумки</h2>
+
+                    <h3>SERVER COMPONENTS вдалий засіб для інтернаціоналізації</h3>
+
+                    <p>Інтернаціоналізація є важливою частиною досвіду користувача: чи ваш додаток підтримує декілька
+                        мов чи ви хочете отримати
+                        вірне відображення особливостей однієї мови. Бібліотека <a
+                            href="https://next-intl-docs.vercel.app/"><mark>next-intl</mark></a> може зарадити в обох
+                        випадках.</p>
+
+                    <p>Впровадження інтернаціоналізації у додатках Next.js завжди супроводжувалося жертвою
+                        продуктивності, але з Server
+                        Components цей недолік нівелюється. Однак, вам знадобиться деякий час аби вивчити паттерни, які
+                        допоможуть перенести
+                        інтернаціоналізацію на сервер.</p>
+
+                    <p>В нашому додатку, нам знадобилося перенести лише один компонент на клієнт:
+                        <mark>OrderBySelect</mark>.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center img-adaptive"
+                            src="/assets/articles/react/react-internationalization/10.png" alt="стартап">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/gtnln
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Також варто відзначити, що ви можете розглянути можливість впровадження станів завантаження,
+                        оскільки швидкість мережі
+                        користувача може створювати затримку, перш ніж користувач побачить результат власних дій.</p>
+
+                    <h3>SEARCH PARAMETERS як гарна альтернатива useState</h3>
+
+                    <p>Search parameters - добрий спосіб впровадити інтерактивні фічі у додатки Next.js, оскільки вони
+                        допомагають зменшити
+                        розмір бандлу на стороні клієнта.</p>
+
+                    <p>Окремо від продуктивності, є ще декілька переваг використання search parameters:</p>
 
                     <ul>
-                        <li>&#9734; Стрічка новин у Facebook</li>
-                        <li>&#9734; Більшість клієнтської сторони Instagram</li>
-                        <li>&#9734; Частково WhatsApp</li>
-                        <li>&#9734; Netflix</li>
-                        <li>&#9734; New York Times</li>
-                        <li>&#9734; Yahoo! Mail</li>
-                        <li>&#9734; Dropbox</li>
-                        <li>&#9734; Codecademy</li>
-                    </ul> <br>
+                        <li>- URL з search parameters можна поширити зі збереженням стану додатку</li>
+                        <li>- Закладки також зберігають стан</li>
+                        <li>- Ви можете за бажанням інтегруватися з історією браузера та повертатися до попередніх
+                            станів за допомогою кнопки “Назад”.</li>
+                    </ul>
 
-                    <h2>Висновок</h2>
-                    <p>JavaScript робить із простого сайту корисний робочий інструмент. Але він обійдеться вам дорожче,
-                        якщо команда використовує класичний підхід до веб-розробки. Та команда, яка знає React,
-                        заощадить гроші.</p>
+                    <p>Варто зауважити, що також існують деякі компроміси:</p>
 
-                    <p>Ця бібліотека відмінно підходить для додатків з великою кількістю інтерактивних елементів і
-                        дозволяє розробнику працювати швидше і повністю контролювати те, що відбувається на стороні
-                        клієнта. Якщо на вашому сайті передбачається багато динамічного контенту, вибирайте команду, яка
-                        знає React.</p>
+                    <ul>
+                        <li>- Значення Search parameter це строки, тож може виникнути потреба серіалізації та
+                            десеріалізації типів даних
+                        </li>
+                        <li>- URL - це частина інтерфейсу користувача, тож використання великої кількості параметрів може негативно вплинути на
+                        читабельність.
+</li>
+                    </ul>
 
-                    <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/PtArxJ</span>
+                    <p>Повний код можна подивитися за посиланням на <a href="https://github.com/amannn/street-photography-viewer">GitHub</a>.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link">http://surl.li/gtnpn</span> <br>
                         <br>
+                        <b>Переклад:</b> Ірина Грицаєнко <br>
                         <b>Редактор:</b> Аліна Берестень <br>
                         <b>Адміністратор:</b> Дмитро Берестень
                     </p>
