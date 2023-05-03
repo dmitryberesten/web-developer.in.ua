@@ -111,6 +111,10 @@ ul {
   font-size: 1em;
 }
 
+.norm-li > li {
+  font-size: 1.2em;
+}
+
 .list-margin-bottom li {
   margin-bottom: 10px;
 }
