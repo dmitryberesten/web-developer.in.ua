@@ -150,6 +150,21 @@ let memes = [
     src: "./album/50.png",
   },
   {
+    src: "./album/51.png",
+  },
+  {
+    src: "./album/52.png",
+  },
+  {
+    src: "./album/53.png",
+  },
+  {
+    src: "./album/54.png",
+  },
+  {
+    src: "./album/55.png",
+  },
+  {
     src: "./album/56.png",
   },
   {
