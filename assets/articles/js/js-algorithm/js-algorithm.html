@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Алгоритм сортування своїми руками</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <a href="../js-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Алгоритм сортування своїми руками</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/js/js-algorithm/1.png" alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: http://surl.li/hawls</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <h2>Мета</h2>
+
+                    <p>На мій погляд, зрозуміти, краще ніж запам'ятати. Можливо ця стаття допоможе комусь зрозуміти суть
+                        алгоритмів і
+                        зекономить час на їх запам'ятовування.</p>
+
+                    <h2>Задача</h2>
+
+                    <p>В цій статті я спробую написати алгоритм-мутант. Cпрощенний, стабільний варіант алоритму швидкого
+                        сортування (Stable
+                        Quick Sort).</p>
+
+                    <p>Працювати це має наступним чином:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/js/js-algorithm/2.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Розв'язання</h2>
+
+                    <p>Швидке сортування (Quick Sort) - один з найбільш відомих алгоритмів. Цей алгоритм популярний
+                        через те, що не потребує
+                        додаткової пам'яті, а його складність за O нотацією - n(log n). Цей алгоритм є нестабільним.</p>
+
+                    <p>Стабільність алгоритму сортування - властивість яка гарантує збереження порядоку тих елементів,
+                        що вже є
+                        відсортованними. Приклад:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/3.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Мініфікований код для самостійного запуску і експериментів:</p>
+
+                    <p>
+                    <pre class="code-p">
+                            <code>const products=[{name:"Apple",price:10},{name:"Banana",price:10},{name:"Orange",price:5},],sorted=products.toSorted((e,r)=>e.price-r.price);console.log({products,sorted});</code>
+                        </pre>
+                    </p>
+
+                    <p>Результат:</p>
+
+                    <p class="">
+                    <figure>
+                        <img class="image-center " src="/assets/articles/js/js-algorithm/4.png">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Зверніть увагу на позиції <b>Apple</b> і <b>Banana</b> до і після сортування.</p>
+
+                    <p>Швидке сортування - алгоритм який базується на принціпі "<b>Розділяй і володарюй</b>". Цей
+                        алгоритм, як і будь-який інший
+                        алгоритм сортування, розглядає поняття "відсортований масив" під своїм кутом.</p>
+
+                    <p><i>З точки зору цього алгоритму відсортованний масив - це масив, в якому для будь-якого
+                            <b>вибраного</b> елементу справедливі
+                            твердження:</i></p>
+
+                    <ul class="norm-li">
+                        <li>
+                            <i>&#8226; Всі елементи, що <b>менше вибраного</b> знаходяться <b>зліва від нього</b></i>
+                        </li> <br>
+                        <li>
+                            <i>
+                                &#8226; Всі елементи, що <b>більше вибраного</b> знаходяться <b>справа від нього</b>
+                            </i>
+                        </li> <br>
+                        <li>
+                            <i>
+                                &#8226; Порядок <b>евівалентних виброному</b> елементів <b>не змінюється</b> (наша додаткова
+                                вимога до стабільності)
+                            </i>
+                        </li>
+                    </ul> <br>
+
+                    <p>Спробуємо виразити данний список вимог за допомогою JavaScript виразів:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/5.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Якщо помістити данний код в тіло функції <b>toSorted</b>, яку ми хочемо написати, то отримаємо
+                        наступне:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/6.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Для того, щоб заповнити невідомі частини, повернемось до основної чистини визначення:</p>
+
+                    <p class="note"><b><i>Відсортованний масив - це масив, в якому для будь-якого вибраного елементу
+                                справедливі твердження...</i></b></p>
+
+                    <p>Що це нам дає?</p>
+
+                    <p>Розглянемо по частинах:</p>
+
+                    <ul class="norm-li">
+                        <li>
+                            &#8226; <b>будь-якого вибраного елементу</b> - тобто вибраним може бути випадковий елемент. Напишемо
+                            окрему функцію яка бере випадковий
+                            елемент і додамо до існуючого коду:
+                            <figure> <br>
+                                <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/7.png"
+                                    alt="зображення">
+                                <figcaption class="photo-src">
+                                    Джерело:
+                                    http://surl.li/hawls
+                                </figcaption> <br>
+                            </figure>
+                        </li>
+                        <li>
+                            &#8226; <b>Такий масив, в якому ... справедливі твердження</b> - очевидно, що в результаті ми маємо
+                            об'єднати все в один масив:
+                            <figure> <br>
+                                <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/8.png"
+                                    alt="зображення">
+                                <figcaption class="photo-src">
+                                    Джерело:
+                                    http://surl.li/hawls
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul> <br>
+
+                    <p>Таким чином, ми написали код, що відповідає данним вимогам:</p>
+
+                    <p>Відсортованний масив - це масив, в якому для <b>будь-якого вибраного</b> елементу справедливі
+                        твердження:</p>
+
+                    <ul class="norm-li">
+                        <li>
+                            &#8226; <i>Всі елементи, що <b>менше вибраного</b> знаходяться <b>зліва від нього</b></i>
+                        </li> <br>
+                        <li>
+                            &#8226; <i>Всі елементи, що <b>більше вибраного</b> знаходяться <b>справа від нього</b></i>
+                        </li> <br>
+                        <li>
+                            &#8226; <i>Порядок <b>евівалентних виброному</b> елементів <b>не змінюється</b> (наша додаткова
+                                    вимога до стабільності)</i>
+                        </li>
+                    </ul> <br>
+
+                    <p>Але зараз ці вимоги працюють тільки для одного, випадкового елементу. Щоб зробити з цього коду
+                        працююче рішення,
+                        потрібно використати <b>рекурсію</b>.</p>
+
+                    <p>Рекурсія складається з <b>базового</b> і <b>рекурсивного</b> випадків. У випадку з нашою задачею
+                        базовий випадок:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/9.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Рекурсивний випадок:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/10.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Тож, об'єднаємо весь код разом:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/11.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Пробував запускати цей код в консолі Google Chrome. Начебто працює.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-algorithm/12.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hawls
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Можете спробувати запустити наступний мініфікований варіант самостійно:</p>
+
+                    <p></p>
+
+                    <p>
+                    <pre class="code-p">
+        <code>const nums=[9,1,5,7,3,5],sorted=toSorted(nums);function toSorted(t){if(t.length<=1)return t;let r=getRandomArrayItem(t),e=t.filter(t=>t<r),o=t.filter(t=>t>r),n=t.filter(t=>t===r);return[...toSorted(e),...n,...toSorted(o)]}function getRandomArrayItem(t){letr=Math.floor(t.length*Math.random());return t.at(r)}console.log(sorted);</code>
+    </pre>
+                    </p>
+
+                    <h2>Висновок</h2>
+
+                    <p>Отже в данній статті, ми вигадали свої вимоги до алгоритму сортування і написали реалізацію під
+                        них на JavaScript.
+                        Розв'язання задач таким чином дуже подібне до розв'язання задач з Фізики, Хімії, Математики в
+                        школі. Сподіваюсь було
+                        цікаво і ви дізнались щось нове.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/hawls"
+                                target="_blank">http://surl.li/hawls</a></span>
+                        <br>
+                        <b>Автор:</b> <a href="https://www.linkedin.com/in/vladyslav-murashchenko-3346b917a/"
+                            target="_blank"> Vladyslav Murashchenko</a> <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
+                                Головна</a></li>
+                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
+                                    class="fa-regular fa-file-lines"></i>
+                                Статті</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
+                                Уроки</a></li>
+                        <li class="menu-item__btn"><a href="../../../../services.html"><i
+                                    class="fa-solid fa-pen-ruler"></i>
+                                Cервіси</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
+                                    class="fa-solid fa-podcast"></i>
+                                Подкасти</a></li>
+                        <li>
+                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
+                                Генератори</span>
+                            <ul>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-memes/generator-memes.html"><i
+                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
+                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
+                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-facts/generator-facts.html"><i
+                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
+                                    class="fa-brands fa-youtube"></i>
+                                Українські ІТ-ютубери</a></li>
+                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
+                                    class="fa-solid fa-hand-holding-dollar"></i>
+                                Донат</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
+                                    class="fa-solid fa-user-group"></i>
+                                Про
+                                нас</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Люди читають:</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="../../git/improving-git/improving-git.html" class="image"><img
+                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
+                            <a href="../../git/improving-git/improving-git.html">
+                                <h3>Покращуємо процес роботи з Git</h3>
+                            </a>
+                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
+                        </article>
+                        <article>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
+                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
+                                <h3>Використання Bootstrap для адаптивної верстки</h3>
+                            </a>
+                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
+                        </article>
+                        <!-- <article>
+							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
+									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
+							<a href="./assets/articles/node/node-need/node-need.html">
+								<h3>Коли застосовують Node.js?</h3>
+							</a>
+							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
+						</article> -->
+                        <article>
+                            <a href="https://i.goit.global/hwVUk" class="image"><img src="../../../../images/gus.jpg"
+                                    alt="image" /></a>
+                            <a href="https://i.goit.global/hwVUk">
+                                <h3>Хочеш в ІТ, але не знаєш з чого почати?</h3>
+                            </a>
+                            <p>Відповідь знайдеш на <b>безплатному</b> тест-драйві ІТ-професій від GoIT. За тиждень тут
+                                можна спробувати себе на чотирьох
+                                позиціях.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="https://i.goit.global/hwVUk" class="button">РЕЄСТРУЙСЯ</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
+                        можете написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
+                            dmitryberesten</a>.
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
