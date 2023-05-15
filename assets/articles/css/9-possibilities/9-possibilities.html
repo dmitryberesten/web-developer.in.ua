@@ -5,7 +5,7 @@
     <title>9 можливостей</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
 </head>
 
@@ -35,7 +35,7 @@
                     </ul>
                 </header>
 
-				<a href="../css-articles.html" class="button small btn-back">Назад</a>
+                <a href="../css-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -50,18 +50,20 @@
 
                     <p>За більше як 20 років свого існування CSS став стандартом стилізації веб-сторінок. Продовжують
                         виходити нові
-                        специфікації (Наприклад, CSS4), що додають нові круті можливості: анімації, трансформації, нові
-                        одиниці виміру. В швидкому світі веб-розробки ми часто пропускаємо повз себе багато важливих
-                        функцій. Сьогодні ми поговоримо про те, що
+                        специфікації (наприклад, CSS4), що додають нові круті можливості: анімації, трансформації, нові
+                        одиниці виміру. В
+                        швидкому світі веб-розробки ми часто пропускаємо повз себе багато важливих функцій. Сьогодні ми
+                        поговоримо про те, що
                         заслуговує уваги, але чомусь майже не використовується розробниками.</p>
 
                     <hr class="major" />
 
                     <h2>1. Функція calc()</h2>
 
-                    <p>calc() це, напевно, найкрутіша фіча в цьому списку. Вона робить можливим перенесення таких
-                        висловів в CSS-код: "я хочу
-                        щоб елемент займав всю ширину мінус 20 пікселів"</p>
+                    <p>сalc() це, напевно, найкрутіша фіча в цьому списку. Якщо ви колись нею користувались, то
+                        погодитесь, що простими словами
+                        її можна описати так: “Я хочу, щоб цей елемент займав ось таку ширину, мінус стільки-то
+                        пікселів.”</p>
 
                     <p class="code-wrapper">
                         <code>
@@ -71,19 +73,24 @@
                         </code>
                     </p>
 
-                    <p>Схоже на який препроцесор, але насправді це вбудована можливість CSS, в якій використовується вже
-                        відрендерені розміри
-                        елементу (що неможливо при використанні препроцесорів).</p>
+                    <p>Схоже на який елемент препроцесору типу SASS, але насправді це вбудована можливість CSS, в якій
+                        використовується вже
+                        відрендерені розміри елементу (що неможливо при використанні препроцесорів).</p>
+
+                    <p>Елемент .box, який вказано на прикладі вище, буде займати “100% своєї гіпотетичної ширини, мінус
+                        20 пікселів.” Ця фіча
+                        буде корисна для таких цілей як додавання елементів з фіксованою шириною разом з елементами з
+                        різноманітною шириною.
+                    </p>
 
                     <hr class="major" />
 
                     <h2>2. Медіа-запити для екрану та сенсору</h2>
 
-                    <p>На жаль, поки що такі медіа-запити погано підтримуються браузерами (~70%). Зазвичай для
-                        адаптивної верстки
-                        використовують медіа-запити ширини екрану, але вже є можливість визначити чим користувач
-                        здійснює керування сторінкою.
-                        Вони дозволяють вам запитати у браузера: "цей користувач використовує свій палець чи мишку?".
+                    <p>На жаль, поки що такі медіа-запити погано підтримуються браузерами (~70%). Зазвичай для адаптивної верстки
+                    використовують медіа-запити ширини екрану, але вже є можливість визначити чим користувач здійснює керування сторінкою.
+                    Вони дозволяють вам запитати у браузера: "Цей користувач використовує свій палець чи мишку?" для того, щоб створити
+                    кнопки відповідного розміру.
                     </p>
 
                     <p class="code-wrapper">
@@ -104,9 +111,8 @@
 
                     <h2>Підтримка</h2>
 
-                    <p>Вона лишає бажати кращого, але все ж позитивні зрушення є. Так Webkit, Blink та Edge вже
-                        підтримують цю можливість, а от
-                        Gecko/Firefox ще ні.</p>
+                    <p>Вона лишає бажати кращого, але все ж позитивні зрушення є. Так Webkit, Blink та Edge вже підтримують цю можливість, а от
+                    Gecko/Firefox ще ні.</p>
 
                     <hr class="major" />
 
@@ -127,11 +133,8 @@
                     </p>
 
                     <p>
-                        <i> <b>Michael Wong</b> зробив важливе зауваження. Не слід використовувати цю змінну там, де колір і
-                        так каскадно успадковується. В
-                        своєму прикладі я допустив помилку, <code>border-top-color</code>  і так матиме колір батьківського елементу.
-                        Тому використовуйте цю
-                        змінну на інших властивостях, наприклад, <code>background</code>.
+                        <i> <b>Michael Wong</b> зробив важливе зауваження. Не слід використовувати цю змінну там, де колір і так каскадно успадковується. В своєму
+                        прикладі я допустив помилку, <code>border-top-color</code> і так матиме колір батьківського елементу. Тому використовуйте цю змінну на інших властивостях, наприклад, <code>background</code>.
                         </i>
 
                     </p>
@@ -151,111 +154,116 @@
                         <code>input:invalid { color: red; }</code>
                     </p>
 
-                    <p>Псевдоклас <code>:empty</code>  спрацьовує на елементах, що не мають всередині себе нічого (працює не тільки з формами). Тепер в
-                    шаблонах вам не потрібно писати додаткову логіку для відображення і приховання <code>&lt;h1&gt;{name}&lt;/h1&gt;</code> .</p>
+                    <p>Псевдоклас <code>:empty</code> спрацьовує на елементах, що не мають всередині себе нічого (працює не тільки з формами). Тепер в шаблонах вам не
+                    потрібно писати додаткову логіку для відображення і приховання
+                        <code>&lt;h1&gt;{name}&lt;/h1&gt;</code> .</p>
 
                     <p class="code-wrapper">
-                       <code>h1:empty { display: none; }</code>
+                        <code>h1:empty { display: none; }</code>
                     </p>
 
                     <hr class="major" />
 
                     <h2>5. Лічильники</h2>
 
-                    <p>Вам потрібен нумерований список, але ви не хочете (або не можете) використовувати елемент <code>&lt;ol&gt;&lt;/ol&gt;</code> ? <br> Не хочете
-                        використовувати для цього JS? І не потрібно, це все можна зробити на CSS.</p>
+                    <p>Вам потрібен нумерований список, але ви не хочете (або не можете) використовувати елемент
+                        <code>&lt;ol&gt;&lt;/ol&gt;</code> ? <br> Не хочете використовувати для цього JS? І не потрібно, це все можна зробити на CSS.</p>
 
-                        <p class="code-wrapper">
-                            .shelf { <br> counter-reset: books; <br> } <br>
-                            .shelf__book { <br> counter-increment: books; <br> } <br>
-                            .shelf__book::before { <br>
-                            content: "Book " counter(books) " of 10."; <br>
-                            }
-                        </p>
+                    <p class="code-wrapper">
+                        .shelf { <br> counter-reset: books; <br> } <br>
+                        .shelf__book { <br> counter-increment: books; <br> } <br>
+                        .shelf__book::before { <br>
+                        content: "Book " counter(books) " of 10."; <br>
+                        }
+                    </p>
 
-                        <p>Так, іноді CSS виглядає кумедним, і це один з таких випадків. Тут немає оператора для з'єднання стрічок, просто поставте
-                        між ними пробіл.</p>
+                    <p>Так, іноді CSS виглядає кумедним, і це один з таких випадків. Тут немає оператора для з'єднання, просто поставте між
+                    ними пробіл.</p>
 
-                        <hr class="major" />
-                        
-                        <h2>6. Більш передбачувані таблиці</h2>
+                    <hr class="major" />
 
-                        <p>
-                        За умовчуванням ширина стовпця в таблиці вираховується після рендерингу таблиці, таким чином на неї впливають всі
-                        елементи в стовпці. Додання <code>table-layout:fixed</code> змусить браузер встановлювати ширину стовпця опираючись на перший елемент
-                        в ньому. Це швидше і робить таблиці більш керованими.
-                        </p>
+                    <h2>6. Більш передбачувані таблиці</h2>
 
-                        <p class="code-wrapper">
-                            .grid { <br>
-                            table-layout: fixed; <br>
-                            }
-                        </p>
+                    <p>
+                        За замовчуванням ширина стовпця в таблиці вираховується після рендерингу таблиці, таким чином на неї впливають всі
+                        елементи в стовпці. Додавання <code>table-layout:fixed</code> змусить браузер встановлювати ширину стовпця спираючись на перший елемент в ньому. Це швидше і робить таблиці більш
+                        керованими.
+                    </p>
 
-                        <hr class="major" />
-                        
-                        <h2>7. Селектор за сусіднім елементом</h2>
+                    <p class="code-wrapper">
+                        .grid { <br>
+                        table-layout: fixed; <br>
+                        }
+                    </p>
 
-                        <p>Селектор за сусіднім елементом є азами, які вчить кожен новачок. Але вони чомусь майже зовсім не використовуються. А
-                        даремно, з ними можна дуже легко стилізувати форми та надписи до них, і все без JS.</p>
+                    <hr class="major" />
 
-                        <p class="code-wrapper">
-                            [type="checkbox"] + label { <br>
-                           &nbsp; font-weight: normal; <br>
-                            } <br>
-                            [type="checkbox"]:checked + label { <br>
-                           &nbsp; font-weight: bold; <br>
-                            } <br>
-                            [required]:valid + span { <br>
-                                &nbsp; color: green; <br>
-                                 } <br>
-                            [required]:invalid + span { <br>
-                                &nbsp; color: red; <br>
-                                } <br>
-                        </p>
+                    <h2>7. Селектор за сусіднім елементом</h2>
 
-                        <hr class="major" />
-                        
-                        <h2>8. Алгебраїчні вирази в nth-child()</h2>
+                    <p>Селектор за сусіднім елементом є азами, які вчить кожен новачок. Але вони чомусь майже зовсім не використовуються. А
+                    даремно, з ними можна дуже легко стилізувати форми та надписи до них, і все без JS.</p>
 
-                        <p>Селектори з <code>nth-child()</code> дуже зручні для прибирання рамки з останнього елементу, чи організації чергування стилів для
-                        різних рядків таблиці. Але це лише невелика частина того, що можна з ним робити.
-                        
-                        Згадайте трошки алгебри і ви зможете виділити кожен четвертий елемент починаючи з першого:</p>
+                    <p class="code-wrapper">
+                        [type="checkbox"] + label { <br>
+                        &nbsp; font-weight: normal; <br>
+                        } <br>
+                        [type="checkbox"]:checked + label { <br>
+                        &nbsp; font-weight: bold; <br>
+                        } <br>
+                        [required]:valid + span { <br>
+                        &nbsp; color: green; <br>
+                        } <br>
+                        [required]:invalid + span { <br>
+                        &nbsp; color: red; <br>
+                        } <br>
+                    </p>
 
-                        <p class="code-wrapper">
-                            .book:nth-child(4n+1) { <br> &nbsp; color: red; <br> }
-                        </p>
+                    <hr class="major" />
 
-                        <p>чи кожен третій починаючи з другого:</p>
+                    <h2>8. Алгебраїчні вирази в nth-child()</h2>
 
-                        <p class="code-wrapper">
-                            .book:nth-child(3n-1) { <br> &nbsp; color: blue; <br> }
-                        </p>
+                    <p>Селектори з <code>nth-child()</code> дуже зручні для прибирання рамки з останнього елементу, чи організації чергування стилів для різних рядків таблиці. Але
+                    це лише невелика частина того, що можна з ним робити. Згадайте трошки алгебри і ви зможете виділити кожен четвертий
+                    елемент починаючи з першого:</p>
 
-                        <hr class="major" />
-                        
-                        <h2>9. Анімація елементів з animation-fill-mode</h2>
+                    <p class="code-wrapper">
+                        .book:nth-child(4n+1) { <br> &nbsp; color: red; <br> }
+                    </p>
 
-                        <p>Зазвичай, після відображення анімації, елементу слід запам'ятовувати свої поточні характеристики і не відновлюватися до
-                        тих, що були до анімації. Коли ви хочете саме такої поведінки в ваших стилях — просто використовуйте <code>animation-fill-mode</code> 
+                    <p>чи кожен третій починаючи з другого:</p>
+
+                    <p class="code-wrapper">
+                        .book:nth-child(3n-1) { <br> &nbsp; color: blue; <br> }
+                    </p>
+
+                    <hr class="major" />
+
+                    <h2>9. Анімація елементів з animation-fill-mode</h2>
+
+                    <p>Зазвичай, після відображення анімації, елементу слід запам'ятовувати свої поточні характеристики і не відновлюватися до
+                    тих, що були до анімації. Коли ви хочете саме такої поведінки в ваших стилях — просто використовуйте <code>animation-fill-mode</code>
                         на потрібному елементі.</p>
 
-                        <p class="code-wrapper">
-                            @keyframes slideIn { <br>
-                            &nbsp;0% { transform: translateX(-100%); } <br>
-                            &nbsp;100% { transform: translateX(0); } <br>
-                            } <br><br>
-                            
-                            .slideIn { <br>
-                            &nbsp;animation-name: slideIn; <br>
-                            &nbsp;animation-duration: .25s; <br>
-                            &nbsp;animation-fill-mode: forwards; <br>
-                            }
-                        </p>
+                    <p class="code-wrapper">
+                        @keyframes slideIn { <br>
+                        &nbsp;0% { transform: translateX(-100%); } <br>
+                        &nbsp;100% { transform: translateX(0); } <br>
+                        } <br><br>
 
-                    <p class="article-info"> <b>Джерело:</b> <span
-                            class="span-link">https://bit.ly/3RobqMa</span>
+                        .slideIn { <br>
+                        &nbsp;animation-name: slideIn; <br>
+                        &nbsp;animation-duration: .25s; <br>
+                        &nbsp;animation-fill-mode: forwards; <br>
+                        }
+                    </p>
+
+                    <p>Так як розробники браузерів прагнуть до того, аби їх веб-сторінки виглядали наче застосунки, інструменти CSS стають все
+                    більш звичнішими, складнішими та цікавішими. Кожен день з’являються нові фічі та круті функції не за горами.</p>
+
+                    <p>Але з всією цією новизною, не нехтуйте тим стандартом CSS і вже наявними там функціями, де іноді можна знайти саме те,
+                    що потрібно.</p>
+
+                    <p class="article-info"> <b>Джерело:</b> <span class="span-link">https://bit.ly/3RobqMa</span>
                         <br>
                         <b>Переклад українською мовою:</b> Аліна Берестень <br>
                         <b>Адміністратор:</b> Дмитро Берестень
@@ -269,7 +277,7 @@
         <!-- Sidebar -->
         <div id="sidebar">
             <div class="inner">
-        
+
                 <nav id="menu">
                     <header class="major">
                         <h2>Меню</h2>
@@ -277,44 +285,52 @@
                     <ul>
                         <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
                                 Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
+                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
+                                    class="fa-regular fa-file-lines"></i>
                                 Статті</a>
                         </li>
                         <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
                                 Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
+                        <li class="menu-item__btn"><a href="../../../../services.html"><i
+                                    class="fa-solid fa-pen-ruler"></i>
                                 Cервіси</a>
                         </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
+                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
+                                    class="fa-solid fa-podcast"></i>
                                 Подкасти</a></li>
                         <li>
                             <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
                                 Генератори</span>
                             <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-memes/generator-memes.html"><i
                                             class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
                                             class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
                                 <li class="menu-item__btn"><a
                                         href="../../../generators/generator-motivations/generator-motivations.html"><i
                                             class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-facts/generator-facts.html"><i
                                             class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
+                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
+                                    class="fa-brands fa-youtube"></i>
                                 Українські ІТ-ютубери</a></li>
                         <li class="menu-item__btn"><a href="../../../../donate.html"><i
                                     class="fa-solid fa-hand-holding-dollar"></i>
                                 Донат</a>
                         </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
+                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
+                                    class="fa-solid fa-user-group"></i>
                                 Про
                                 нас</a>
                         </li>
                     </ul>
                 </nav>
-        
+
                 <section>
                     <header class="major">
                         <h2>Люди читають:</h2>
@@ -344,21 +360,22 @@
 							</a>
 							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
 						</article> -->
-							<article>
-								<a href="https://i.goit.global/hwVUk" class="image"><img
-										src="../../../../images/gus.jpg" alt="image" /></a>
-								<a href="https://i.goit.global/hwVUk">
-									<h3>Хочеш в ІТ, але не знаєш з чого почати?</h3>
-								</a>
-								<p>Відповідь знайдеш на <b>безплатному</b> тест-драйві ІТ-професій від GoIT. За тиждень тут можна спробувати себе на чотирьох
-								позиціях.</p>
-							</article>
-					</div>
-					<ul class="actions">
-						<li><a href="https://i.goit.global/hwVUk" class="button">РЕЄСТРУЙСЯ</a></li>
-					</ul>
+                        <article>
+                            <a href="https://i.goit.global/hwVUk" class="image"><img src="../../../../images/gus.jpg"
+                                    alt="image" /></a>
+                            <a href="https://i.goit.global/hwVUk">
+                                <h3>Хочеш в ІТ, але не знаєш з чого почати?</h3>
+                            </a>
+                            <p>Відповідь знайдеш на <b>безплатному</b> тест-драйві ІТ-професій від GoIT. За тиждень тут
+                                можна спробувати себе на чотирьох
+                                позиціях.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="https://i.goit.global/hwVUk" class="button">РЕЄСТРУЙСЯ</a></li>
+                    </ul>
                 </section>
-        
+
                 <!-- Section -->
                 <section>
                     <header class="major">
@@ -374,7 +391,7 @@
                         <li class="icon solid fa-home">Київ, Україна!</li>
                     </ul>
                 </section>
-        
+
                 <!-- Footer -->
                 <footer id="footer">
                     <p class="copyright">&copy; Всі права захищені. <br><br> <span
