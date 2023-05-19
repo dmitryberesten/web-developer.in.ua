@@ -1,5 +1,4 @@
-
-/* Form */
+Form
 
 form {
   margin: 0 0 2em 0;
@@ -36,6 +35,7 @@ textarea {
   text-decoration: none;
   width: 100%;
 }
+
 input[type="text"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
@@ -46,6 +46,7 @@ select:invalid,
 textarea:invalid {
   box-shadow: none;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -67,13 +68,16 @@ select {
   padding-right: 2.75em;
   text-overflow: ellipsis;
 }
+
 select option {
   color: #3d4449;
   background: #ffffff;
 }
+
 select:focus::-ms-value {
   background-color: transparent;
 }
+
 select::-ms-expand {
   display: none;
 }
@@ -92,7 +96,7 @@ textarea {
   padding: 0.75em 1em;
 }
 
-input[type="checkbox"],
+/* input[type="checkbox"],
 input[type="radio"] {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -104,9 +108,10 @@ input[type="radio"] {
   opacity: 0;
   width: 1em;
   z-index: -1;
-}
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+} */
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
   text-decoration: none;
   color: #7f888f;
   cursor: pointer;
@@ -117,8 +122,9 @@ input[type="radio"] + label {
   padding-right: 0.75em;
   position: relative;
 }
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
+
+input[type="checkbox"]+label:before,
+input[type="radio"]+label:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -130,8 +136,9 @@ input[type="radio"] + label:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
+
+input[type="checkbox"]+label:before,
+input[type="radio"]+label:before {
   background: #ffffff;
   border-radius: 0.375em;
   border: solid 1px rgba(210, 215, 217, 0.75);
@@ -146,24 +153,26 @@ input[type="radio"] + label:before {
   top: 0;
   width: 2.0625em;
 }
-input[type="checkbox"]:checked + label:before,
-input[type="radio"]:checked + label:before {
+
+input[type="checkbox"]:checked+label:before,
+input[type="radio"]:checked+label:before {
   background: #3d4449;
   border-color: #3d4449;
   color: #ffffff;
   content: "\f00c";
 }
-input[type="checkbox"]:focus + label:before,
-input[type="radio"]:focus + label:before {
+
+input[type="checkbox"]:focus+label:before,
+input[type="radio"]:focus+label:before {
   border-color: #3668e8;
   box-shadow: 0 0 0 1px #3668e8;
 }
 
-input[type="checkbox"] + label:before {
+input[type="checkbox"]+label:before {
   border-radius: 0.375em;
 }
 
-input[type="radio"] + label:before {
+input[type="radio"]+label:before {
   border-radius: 100%;
 }
 
