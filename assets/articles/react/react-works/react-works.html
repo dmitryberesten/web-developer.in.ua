@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Як працює React.js під капотом?</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <a href="../js-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Як працює React.js під капотом?</h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/js/js-works/1.png"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hiruy
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>Під капотом React.js використовує віртуальну об'єктну модель документа (DOM - Document Object
+                        Model) та алгоритм
+                        порівняння для ефективного оновлення інтерфейсу користувача.
+                    </p>
+
+                    <h3>Структура компонентів:</h3>
+                    <p>Додатки React.js будуються за допомогою компонентів, які повторно використовуються. Кожен
+                        компонент представляє частину
+                        інтерфейсу користувача і може складатися з інших компонентів. Компоненти можуть мати властивості
+                        (props) і зберігати
+                        власний внутрішній стан.</p>
+
+                    <h3>Віртуальний DOM:</h3>
+                    <p>React.js представляє віртуальний DOM, який є спрощеним представленням фактичного DOM. Віртуальний
+                        DOM — це об'єкт
+                        JavaScript, який відображає структуру реальних елементів DOM.</p>
+
+                    <h3>Рендеринг:</h3>
+                    <p>Коли React компонент рендериться, він створює віртуальне представлення свого власного DOM та
+                        дочірніх компонентів.
+                    </p>
+
+                    <h3>Порівняння:</h3>
+                    <p>React використовує алгоритм порівняння для ефективного оновлення реального DOM. Коли змінюються
+                        стан або властивості
+                        компонента, React створює нове віртуальне представлення DOM. Потім воно порівнює новий
+                        віртуальний DOM з попереднім
+                        (здійснює порівняння), визначаючи мінімальний набір змін, необхідних для оновлення реального
+                        DOM.</p>
+
+                    <h3>Ефективні оновлення:</h3>
+                    <p>React оптимізовує процес оновлення, мінімізуючи операції з DOM. Замість оновлення всього
+                        DOM-дерева, він вибірково
+                        оновлює лише необхідні частини. Цей підхід покращує продуктивність шляхом зменшення кількості
+                        трудомістких операцій,
+                        необхідних для оновлення інтерфейсу користувача.</p>
+
+                    <h3>Методи життєвого циклу компонентів:</h3>
+                    <p>React надає методи життєвого циклу, які дозволяють розробникам виконувати дії на певних етапах
+                        життєвого циклу
+                        компонента. Ці методи включають componentDidMount, componentDidUpdate, componentWillUnmount:
+                        вони дозволяють розробникам
+                        обробляти “побічні ефекти”, виконувати AJAX-запити або відповідно оновлювати стан компонента.
+                    </p>
+
+                    <h3>Обробка подій:</h3>
+                    <p>React.js використовує систему синтетичних подій для обробки взаємодій користувача. Він нормалізує
+                        специфічні для
+                        браузера події та надає єдиний API для обробки подій у різних браузерах.</p>
+
+                    <h3>Односпрямований потік даних:</h3>
+                    <p>React дотримується односпрямованого потоку даних, також відомого як одностороння прив’язка. Дані
+                        переходять від
+                        батьківських компонентів до дочірніх через властивості (props). Дочірні компоненти можуть
+                        сповіщати батьківські
+                        компоненти про зміни за допомогою callback-функцій, переданих через властивості.
+                    </p>
+
+                    <p>За допомогою ефективного керування віртуальним DOM та використання алгоритму порівняння, React.js
+                        мінімізує прямі
+                        операції з реальним DOM, що призводить до покращення продуктивності та більш адаптивного
+                        інтерфейсу користувача.
+                    </p>
+
+                    <p>Зверніть увагу, що це спрощене пояснення того, як працює React.js, і внутрішні деталі його
+                        реалізації можуть
+                        відрізнятися.
+                    </p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/hifmt"
+                                target="_blank">http://surl.li/hisfd</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/iryna-neher/" target="_blank"> Iryna Neher </a> <br>
+                        <b>Редактор:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <nav id="menu">
+                    <header class="major">
+                        <h3>Меню</h3>
+                    </header>
+                    <ul>
+                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
+                                Головна</a></li>
+                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
+                                    class="fa-regular fa-file-lines"></i>
+                                Статті</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
+                                Уроки</a></li>
+                        <li class="menu-item__btn"><a href="../../../../services.html"><i
+                                    class="fa-solid fa-pen-ruler"></i>
+                                Cервіси</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
+                                    class="fa-solid fa-podcast"></i>
+                                Подкасти</a></li>
+                        <li>
+                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
+                                Генератори</span>
+                            <ul>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-memes/generator-memes.html"><i
+                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
+                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
+                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-facts/generator-facts.html"><i
+                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
+                                    class="fa-brands fa-youtube"></i>
+                                Українські ІТ-ютубери</a></li>
+                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
+                                    class="fa-solid fa-hand-holding-dollar"></i>
+                                Донат</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
+                                    class="fa-solid fa-user-group"></i>
+                                Про
+                                нас</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h3>Люди читають:</h3>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="../../git/improving-git/improving-git.html" class="image"><img
+                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
+                            <a href="../../git/improving-git/improving-git.html">
+                                <h3>Покращуємо процес роботи з Git</h3>
+                            </a>
+                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
+                        </article>
+                        <article>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
+                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
+                                <h3>Використання Bootstrap для адаптивної верстки</h3>
+                            </a>
+                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
+                        </article>
+                        <!-- <article>
+							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
+									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
+							<a href="./assets/articles/node/node-need/node-need.html">
+								<h3>Коли застосовують Node.js?</h3>
+							</a>
+							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
+						</article> -->
+                        <article>
+                            <a href="https://i.goit.global/hwVUk" class="image"><img src="../../../../images/gus.jpg"
+                                    alt="image" /></a>
+                            <a href="https://i.goit.global/hwVUk">
+                                <h3>Хочеш в ІТ, але не знаєш з чого почати?</h3>
+                            </a>
+                            <p>Відповідь знайдеш на <b>безплатному</b> тест-драйві ІТ-професій від GoIT. За тиждень тут
+                                можна спробувати себе на чотирьох
+                                позиціях.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="https://i.goit.global/hwVUk" class="button">РЕЄСТРУЙСЯ</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h3>Зв'язатись</h3>
+                    </header>
+                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
+                        можете написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
+                            dmitryberesten</a>.
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
