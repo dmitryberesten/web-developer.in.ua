@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Повторний рендеринг в React</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Повторний рендеринг в React</h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/react/react-re-render/1.png"
+                            alt="зображення" >
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hjnwi
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>Як фронтенд розробник, ви, ймовірно, стикалися з терміном "повторний рендеринг", якщо працювали з
+                        React. Сьогодні ми
+                        детально розберемося з цим терміном.
+                        Перш за все, нам потрібно знати, що таке "рендеринг" в екосистемі React.
+                    </p>
+
+                    <h2>Що таке "рендеринг" в React?</h2>
+
+                    <p>В екосистемі React рендеринг відноситься до процесу, за допомогою якого React відображає елементи
+                        інтерфейсу користувача
+                        (UI) на екрані відповідно до стану програми.
+                        Як ви вже змогли зрозуміти, "повторний рендеринг" відноситься до процесу повторного
+                        відображення.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive"
+                            src="/assets/articles/react/react-re-render/2.gif" alt="зображення" style="width: 60%; max-width: 60%; height: auto;"
+							 >
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hjnys
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Добре, тепер, коли ми розуміємо концепцію, давайте обговоримо, коли ми стикаємося з цим процесом
+                        у нашій програмі React.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive"
+                            src="/assets/articles/react/react-re-render/3.gif" alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/hjoam
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У React фактично існує лише один метод повторного рендеру компонентів: ОНОВЛЕННЯ СТАНУ!!!
+                    </p>
+
+                    <p>Напевно, ви чули, що зміна пропів компонента здатна повторно рендерити компонент. Пізніше я розповім про те, чому цей
+                    аргумент неправильний.</p>
+
+                    <h2>Оновлення стану</h2>
+
+                    <p>Як я вже згадував вище, єдиний спосіб повторно рендерити компонент – це оновлення стану. Тому що React стежить за
+                    змінами даних таким чином. Дозвольте мені навести приклад:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/4.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Якщо ви напишете цей код і натиснете на кнопку, побачите, що нічого не змінилося. Давайте зробимо те ж саме,
+                    використовуючи хук React’a useState:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/5.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>В даному випадку ви побачите, що число збільшується на одиницю.</p>
+
+                    <p>Можливо, вам цікаво, чому кількість збільшується під час використання хука useState. React використовує концепцію,
+                    відому як "Віртуальний DOM" (Virtual DOM), яка є аналогом фактичного DOMу (Document Object Model — об’єктної моделі
+                    документа). Віртуальний DOM — це техніка, яка підвищує ефективність шляхом мінімізації прямої взаємодії з DOM. Замість
+                    того, щоб вносити зміни безпосередньо в DOM, зміни спочатку вносяться у віртуальний DOM. Потім React порівнює нову
+                    версію віртуального DOM з попередньою та оновлює лише фактичні елементи DOM, які змінилися. Ми називаємо цей крок
+                    "повторним рендерингом". Такий підхід значно підвищує продуктивність складних динамічних веб-додатків. React виконує ці
+                    кроки завдяки хуку useState.</p>
+
+                    <h3>Зміна пропів</h3>
+
+                    <p>Коли я почав вивчати React, я припускав, що зміна пропів компонентів призведе до повторного рендерингу цих компонентів.
+                    Однак, провівши кілька тестів, я виявив, що це припущення невірне.</p>
+
+                    <p>Дозвольте мені чітко пояснити це:</p>
+
+                    <p>У цьому експерименті ми працюємо з двома прикладами. Перший приклад містить компонент із пропом, тоді як другий приклад
+                    містить додатковий компонент, який не має пропів.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/6.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У першому прикладі ми маємо 2 компоненти. NameViewer і його батьківський компонент App. Якщо ви спробуєте щось ввести,
+                    ви помітите, що ці логи з’являються в консолі. (Не звертайте уваги на додаткові логи, які відображаються кольорами,
+                    відмінними від білого. Вони з’являються через строгий режим React (strict mode)).</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/7.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У наведеному прикладі ви можете подумати, що компонент NameViewer повторно рендериться, оскільки його проп змінюється.
+                    Переглянувши другий приклад, ви зрозумієте, що пропи не є визначальним фактором для повторного рендеру компонента.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/8.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src" >
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У другому прикладі я додав інший компонент під назвою ComponentWithNoProps. Цей компонент не має пропів. Однак, якщо ви
+                    спробуєте щось ввести, ви також побачите лог "ComponentWithNoProps render" у консолі. (Будь ласка, не звертайте уваги на
+                    додаткові логи, які відображаються кольорами, відмінними від білого. Вони з’являються через суворий режим React(strict
+                    mode)).</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/10.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Як зазначалося, "ComponentWithNoProps" не має жодних пропів, але все ще повторно рендериться. Вам цікаво, чому це
+                    відбувається?</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/11.gif"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У React зміна стану компонента потенційно може призвести до повторного рендерингу цього компонента та його дочірніх
+                    компонентів.</p>
+
+                    <p>Отже, які висновки ми можемо зробити із наведеного вище речення?</p>
+
+                    <ul class="norm-li">
+                        <li>1. React починає повторно рендерити компонент, у якому був ініціалізований стан.</li>
+                        <li>2. Дочірні компоненти можуть повторно рендериться, якщо не використовуються техніки мемоізації.</li>
+                        <li>3. Самі по собі пропи не призводять до повторного рендерингу компонентів, але зміни в пропах можуть ініціювати повторний
+                        рендеринг.</li>
+                    </ul> <br>
+
+                    <p>Існують техніки, які називаються "мемоізація" (memoization), не плутати з "запам’ятовуванням" (memorization), вони
+                    можуть запобігти непотрібному повторному рендерингу. Незважаючи на різницю в термінології, концепції мають спільні риси.</p>
+
+                    <p>Я збираюся поділитися порадою щодо запобігання непотрібного повторного рендерингу.</p>
+
+                    <h2>Бонусна порада щодо мемоізації</h2>
+
+                    <p>За допомогою "React.memo" ми можемо запобігти непотрібним повторним рендерингам. Огортаючи компонент за допомогою
+                    "memo", ми, по суті, наказуємо React: "Гей, не рендеруй повторно цей компонент, якщо його пропи не змінилися".</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/12.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Після цього ви побачите ці логи у консолі. Як видно, в логах немає жодного повідомлення про компонент
+                    "ComponentWithNoProps". Це тому, що React зберігає його в пам'яті і рендерить компонент лише в разі зміни його пропів. У
+                    цьому випадку, компонент не має пропів, тому він не рендериться знову.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive" src="/assets/articles/react/react-re-render/13.png"
+                            alt="зображення" style="width: 60%; max-width: 60%; height: auto;">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Дякую за час, який ви виділили на прочитання цієї статті.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/hjopy"
+                                target="_blank">http://surl.li/hjopy</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/yevheniia-melnychenko/" target="_blank"> Yevheniia Melnychenko</a> <br>
+                        <b>Редактор:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
+                                Головна</a></li>
+                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
+                                    class="fa-regular fa-file-lines"></i>
+                                Статті</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
+                                Уроки</a></li>
+                        <li class="menu-item__btn"><a href="../../../../services.html"><i
+                                    class="fa-solid fa-pen-ruler"></i>
+                                Cервіси</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
+                                    class="fa-solid fa-podcast"></i>
+                                Подкасти</a></li>
+                        <li>
+                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
+                                Генератори</span>
+                            <ul>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-memes/generator-memes.html"><i
+                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
+                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
+                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-facts/generator-facts.html"><i
+                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
+                                    class="fa-brands fa-youtube"></i>
+                                Українські ІТ-ютубери</a></li>
+                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
+                                    class="fa-solid fa-hand-holding-dollar"></i>
+                                Донат</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
+                                    class="fa-solid fa-user-group"></i>
+                                Про
+                                нас</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Люди читають:</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="../../git/improving-git/improving-git.html" class="image"><img
+                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
+                            <a href="../../git/improving-git/improving-git.html">
+                                <h3>Покращуємо процес роботи з Git</h3>
+                            </a>
+                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
+                        </article>
+                        <article>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
+                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
+                                <h3>Використання Bootstrap для адаптивної верстки</h3>
+                            </a>
+                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
+                        </article>
+                        <!-- <article>
+							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
+									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
+							<a href="./assets/articles/node/node-need/node-need.html">
+								<h3>Коли застосовують Node.js?</h3>
+							</a>
+							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
+						</article> -->
+                        <article>
+                            <a href="https://i.goit.global/hwVUk" class="image"><img src="../../../../images/gus.jpg"
+                                    alt="image" /></a>
+                            <a href="https://i.goit.global/hwVUk">
+                                <h3>Хочеш в ІТ, але не знаєш з чого почати?</h3>
+                            </a>
+                            <p>Відповідь знайдеш на <b>безплатному</b> тест-драйві ІТ-професій від GoIT. За тиждень тут
+                                можна спробувати себе на чотирьох
+                                позиціях.</p>
+                        </article>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="https://i.goit.global/hwVUk" class="button">РЕЄСТРУЙСЯ</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
+                        можете написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
+                            dmitryberesten</a>.
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
