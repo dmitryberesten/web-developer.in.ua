@@ -5,7 +5,7 @@
     <title>Що таке Angular?</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
 </head>
 
@@ -35,7 +35,7 @@
                     </ul>
                 </header>
 
-				<a href="../angular-articles.html" class="button small btn-back">Назад</a>
+                <a href="../angular-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -43,33 +43,47 @@
                         <h1>Що таке Angular?</h1>
                     </header>
 
-                    <span class="image main"><img src="/assets/articles/angular/angular-introduction/angular-introduction.png"
+                    <span class="image main"><img
+                            src="/assets/articles/angular/angular-introduction/angular-introduction.png"
                             alt="html code" /></span>
                     <p class="photo-src">Джерело фото: https://goo.su/74rnuez</p>
                     <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
                     <div id="updown"></div>
 
-                    <p>Angular (зазвичай так називають фреймворк Angular 2 або Angular 2+, тобто вищі версії) — написаний на TypeScript front-end фреймворк з відкритим кодом, який розробляється під керівництвом Angular Team у компанії Google, а також спільнотою приватних розробників та корпорацій. Angular — це AngularJS, який був переосмислений та перероблений тією ж командою розробників.</p>
+                    <p>Angular (зазвичай так називають фреймворк Angular 2 або Angular 2+, тобто вищі версії) —
+                        написаний на TypeScript front-end фреймворк з відкритим кодом, який розробляється під
+                        керівництвом Angular Team у компанії Google, а також спільнотою приватних розробників та
+                        корпорацій. Angular — це AngularJS, який був переосмислений та перероблений тією ж командою
+                        розробників.</p>
 
                     <h2>Історія</h2>
 
-                    <p>Спочатку переписаний AngularJS отримав назву Angular 2 від команди розробників, яка над ним працювала, але це призвело до плутанини серед інших розробників. Аби пояснити різницю між ними та наголосити, що це окремі проекти, команда вирішила для фреймворків версій 1.X застосовувати назву AngularJS, а для версій, починаючи з 2.0, — Angular без JS.</p>
+                    <p>Спочатку переписаний AngularJS отримав назву Angular 2 від команди розробників, яка над ним
+                        працювала, але це призвело до плутанини серед інших розробників. Аби пояснити різницю між ними
+                        та наголосити, що це окремі проекти, команда вирішила для фреймворків версій 1.X застосовувати
+                        назву AngularJS, а для версій, починаючи з 2.0, — Angular без JS.</p>
 
                     <h2>Основні відмінності між Angular та AngularJS</h2>
 
                     <p>Як згадано вище, Angular — це ретельно переписаний AngularJS.</p>
 
-                    <p>&#10003; Додано Angular CLI, що дає змогу розпочати створення нового додатка, просто написавши команду ng new [app name]</p>
+                    <p>&#10003; Додано Angular CLI, що дає змогу розпочати створення нового додатка, просто написавши
+                        команду ng new [app name]</p>
 
-                    <p>&#10003; Angular не використовує концепцію "області видимості" або контролерів, натомість як головну архітектурну концепцію він застосовує ієрархію компонентів</p>
+                    <p>&#10003; Angular не використовує концепцію "області видимості" або контролерів, натомість як
+                        головну архітектурну концепцію він застосовує ієрархію компонентів</p>
 
-                    <p>&#10003; Angular має інакший синтаксис написання виразів, застосовуючи "[ ]" для біндінгу даних властивостей, і "( )" для біндінгу даних івентів</p>
+                    <p>&#10003; Angular має інакший синтаксис написання виразів, застосовуючи "[ ]" для біндінгу даних
+                        властивостей, і "( )" для біндінгу даних івентів</p>
 
                     <p>&#10003; Модульність – значна частина основного функціоналу перенесена у модулі</p>
 
-                    <p>&#10003; Angular рекомендує та застосовує розроблену Microsoft мову — TypeScript, що містить такі можливості, як: <b>класи</b>, а отже Об'єктно-орієнтоване програмування, система <b>типізації</b>, <b>узагальнене</b> програмування </p>
+                    <p>&#10003; Angular рекомендує та застосовує розроблену Microsoft мову — TypeScript, що містить такі
+                        можливості, як: <b>класи</b>, а отже Об'єктно-орієнтоване програмування, система
+                        <b>типізації</b>, <b>узагальнене</b> програмування </p>
 
-                    <p>&#10003; TypeScript — надмножина ECMAScript 6 (ES6), і є зворотно сумісним зі стандартом ECMAScript 5 (тобто JavaScript).</p>
+                    <p>&#10003; TypeScript — надмножина ECMAScript 6 (ES6), і є зворотно сумісним зі стандартом
+                        ECMAScript 5 (тобто JavaScript).</p>
 
                     <h2>Angular також має такі ES6-можливості, як:</h2>
 
@@ -80,26 +94,33 @@
                         рефлексія,
                         динамічне завантаження,
                         асинхронна компіляція шаблонів,
-                        заміна контролерів та $scope(області видимості) компонентами та директивами – компонент є директивою з шаблоном,
-                        ітеративні колбеки завдяки використанню RxJS. RxJS дещо обмежує видимість станів та можливості дебагінгу, але, застосовуючи такі плагіни, як ngReact та ngrx, це легко вирішується.</p>
+                        заміна контролерів та $scope(області видимості) компонентами та директивами – компонент є
+                        директивою з шаблоном,
+                        ітеративні колбеки завдяки використанню RxJS. RxJS дещо обмежує видимість станів та можливості
+                        дебагінгу, але, застосовуючи такі плагіни, як ngReact та ngrx, це легко вирішується.</p>
 
-                        <h2>Майбутні версії</h2>
+                    <h2>Майбутні версії</h2>
 
-                        <p>Починаючи з 9 версії Angular всі нові програми використовують компілятор Ivy. Тож команда Angular працюватиме над покращенням цього компілятора, що в свою чергу має призвести до зменшення загального розміру пакунка. Очікується, що кожна наступна версія буде зворотно сумісною з попередньою. Google також обіцяє публікувати оновлення двічі на рік.</p>
+                    <p>Починаючи з 9 версії Angular всі нові програми використовують компілятор Ivy. Тож команда Angular
+                        працюватиме над покращенням цього компілятора, що в свою чергу має призвести до зменшення
+                        загального розміру пакунка. Очікується, що кожна наступна версія буде зворотно сумісною з
+                        попередньою. Google також обіцяє публікувати оновлення двічі на рік.</p>
 
-                        <h2>Статистика користування Angular</h2>
+                    <h2>Статистика користування Angular</h2>
 
-                        <p>Angular з кожним роком зростає у популярності. Станом на серпень 2020, кожного дня завантажується близько 1,5 мільйонів Angular/core, та подвоюється кожен рік.
+                    <p>Angular з кожним роком зростає у популярності. Станом на серпень 2020, кожного дня завантажується
+                        близько 1,5 мільйонів Angular/core, та подвоюється кожен рік.
 
-                            Технологія Angular використовується у вебдодатках таких компаній:
-                            
-                            Google (Gmail, Google Play, Google Translate, Google Ads, Youtube);
-                            PayPay;
-                            Upwork;
-                            Expedia Group;
-                            Lego;
-                            Adidas.
-                            На ринку програмних фреймворків Angular займає 2 позицію після ASP.NET, що займають 9,18% та 44,9% відповідно.</p>
+                        Технологія Angular використовується у вебдодатках таких компаній:
+
+                        Google (Gmail, Google Play, Google Translate, Google Ads, Youtube);
+                        PayPay;
+                        Upwork;
+                        Expedia Group;
+                        Lego;
+                        Adidas.
+                        На ринку програмних фреймворків Angular займає 2 позицію після ASP.NET, що займають 9,18% та
+                        44,9% відповідно.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/R4fT</span>
                         <br>
@@ -115,7 +136,7 @@
         <!-- Sidebar -->
         <div id="sidebar">
             <div class="inner">
-        
+
                 <nav id="menu">
                     <header class="major">
                         <h2>Меню</h2>
@@ -123,44 +144,52 @@
                     <ul>
                         <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
                                 Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
+                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
+                                    class="fa-regular fa-file-lines"></i>
                                 Статті</a>
                         </li>
                         <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
                                 Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
+                        <li class="menu-item__btn"><a href="../../../../services.html"><i
+                                    class="fa-solid fa-pen-ruler"></i>
                                 Cервіси</a>
                         </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
+                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
+                                    class="fa-solid fa-podcast"></i>
                                 Подкасти</a></li>
                         <li>
                             <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
                                 Генератори</span>
                             <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-memes/generator-memes.html"><i
                                             class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
                                             class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
                                 <li class="menu-item__btn"><a
                                         href="../../../generators/generator-motivations/generator-motivations.html"><i
                                             class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-facts/generator-facts.html"><i
                                             class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
+                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
+                                    class="fa-brands fa-youtube"></i>
                                 Українські ІТ-ютубери</a></li>
                         <li class="menu-item__btn"><a href="../../../../donate.html"><i
                                     class="fa-solid fa-hand-holding-dollar"></i>
                                 Донат</a>
                         </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
+                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
+                                    class="fa-solid fa-user-group"></i>
                                 Про
                                 нас</a>
                         </li>
                     </ul>
                 </nav>
-        
+
                 <section>
                     <header class="major">
                         <h2>Люди читають:</h2>
@@ -182,29 +211,17 @@
                             </a>
                             <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
                         </article>
-                        <!-- <article>
-							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-							<a href="./assets/articles/node/node-need/node-need.html">
-								<h3>Коли застосовують Node.js?</h3>
-							</a>
-							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-						</article> -->
-							<article>
-								<a href="https://i.goit.global/hwVUk" class="image"><img
-										src="../../../../images/gus.jpg" alt="image" /></a>
-								<a href="https://i.goit.global/hwVUk">
-									<h3>Хочеш в ІТ, але не знаєш з чого почати?</h3>
-								</a>
-								<p>Відповідь знайдеш на <b>безплатному</b> тест-драйві ІТ-професій від GoIT. За тиждень тут можна спробувати себе на чотирьох
-								позиціях.</p>
-							</article>
-					</div>
-					<ul class="actions">
-						<li><a href="https://i.goit.global/hwVUk" class="button">РЕЄСТРУЙСЯ</a></li>
-					</ul>
+                        <article>
+                            <a href="../../node/node-need/node-need.html" class="image"><img
+                                    src="../../node/node-need/node-need.png" alt="" /></a>
+                            <a href="../../node/node-need/node-need.html">
+                                <h3>Коли застосовують Node.js?</h3>
+                            </a>
+                            <p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
+                        </article>
+
                 </section>
-        
+
                 <!-- Section -->
                 <section>
                     <header class="major">
@@ -220,7 +237,7 @@
                         <li class="icon solid fa-home">Київ, Україна!</li>
                     </ul>
                 </section>
-        
+
                 <!-- Footer -->
                 <footer id="footer">
                     <p class="copyright">&copy; Всі права захищені. <br><br> <span
