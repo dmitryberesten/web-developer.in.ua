@@ -1,0 +1,62 @@
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.team-member-card {
+    flex-basis: 25%;
+    max-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+}
+
+.team-member-card h3 {
+    margin: 0;
+}
+
+.team-member-card p {
+    margin: 5px 0;
+}
+
+@media (max-width: 1200px) {
+    .team-member-card {
+        flex-basis: 33.33%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member-card {
+        flex-basis: 50%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-member-card {
+        flex-basis: 100%;
+        max-width: 300px;
+    }
+}
