@@ -1,23 +1,33 @@
 const chats = [
   {
-    logo: "../../images/team/1.jpg",
-    name: "ІТ КПІ - JS",
-    link: "https://t.me/itkpi_js",
+    logo: "../../images/chats/1.jpg",
+    name: "Чат - Фрілансер по життю 🇺🇦",
+    link: "https://t.me/flschat",
   },
   {
-    logo: "../../images/team/1.jpg",
+    logo: "../../images/chats/2.jpg",
+    name: "Команда JS 🇺🇦",
+    link: "https://t.me/chatjsua",
+  },
+  {
+    logo: "../../images/chats/3.jpg",
     name: "NodeUA - JavaScript and Node.js",
-    link: "https://t.me/chat1",
+    link: "https://t.me/nodeua",
   },
   {
-    logo: "../../images/team/1.jpg",
-    name: "JS різноробочий | Fullstack JavaScript UA",
-    link: "https://t.me/chat1",
+    logo: "../../images/chats/4.jpg",
+    name: "TECH Interview",
+    link: "https://t.me/FaangTechInterview",
   },
   {
-    logo: "../../images/team/1.jpg",
-    name: "Назва чату 1",
-    link: "https://t.me/chat1",
+    logo: "../../images/chats/5.jpg",
+    name: "IT KPI chat",
+    link: "https://t.me/itkpi_flood",
+  },
+  {
+    logo: "../../images/chats/6.jpg",
+    name: "Nightly IT ✙ #УкрТг",
+    link: "https://t.me/itcrowdua",
   },
 ];
 
