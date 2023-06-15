@@ -47,6 +47,60 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/denys-kyzym/",
     photo: "../../images/team/8.jpg",
   },
+  {
+    name: "Denis Kononuchenko",
+    position: "Technical Translator",
+    linkedin: "https://www.linkedin.com/in/denis-kononuchenko/",
+    photo: "../../images/team/9.jpg",
+  },
+  {
+    name: "Volodymyr Pyts",
+    position: "Content Manager",
+    linkedin: "https://www.linkedin.com/in/volodymyr-pyts/",
+    photo: "../../images/team/10.jpg",
+  },
+  {
+    name: "Iryna Shashko",
+    position: "Content Specialist",
+    linkedin: "https://www.linkedin.com/in/iryna-shashko/",
+    photo: "../../images/team/11.jpg",
+  },
+  {
+    name: "Tetiana Prokopchuk",
+    position: "Content Manager",
+    linkedin: "https://www.linkedin.com/in/tetianaprokopchuk/",
+    photo: "../../images/team/12.jpg",
+  },
+  {
+    name: "Вадим Кузик",
+    position: "English Translator",
+    linkedin: "https://www.linkedin.com/in/vadym-kuzyk-468395250/",
+    photo: "../../images/team/13.jpg",
+  },
+  {
+    name: "Aliona Chaban",
+    position: "Creative Manager",
+    linkedin: "https://www.linkedin.com/in/aliona-chaban-21b5841a8/",
+    photo: "../../images/team/14.jpg",
+  },
+  {
+    name: "Oksana Stetsko",
+    position: "Translator",
+    linkedin: "https://www.linkedin.com/in/oksana-stetsko-824a07245/",
+    photo: "../../images/team/15.jpg",
+  },
+  {
+    name: "Margarita Chigrinets",
+    position: "English Translator",
+    linkedin: "https://www.linkedin.com/in/margarita-chigrinets-74197225b/",
+    photo: "../../images/team/16.jpg",
+  },
+  // {
+  //   name: "",
+  //   position: "",
+  //   linkedin: "",
+  //   photo: "../../images/team/.jpg",
+  // },
 ];
 
 const teamContainer = document.querySelector(".team-members");
