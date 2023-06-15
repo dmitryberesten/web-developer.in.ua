@@ -1,0 +1,14 @@
+	<script src="./assets/js/loader.js" async></script>
+
+
+	<div class="loader-container" id="spinner-loader">
+		<div class="loader-circle"></div>
+	</div>
+
+
+    <div id="component-header"></div>
+    <script src="./assets/js/components/component-header.js"></script>
+
+
+    <div id="component-sidebar"></div>
+	<script src="./assets/js/components/component-sidebar.js" ></script>

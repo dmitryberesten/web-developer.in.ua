@@ -1,0 +1,31 @@
+ .loader-container {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 99999;
+ }
+
+ .loader-circle {
+     border: 7px solid rgb(228, 228, 22);
+     border-top: 7px solid #3668e8;
+     border-radius: 50%;
+     width: 70px;
+     height: 70px;
+     animation: spin 1.5s linear infinite;
+ }
+
+ @keyframes spin {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }

@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="icon" type="image/ico" href="../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,21 +23,8 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../js/components/component-header.js"></script>
 
                 <!-- Section -->
                 <section>
@@ -435,7 +426,7 @@
                                 <span class="fa-brands fa-youtube color-logo"></span> #pivorak Lviv Ruby MeetUp
                             </a>
                         </h2>
-                    
+
                         <p>
                         <figure>
                             <a href="https://www.youtube.com/@pivorakLvivRubyMeetUp" target="_blank">
@@ -448,7 +439,8 @@
                             </figcaption>
                         </figure>
                         </p>
-                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> #pivorak is a Lviv ruby user group with no crap.</p>
+                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> #pivorak is a
+                            Lviv ruby user group with no crap.</p>
                     </div>
 
                     <div class="hr-custom">
@@ -517,7 +509,8 @@
                             </figcaption>
                         </figure>
                         </p>
-                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> Канал про програмування на Ruby та Ruby on Rails</p>
+                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> Канал про
+                            програмування на Ruby та Ruby on Rails</p>
                     </div>
 
                     <div class="hr-custom">
@@ -623,10 +616,11 @@
                     <div class="hr-custom">
                         <h2 class="text_center">
                             <a href="https://www.youtube.com/@bui-studies" target="_blank">
-                                <span class="fa-brands fa-youtube color-logo"></span> БУЙ studies | Програмування Українською
+                                <span class="fa-brands fa-youtube color-logo"></span> БУЙ studies | Програмування
+                                Українською
                             </a>
                         </h2>
-                    
+
                         <p>
                         <figure>
                             <a href="https://www.youtube.com/@bui-studies" target="_blank">
@@ -639,7 +633,9 @@
                             </figcaption>
                         </figure>
                         </p>
-                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> БУЙ studies. Команда ентузіастів, яким дуже кортить передавати свої знання та навички на користь ІТ сектору України.</p>
+                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> БУЙ studies.
+                            Команда ентузіастів, яким дуже кортить передавати свої знання та навички на користь ІТ
+                            сектору України.</p>
                     </div>
 
                     <div class="hr-custom">
@@ -719,7 +715,7 @@
                                 <span class="fa-brands fa-youtube color-logo"></span> Victoriia Hladka
                             </a>
                         </h2>
-                    
+
                         <p>
                         <figure>
                             <a href="https://www.youtube.com/@victoriiahladka" target="_blank">
@@ -732,7 +728,8 @@
                             </figcaption>
                         </figure>
                         </p>
-                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> Віторія - веб 🖥️ розробник , ❤️ природу і дизайн.</p>
+                        <p class="center-text__desc"><i class="fa-solid fa-circle-info info-text"></i> Віторія - веб 🖥️
+                            розробник , ❤️ природу і дизайн.</p>
                     </div>
 
                 </section>
@@ -742,140 +739,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../articles.html"><i
-                                    class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../services.html"><i
-                                    class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../podcasts/podcasts.html"><i
-                                    class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a
-                                        href="../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../bloggers/bloggers.html"><i
-                                    class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../about-us.html"><i
-                                    class="fa-solid fa-user-group"></i> Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../git/improving-git/improving-git.html" class="image"><img
-                                    src="../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                        <!-- <article>
-                                            							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                            									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                            							<a href="./assets/articles/node/node-need/node-need.html">
-                                            								<h3>Коли застосовують Node.js?</h3>
-                                            							</a>
-                                            							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                            						</article> -->
-                        <article>
-                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                                class="image"><img src="../../../images/itvdn.png" alt="screen" /></a>
-                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                                <h3>Вивчайте програмування безкоштовно</h3>
-                            </a>
-                            <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                                розробці на
-                                Android та iOS та інших.</p>
-                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                                target="_blank">Перейти</a>
-                        </article>
-                        <article>
-                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                    src="../../../images/cyberbionic.png" alt="screen" /></a>
-                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                                <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                            </a>
-                            <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                                працевлаштування.</p>
-                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                                target="_blank">Перейти</a>
-                        </article>
-                </section>
-
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
+        <div id="component-sidebar"></div>
+        <script src="../../js/components/component-sidebar.js"></script>
 
     </div>
 
