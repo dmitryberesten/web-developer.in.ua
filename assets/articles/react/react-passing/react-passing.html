@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Посібник для початківців з передачі props у React</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
+                    <ul class="icons">
+                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
+                                    class="label">Telegram</span></a></li>
+                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
+                                    class="label">Facebook</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
+                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
+                                    class="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Посібник для початківців з передачі props у React</h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/react/react-passing/1.jpg"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/icotw
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <P><b>Вступ:</b> <br>
+                        React, популярна бібліотека JavaScript, надає розробникам гнучкий та ефективний спосіб створення
+                        багаторазових
+                        компонентів інтерфейсу користувача. Однією з ключових концепцій React є можливість передавати
+                        props (скорочено від англ.
+                        props - властивості) від батьківських компонентів до їхніх дочірніх компонентів. У цій статті ми
+                        розглянемо значення та
+                        переваги передачі props у React, а також те, як це покращує повторне використання компонентів та
+                        їх супровід.
+                    </P>
+
+                    <p><b>Розуміння props:</b> <br>
+                        У React props (реквізити) використовуються для передачі даних від батьківського компонента до
+                        дочірнього. Подумайте про
+                        props як про канал зв'язку між компонентами, що дозволяє їм обмінюватися інформацією. Props
+                        можуть бути різні типи
+                        даних, включаючи рядки, числа, об'єкти, масиви і навіть функції.
+                    </p>
+
+                    <p><b>Передача props:</b> <br>
+                        Щоб передати реквізити від батьківського компонента до дочірнього, просто додайте потрібні props
+                        як атрибути під час
+                        рендерингу дочірнього компонента. Давайте розглянемо приклад:
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-passing/2.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-passing/3.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У цьому фрагменті коду є два React-компоненти: <mark>ParentComponent</mark> і
+                        <mark>ChildComponent</mark>. Компонент <mark>ParentComponent</mark> рендерить
+                        екземпляр <mark>ChildComponent</mark>.
+                    </p>
+
+                    <p>У <mark>ParentComponent</mark> до <mark>ChildComponent</mark> передаються два props:</p>
+
+                    <ul class="norm-li">
+                        <li>1. <mark>greeting</mark>: Це рядок зі значенням "Hello, World!". Цей prop містить вітальне
+                            повідомлення.</li>
+                        <li>2. <mark>numbers</mark>: Це масив, що містить числа [1, 2, 3, 4, 5]. Цей prop містить список
+                            чисел.</li>
+                    </ul> <br>
+
+                    <p>У <mark>дочірньому компоненті</mark> отримані props <mark>greeting</mark> і <mark>numbers</mark> деструктуруються з параметра функції.
+                        Усередині компонента
+                        prop <mark>greeting</mark> відображається у вигляді заголовка <mark>h1</mark> зі значенням "Hello, World!".
+                    </p>
+
+                    <p>Потім prop <mark>numbers</mark> відображається за допомогою функції <mark>map()</mark> для створення списку елементів <mark>li</mark> . Кожен елемент масиву
+                    <mark>numbers</mark> відображається як елемент <mark>li</mark> з присвоєним йому унікальним ключем. У цьому випадку числа [1, 2, 3, 4, 5] будуть
+                    відображені у вигляді нумерованого списку в елементі <mark>ul</mark> .</p>
+
+                    <p>Загалом, <mark>батьківський компонент</mark> передає prop <mark>greeting</mark> та prop <mark>numbers</mark> дочірньому компоненту, який потім рендерить
+                    привітання та список чисел на основі цих props. Причина, чому це важливо, полягає в тому, що зазвичай <mark>дочірній компонент</mark>
+                    не має можливості використовувати константи, визначені в <mark>батьківському компоненті</mark>, а передача props дає можливість тим,
+                    хто пише на React, впорядкувати повторне використання інформації. Більше про переваги нижче!</p>
+
+                    <ul class="norm-li">
+                        <li><b>1. Повторне використання компонентів</b>: <br> Передаючи реквізити, ви можете створювати багаторазові компоненти, які можна
+                        використовувати всюди у вашому додатку. Один і той самий дочірній компонент може відображати різний вміст на основі
+                        отриманих props, що забезпечує гнучкість та ефективність коду.</li><br>
+                        <li><b>2. Контроль потоку даних</b>: <br> Props забезпечують односпрямований потік даних у React. Зміни props у батьківському компоненті
+                        спричиняють повторний рендеринг дочірнього компонента, гарантуючи, що інтерфейс залишається синхронізованим з основними
+                        даними.</li><br>
+                        <li><b>3. Зручність супроводу</b>: <br> Розбиваючи інтерфейс на менші компоненти, які можна повторно використовувати, ви покращуєте
+                        зручність супроводу вашої кодової бази. Props полегшують міркування про поведінку та вимоги до даних кожного компонента,
+                        що спрощує налагодження та модифікацію.</li><br>
+                        <li><b>4. Кастомізація та конфігурація</b>: <br> Props дозволяють налаштовувати компоненти. Ви можете передавати різні значення, щоб
+                        змінити вигляд або поведінку компонента, наприклад, передати інший колір або розмір для динамічної зміни стилю.</li>
+                    </ul> <br>
+
+                    <h3>Висновок:</h3>
+                    <p>Передача props у React є фундаментальною концепцією, яка розкриває справжній потенціал компонентної розробки. Ефективно
+                    використовуючи props, ви можете створювати багаторазові, кастомізовані та підтримувані компоненти, в результаті чого ви
+                    отримаєте більш ефективний та масштабований додаток. Розуміння та використання можливостей props є важливим кроком на
+                    шляху до того, щоб стати досвідченим React-розробником. Щасливого кодування!</p>
+
+                    <p>Пам'ятайте, що ця стаття лише зачіпає поверхню передачі props у React. Тож продовжуйте вивчати та експериментувати з
+                    React, щоб краще зрозуміти систему props і те, як її ефективно використовувати!</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/icqpg"
+                                target="_blank">http://surl.li/icqpg</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/oleksandr-vp/"
+                            target="_blank"> Oleksandr Podoliako</a> <br>
+                        <b>Редактор:</b> Аліна Берестень <br>
+                        <b>Адміністратор:</b> Дмитро Берестень
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Меню</h2>
+                    </header>
+                    <ul>
+                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
+                                Головна</a></li>
+                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
+                                    class="fa-regular fa-file-lines"></i>
+                                Статті</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
+                                Уроки</a></li>
+                        <li class="menu-item__btn"><a href="../../../../services.html"><i
+                                    class="fa-solid fa-pen-ruler"></i>
+                                Cервіси</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
+                                    class="fa-solid fa-podcast"></i>
+                                Подкасти</a></li>
+                        <li>
+                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
+                                Генератори</span>
+                            <ul>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-memes/generator-memes.html"><i
+                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
+                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
+                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
+                                <li class="menu-item__btn"><a
+                                        href="../../../generators/generator-facts/generator-facts.html"><i
+                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
+                                    class="fa-brands fa-youtube"></i>
+                                Українські ІТ-ютубери</a></li>
+                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
+                                    class="fa-solid fa-hand-holding-dollar"></i>
+                                Донат</a>
+                        </li>
+                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
+                                    class="fa-solid fa-user-group"></i>
+                                Про
+                                нас</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Люди читають:</h2>
+                    </header>
+                    <div class="mini-posts">
+                        <article>
+                            <a href="../../git/improving-git/improving-git.html" class="image"><img
+                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
+                            <a href="../../git/improving-git/improving-git.html">
+                                <h3>Покращуємо процес роботи з Git</h3>
+                            </a>
+                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
+                        </article>
+                        <article>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
+                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
+                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
+                                <h3>Використання Bootstrap для адаптивної верстки</h3>
+                            </a>
+                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
+                        </article>
+                        <!-- <article>
+                                                                							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
+                                                                									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
+                                                                							<a href="./assets/articles/node/node-need/node-need.html">
+                                                                								<h3>Коли застосовують Node.js?</h3>
+                                                                							</a>
+                                                                							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
+                                                                						</article> -->
+                        <article>
+                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine"
+                                target="_blank" class="image"><img src="../../../../images/itvdn.png"
+                                    alt="screen" /></a>
+                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine"
+                                target="_blank">
+                                <h3>Вивчайте програмування безкоштовно</h3>
+                            </a>
+                            <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++,
+                                Java, QA, мобільній
+                                розробці на
+                                Android та iOS та інших.</p>
+                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine"
+                                class="button big" target="_blank">Перейти</a>
+                        </article>
+                        <article>
+                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank"
+                                class="image"><img src="../../../../images/cyberbionic.png" alt="screen" /></a>
+                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
+                                <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
+                            </a>
+                            <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек,
+                                курсові проєкти, стажування та
+                                працевлаштування.</p>
+                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner"
+                                class="button big" target="_blank">Перейти</a>
+                        </article>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Зв'язатись</h2>
+                    </header>
+                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
+                        можете написати адміністратору в зручний для вас спосіб.</p>
+                    <ul class="contact">
+                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
+                        </li>
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+                        <li class="icon solid fa-home">Київ, Україна!</li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
+                            class="footer-text">web-developer.in.ua</span> <br><br> <a
+                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
+                            dmitryberesten</a>.
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
