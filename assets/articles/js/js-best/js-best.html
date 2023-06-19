@@ -5,11 +5,15 @@
     <title>Чому JavaScript найкращий?</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../js-articles.html" class="button small btn-back">Назад</a>
+                <a href="../js-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -43,54 +34,101 @@
                         <h1>Чому JavaScript найкращий?</h1>
                     </header>
 
-                    <span class="image main"><img
-                            src="/assets/articles/js/js-best/javascript.webp"
+                    <span class="image main"><img src="/assets/articles/js/js-best/javascript.webp"
                             alt="html code" /></span>
                     <p class="photo-src">Джерело фото: https://goo.su/Ajb3rq</p>
                     <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
                     <div id="updown"></div>
 
-                        <p>У моїх останніх бесідах із менеджерами по найму про те, як важко зараз знайти хорошого розробника, мене осінило, що мова програмування, яку потрібно вивчати сьогодні є JavaScript.</p>
+                    <p>У моїх останніх бесідах із менеджерами по найму про те, як важко зараз знайти хорошого
+                        розробника, мене осінило, що мова програмування, яку потрібно вивчати сьогодні є JavaScript.</p>
 
-                        <h2>Попит</h2>
+                    <h2>Попит</h2>
 
-                        <p>Основна причина того, що я кажу це те, що JavaScript розвивається і такі речі, як Node.js стають все більш життєздатними варіантами, і попит на програмістів JavaScript тільки продовжуватиме зростати. JavaScript вже перевершує C# за рейтингом, і поступається тільки Java. І якщо ви поглянете на проекти в GitHub, ви виявите, що представництво JavaScript зростає і вже перевершує Java і C#. І, нарешті, дивлячись на StackOverflow, ми бачимо, що Javascript в топі там також.</p>
+                    <p>Основна причина того, що я кажу це те, що JavaScript розвивається і такі речі, як Node.js стають
+                        все більш життєздатними варіантами, і попит на програмістів JavaScript тільки продовжуватиме
+                        зростати. JavaScript вже перевершує C# за рейтингом, і поступається тільки Java. І якщо ви
+                        поглянете на проекти в GitHub, ви виявите, що представництво JavaScript зростає і вже перевершує
+                        Java і C#. І, нарешті, дивлячись на StackOverflow, ми бачимо, що Javascript в топі там також.
+                    </p>
 
-                        <h2>Добре оплачувана</h2>
+                    <h2>Добре оплачувана</h2>
 
-                        <p>Згідно з SitePoint, за JavaScript платять краще, ніж за C#. Знову ж, Java трохи дорожча від JavaScript сьогодні. Але оскільки попит на JavaScript постійно росте, ви можете очікувати, що Java в лідерах ненадовго.
+                    <p>Згідно з SitePoint, за JavaScript платять краще, ніж за C#. Знову ж, Java трохи дорожча від
+                        JavaScript сьогодні. Але оскільки попит на JavaScript постійно росте, ви можете очікувати, що
+                        Java в лідерах ненадовго.
 
-                            На Gooroo, дещо інша картина. У той час як попит на JavaScript явний, очевидно, що декілька мов, які мають менший попит насправді оплачуються краще. Я підозрюю, це тому, що багато організацій все ще думають про JavaScript як мову, яку може використовувати будь-хто. Це буде дуже болючий урок, коли вони дізнаються, що "Будь-яка людина може програмувати на JavaScript" насправді означає "Будь-яка людина може написати JavaScript гівнокод".</p>
+                        На Gooroo, дещо інша картина. У той час як попит на JavaScript явний, очевидно, що декілька мов,
+                        які мають менший попит насправді оплачуються краще. Я підозрюю, це тому, що багато організацій
+                        все ще думають про JavaScript як мову, яку може використовувати будь-хто. Це буде дуже болючий
+                        урок, коли вони дізнаються, що "Будь-яка людина може програмувати на JavaScript" насправді
+                        означає "Будь-яка людина може написати JavaScript гівнокод".</p>
 
-                            <p>На StackOverflow, ми бачимо дуже детальну розбивку розробників за останні три роки. Якщо перейти до розділу "Technologies Used", ми знаходимо, що якщо ви просто називали себе програмістом JavaScript - Вам платять краще, ніж Java і менш, ніж C#, але якщо ви говорите, що ви програміст Node.js (який і є JavaScript) ви другий найбільш високооплачуваний розробник. Єдине, за що платять краще Objective-C (і я припускаю, що найближчим часом це Swift).</p>
+                    <p>На StackOverflow, ми бачимо дуже детальну розбивку розробників за останні три роки. Якщо перейти
+                        до розділу "Technologies Used", ми знаходимо, що якщо ви просто називали себе програмістом
+                        JavaScript - Вам платять краще, ніж Java і менш, ніж C#, але якщо ви говорите, що ви програміст
+                        Node.js (який і є JavaScript) ви другий найбільш високооплачуваний розробник. Єдине, за що
+                        платять краще Objective-C (і я припускаю, що найближчим часом це Swift).</p>
 
-                            <h2>JavaScript зріє</h2>
+                    <h2>JavaScript зріє</h2>
 
-                            <p>З недавнього зобов'язання комітету зі стандартів JavaScript випускатиме новий стандарт щороку і тут стає ясно, що кількість синтаксичних цукерок які будуть додані до JavaScript будуть збільшуватися щороку. Однією з особливостей яку я з нетерпінням чекаю це можливість використовувати асинхронність і ключові слова в моєму JavaScript коді, щоб усунути пекло із callback.</p>
+                    <p>З недавнього зобов'язання комітету зі стандартів JavaScript випускатиме новий стандарт щороку і
+                        тут стає ясно, що кількість синтаксичних цукерок які будуть додані до JavaScript будуть
+                        збільшуватися щороку. Однією з особливостей яку я з нетерпінням чекаю це можливість
+                        використовувати асинхронність і ключові слова в моєму JavaScript коді, щоб усунути пекло із
+                        callback.</p>
 
-                            <p>Але фішка в тому, що чим раніше ви почнете вивчати JavaScript, тим легше буде вчитися далі. Всі зміни, які відбуватимуться після, ви поступово і доволі швидко освоєте. Браузери також постійно вдосконалюють трактування JavaScript. Я бачу час у майбутньому, коли браузери не тільки кешують файли JavaScript, але кешують скомпільовані версії файлів JavaScript. Це наближає нас до бінарної швидкості.
+                    <p>Але фішка в тому, що чим раніше ви почнете вивчати JavaScript, тим легше буде вчитися далі. Всі
+                        зміни, які відбуватимуться після, ви поступово і доволі швидко освоєте. Браузери також постійно
+                        вдосконалюють трактування JavaScript. Я бачу час у майбутньому, коли браузери не тільки кешують
+                        файли JavaScript, але кешують скомпільовані версії файлів JavaScript. Це наближає нас до
+                        бінарної швидкості.
 
-                                Цікаво для мене те, що кілька років тому, люди тільки обговорювали майбутнє JavaScript, а вже зараз активно працюють над тим, щоб JavaScript став першокласною мовою.</p>
+                        Цікаво для мене те, що кілька років тому, люди тільки обговорювали майбутнє JavaScript, а вже
+                        зараз активно працюють над тим, щоб JavaScript став першокласною мовою.</p>
 
-                                <h2>Деякі JavaScript розробники рівніші від інших</h2>
+                    <h2>Деякі JavaScript розробники рівніші від інших</h2>
 
-                                <p>Я розмовляв зі своїм старим другом близько року назад. Він зазначив, що він був єдиним у своїй групі із близько 20 програмістів, який писав JavaScript таким чином, щоб виключити забруднення глобальними змінними. Це просто найпростіший з прикладів. Багато людей, які називають себе JavaScript програмістами, не знайомі з основами. І це сьогодні. Уявіть собі, що буде через три-п'ять років.</p>
+                    <p>Я розмовляв зі своїм старим другом близько року назад. Він зазначив, що він був єдиним у своїй
+                        групі із близько 20 програмістів, який писав JavaScript таким чином, щоб виключити забруднення
+                        глобальними змінними. Це просто найпростіший з прикладів. Багато людей, які називають себе
+                        JavaScript програмістами, не знайомі з основами. І це сьогодні. Уявіть собі, що буде через
+                        три-п'ять років.</p>
 
-                                <p>І не забувайте, що багато чого з оснащення для підтримки профілювання і витоку пам'яті знаходиться всього лише в зародковому стані. Якщо у вас є ці навички сьогодні, і ви добре представлені на ринку, то ви вже розумієте, що багато чого з того, що я говорю тут вірно.</p>
+                    <p>І не забувайте, що багато чого з оснащення для підтримки профілювання і витоку пам'яті
+                        знаходиться всього лише в зародковому стані. Якщо у вас є ці навички сьогодні, і ви добре
+                        представлені на ринку, то ви вже розумієте, що багато чого з того, що я говорю тут вірно.</p>
 
-                                <h2>Зріють і фреймворки</h2>
+                    <h2>Зріють і фреймворки</h2>
 
-                                <p>Нова версія Angular у роботі і Aurelia в якості альтернативи. Комерційні продукти, такі як Scencha’s EXTjs. Node.js для програмування на стороні сервера. І інші ... Ніхто не може сказати, що це занадто складно - розробити реальний додаток, що використовує JavaScript. Я впевнений, що, якби я захотів, я міг би написати десктоп додаток, який працював би, не використовуючи нічого, крім JavaScript. Ох. Зачекайте. Це вже було зроблено. (Visual Studio Code для тих, хто спав до цього оголошення.)</p>
+                    <p>Нова версія Angular у роботі і Aurelia в якості альтернативи. Комерційні продукти, такі як
+                        Scencha’s EXTjs. Node.js для програмування на стороні сервера. І інші ... Ніхто не може сказати,
+                        що це занадто складно - розробити реальний додаток, що використовує JavaScript. Я впевнений, що,
+                        якби я захотів, я міг би написати десктоп додаток, який працював би, не використовуючи нічого,
+                        крім JavaScript. Ох. Зачекайте. Це вже було зроблено. (Visual Studio Code для тих, хто спав до
+                        цього оголошення.)</p>
 
-                                <p>Насправді, поки я писав останній параграф, я почав розробляти десктоп додаток, що використовує HTML з Bootstrap і Angular для представлення слоїв і C# в основному для доступу до даних. Так, я знаю, що я міг би зробити все це в JavaScript, якщо б хотів, але я працюю з тим, що найбільш знайоме зараз. Прошу вибачення шанувальників XAML.</p>
+                    <p>Насправді, поки я писав останній параграф, я почав розробляти десктоп додаток, що використовує
+                        HTML з Bootstrap і Angular для представлення слоїв і C# в основному для доступу до даних. Так, я
+                        знаю, що я міг би зробити все це в JavaScript, якщо б хотів, але я працюю з тим, що найбільш
+                        знайоме зараз. Прошу вибачення шанувальників XAML.</p>
 
-                                <h2>JavaScript працює всюди!</h2>
+                    <h2>JavaScript працює всюди!</h2>
 
-                                <p>JavaScript працює на всіх основних браузераx, на всіх основних платформах. Він працює на стороні сервера, на всіх основних операційних системах. Будь-яке написання веб-сайту сьогодні не обходиться без JavaScript у front-end. При чому не має значення на чому back-end - будь-то Java, PHP, .NET, Node.js або щось ще - на стороні клієнта буде необхідний розробнику JavaScript. Насправді, я як і раніше працюю в тусовці тих розробників, які ще не знають, наскільки потужним є JavaScript. Що це означає для вас? Якщо ви стали анріал JavaScript розробником, ви будете мати робочі пропозиції на всіх різноманітних серверних платформах.</p>
+                    <p>JavaScript працює на всіх основних браузераx, на всіх основних платформах. Він працює на стороні
+                        сервера, на всіх основних операційних системах. Будь-яке написання веб-сайту сьогодні не
+                        обходиться без JavaScript у front-end. При чому не має значення на чому back-end - будь-то Java,
+                        PHP, .NET, Node.js або щось ще - на стороні клієнта буде необхідний розробнику JavaScript.
+                        Насправді, я як і раніше працюю в тусовці тих розробників, які ще не знають, наскільки потужним
+                        є JavaScript. Що це означає для вас? Якщо ви стали анріал JavaScript розробником, ви будете мати
+                        робочі пропозиції на всіх різноманітних серверних платформах.</p>
 
-                                <h2>JavaScript компільована мова</h2>
+                    <h2>JavaScript компільована мова</h2>
 
-                                <p>Це може шокувати вас, але JavaScript є компільованою мовою. Це має два наслідки. По-перше, як тільки код компілюється, він працює так само швидко, як і будь-який інший виконуваний файл. По-друге, технічно можливо написати інструменти для JavaScript, які створюватимуть бінарний файл, який не потрібно перекомпілювати щораз, коли код завантажується в пам'ять.</p>
+                    <p>Це може шокувати вас, але JavaScript є компільованою мовою. Це має два наслідки. По-перше, як
+                        тільки код компілюється, він працює так само швидко, як і будь-який інший виконуваний файл.
+                        По-друге, технічно можливо написати інструменти для JavaScript, які створюватимуть бінарний
+                        файл, який не потрібно перекомпілювати щораз, коли код завантажується в пам'ять.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/WBQet</span>
                         <br>
@@ -104,134 +142,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                <!-- <article>
-                                                            							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                            									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                            							<a href="./assets/articles/node/node-need/node-need.html">
-                                                            								<h3>Коли застосовують Node.js?</h3>
-                                                            							</a>
-                                                            							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                            						</article> -->
-                <article>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                        class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                        <h3>Вивчайте програмування безкоштовно</h3>
-                    </a>
-                    <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                        розробці на
-                        Android та iOS та інших.</p>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                        target="_blank">Перейти</a>
-                </article>
-                <article>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                            src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                        <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                    </a>
-                    <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                        працевлаштування.</p>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                        target="_blank">Перейти</a>
-                </article>
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->

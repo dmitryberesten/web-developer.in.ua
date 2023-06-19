@@ -5,11 +5,15 @@
     <title>Гід для новачка JS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../js-articles.html" class="button small btn-back">Назад</a>
+                <a href="../js-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -43,32 +34,59 @@
                         <h1>Гід для новачка: JavaScript</h1>
                     </header>
 
-                    <span class="image main"><img src="/assets/articles/js/js-guide/js-guide.webp" alt="html code" /></span>
+                    <span class="image main"><img src="/assets/articles/js/js-guide/js-guide.webp"
+                            alt="html code" /></span>
                     <p class="photo-src">Джерело фото: https://goo.su/ZXfPed</p>
                     <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
                     <div id="updown"></div>
 
-                    <p>Введення в мову програмування, яка впливає практично на кожну дію, здійснювану вами у Інтернеті.</p>
+                    <p>Введення в мову програмування, яка впливає практично на кожну дію, здійснювану вами у Інтернеті.
+                    </p>
 
-                    <p><b>JavaScript</b> необхідний для будь-яких дій, які ви робите, знаходячись у Інтернеті. Неважливо, чи ви надаєте інформацію про кредитну карту, шукаєте відео на YouTube, прослуховуєте музику або листуєтесь у соцмережах. Все це забезпечує джаваскріпт, мова, яку використовують, аби зробити веб-сторінки інтерактивними – і, напевне, тому, це робить її найпопулярнішою мовою програмування у світі.</p>
+                    <p><b>JavaScript</b> необхідний для будь-яких дій, які ви робите, знаходячись у Інтернеті.
+                        Неважливо, чи ви надаєте інформацію про кредитну карту, шукаєте відео на YouTube, прослуховуєте
+                        музику або листуєтесь у соцмережах. Все це забезпечує джаваскріпт, мова, яку використовують, аби
+                        зробити веб-сторінки інтерактивними – і, напевне, тому, це робить її найпопулярнішою мовою
+                        програмування у світі.</p>
 
-                    <p>Розробники використовують JavaScript для створення багатьох функцій, як для користувацького інтерфейсу (UI), так і для складних ефектів, включаючи:</p>
+                    <p>Розробники використовують JavaScript для створення багатьох функцій, як для користувацького
+                        інтерфейсу (UI), так і для складних ефектів, включаючи:</p>
 
                     <ul>
                         <li>1. Інтерфейси, слайдери зображень</li>
                         <li>2. Стрічку новин, яка оновлює інформацію під час прокручування</li>
-                        <li>3. Можливість надавати інформацію, наприклад, в Google документах, опитуваннях, або при веденні онлайн-платежів.</li>
+                        <li>3. Можливість надавати інформацію, наприклад, в Google документах, опитуваннях, або при
+                            веденні онлайн-платежів.</li>
                     </ul> <br>
 
-                    <p>Такі функції є частиною фронт-енд коду сайту, який відповідає за те, що бачать та з чим взаємодіють користувачі на екранах. Фронт-енд код JavaScript є неподільною частиною браузера користувача, де він починає взаємодіяти з кодом HTML, який є структурою сторінки, а також кодом CSS, який визначає, як і де розташовується елемент.</p> 
+                    <p>Такі функції є частиною фронт-енд коду сайту, який відповідає за те, що бачать та з чим
+                        взаємодіють користувачі на екранах. Фронт-енд код JavaScript є неподільною частиною браузера
+                        користувача, де він починає взаємодіяти з кодом HTML, який є структурою сторінки, а також кодом
+                        CSS, який визначає, як і де розташовується елемент.</p>
 
-                    <p>Але джаваскріпт використовують не тільки для фронтенду. Розробники можуть застосовувати його також для бек-енду, який знаходиться на серверах або спеціальних комп’ютерах, що керують сайтом.</p>
+                    <p>Але джаваскріпт використовують не тільки для фронтенду. Розробники можуть застосовувати його
+                        також для бек-енду, який знаходиться на серверах або спеціальних комп’ютерах, що керують сайтом.
+                    </p>
 
-                    <p>JavaScript дозволяє розробникам виконувати безліч базових задач, що є загальними для мов програмування. Наприклад, умовно кажучи, розробник може вказати, що частина коду повинна виконуватись тільки при дотриманні визначеної умови. Уявіть, що ви створили веб-сторінку, яка відкривала б доступ до інформації про поточне місцезнаходження користувача, а потім показувала іконку поточної температури. Ви можете використати умовний оператор, щоб вказати, що за температури нижче нуля, на екрані повинна відображатися бурулька чи сніжинка.</p>
+                    <p>JavaScript дозволяє розробникам виконувати безліч базових задач, що є загальними для мов
+                        програмування. Наприклад, умовно кажучи, розробник може вказати, що частина коду повинна
+                        виконуватись тільки при дотриманні визначеної умови. Уявіть, що ви створили веб-сторінку, яка
+                        відкривала б доступ до інформації про поточне місцезнаходження користувача, а потім показувала
+                        іконку поточної температури. Ви можете використати умовний оператор, щоб вказати, що за
+                        температури нижче нуля, на екрані повинна відображатися бурулька чи сніжинка.</p>
 
-                    <p>Розробники <b>JavaScript</b> можуть писати свій код декількома способами. Один підхід, відомий як функціональне програмування, організовує код операторів JavaScript, які приймають значення, що містяться в даних, і потім повертають їх у вигляді результатів. Другий метод, відомий як об’єктно-орієнтовне програмування, групує значення і код в об’єкти.</p>
+                    <p>Розробники <b>JavaScript</b> можуть писати свій код декількома способами. Один підхід, відомий як
+                        функціональне програмування, організовує код операторів JavaScript, які приймають значення, що
+                        містяться в даних, і потім повертають їх у вигляді результатів. Другий метод, відомий як
+                        об’єктно-орієнтовне програмування, групує значення і код в об’єкти.</p>
 
-                    <p>Базове знайомство з JavaScript дає вам необхідну основу для створення додатку в React, Angular і Vue, і за допомогою таких бібліотек як jQuery. Фреймворки і бібліотеки – це заздалегідь написані набори коду JavaScript, які спрощують створення власних додатків. Використання фреймворка або бібліотеки може дозволити вам програмувати без необхідності написання кодів для деяких завдань самостійно. JavaScript-кодування без застосування фреймворків або бібліотек, відоме також як vanilla JavaScript, теж може бути джерелом налаштування вашого додатку, якщо усе працює не зовсім так, як ви очікували.</p>
+                    <p>Базове знайомство з JavaScript дає вам необхідну основу для створення додатку в React, Angular і
+                        Vue, і за допомогою таких бібліотек як jQuery. Фреймворки і бібліотеки – це заздалегідь написані
+                        набори коду JavaScript, які спрощують створення власних додатків. Використання фреймворка або
+                        бібліотеки може дозволити вам програмувати без необхідності написання кодів для деяких завдань
+                        самостійно. JavaScript-кодування без застосування фреймворків або бібліотек, відоме також як
+                        vanilla JavaScript, теж може бути джерелом налаштування вашого додатку, якщо усе працює не
+                        зовсім так, як ви очікували.</p>
 
                     <p><b>Що робить JavaScript унікальним?</b> Передусім, три речі:</p>
 
@@ -77,8 +95,9 @@
                         <li>2. Прості функції розроблені просто та зрозуміло</li>
                         <li>3. Підтримка за замовчуванням усіма доступними браузерами</li>
                     </ul> <br>
-                    
-                    <p>Javascript – єдина технологія, яка об’єднує всі три компоненти. Саме тому джаваскрипт такий всесвітньо популярний, особливо коли мова заходить про розробку інтерфейсу для браузера.</p>
+
+                    <p>Javascript – єдина технологія, яка об’єднує всі три компоненти. Саме тому джаваскрипт такий
+                        всесвітньо популярний, особливо коли мова заходить про розробку інтерфейсу для браузера.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/MH5H</span>
                         <br>
@@ -92,134 +111,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                    <!-- <article>
-                                                                							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                                									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                                							<a href="./assets/articles/node/node-need/node-need.html">
-                                                                								<h3>Коли застосовують Node.js?</h3>
-                                                                							</a>
-                                                                							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                                						</article> -->
-                    <article>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                            class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                            <h3>Вивчайте програмування безкоштовно</h3>
-                        </a>
-                        <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                            розробці на
-                            Android та iOS та інших.</p>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                    <article>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                            <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                        </a>
-                        <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                            працевлаштування.</p>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->

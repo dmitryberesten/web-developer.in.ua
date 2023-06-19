@@ -5,11 +5,15 @@
     <title>Чому лажають?</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../css-articles.html" class="button small btn-back">Назад</a>
+                <a href="../css-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -48,9 +39,11 @@
                     <p class="photo-src">Джерело фото:
                         https://www.ionos.ca/digitalguide/fileadmin/_processed_/a/3/csm_was-ist-css-t_2cf0e8295e.jpg</p>
 
-                    <p>Підніміть руку , якщо ви front-end розробник і в якийсь момент у вашій кар'єрі виникло таке відчуття, що ви робите дуже
-                    прості речі, що внесок, який ви робите в команду, мінімальний і те, що робите ви, може зробити будь-хто. Якщо це так, то
-                    ви є частиною більшості.</p>
+                    <p>Підніміть руку , якщо ви front-end розробник і в якийсь момент у вашій кар'єрі виникло таке
+                        відчуття, що ви робите дуже
+                        прості речі, що внесок, який ви робите в команду, мінімальний і те, що робите ви, може зробити
+                        будь-хто. Якщо це так, то
+                        ви є частиною більшості.</p>
 
                     <p>Я маю на увазі, що будь-хто може зробити наступне в CSS:</p>
 
@@ -62,24 +55,30 @@
                         </code>
                     </p>
 
-                    <p>Отже, що дає мені право скаржитися? Для CSS взагалі не потрібно вміння кодити. І це абсолютно очевидно, стилізування
-                    одного елемента на глобальному рівні ніяк не потребує CSS і є значно легким завданням.</p>
+                    <p>Отже, що дає мені право скаржитися? Для CSS взагалі не потрібно вміння кодити. І це абсолютно
+                        очевидно, стилізування
+                        одного елемента на глобальному рівні ніяк не потребує CSS і є значно легким завданням.</p>
 
                     <hr class="major" />
                     <h2>Так що, коли стає тяжко?</h2>
 
-                    <p> <b>> back-end розробник:</b> <i>Я реалізував нову функцію, але зламав front-end, я виправив більшість помилок, залишилось тільки кілька простих
-                    налаштувань, дороби це, там має бути не більше 30 хвилин роботи...</i></p>
+                    <p> <b>> back-end розробник:</b> <i>Я реалізував нову функцію, але зламав front-end, я виправив
+                            більшість помилок, залишилось тільки кілька простих
+                            налаштувань, дороби це, там має бути не більше 30 хвилин роботи...</i></p>
 
                     <p>
-                        <b>> Я:</b> - Відкрив HTML. Таблиці всюди, застарілі теги HTML, нульове свідчення адаптивного дизайну. Вдихаю глибше. Звичайно CSS
-                        вони написали краще. Відкриваю файл CSS. Фіксовані позиції, чисті left та right і найприємніше, всюди !important. Після
+                        <b>> Я:</b> - Відкрив HTML. Таблиці всюди, застарілі теги HTML, нульове свідчення адаптивного
+                        дизайну. Вдихаю глибше. Звичайно CSS
+                        вони написали краще. Відкриваю файл CSS. Фіксовані позиції, чисті left та right і найприємніше,
+                        всюди !important. Після
                         побаченого, я повільно дістаю мишу та огортаю дротом навколо шиї.
                     </p>
 
-                    <p>Добре, таке може траплятися, але я все-таки нечасто зустрічав back-end розробників, які пишуть придатний до вживання
-                    front-end код. Нічого страшного, це ж не їхня задача, але, будь ласка, не лажайте з надією, що front-end розробники
-                    потім після вас будуть все виправляти.
+                    <p>Добре, таке може траплятися, але я все-таки нечасто зустрічав back-end розробників, які пишуть
+                        придатний до вживання
+                        front-end код. Нічого страшного, це ж не їхня задача, але, будь ласка, не лажайте з надією, що
+                        front-end розробники
+                        потім після вас будуть все виправляти.
                     </p>
 
                     <hr class="major" />
@@ -87,9 +86,12 @@
 
                     <p> <b>Структура,</b> структура проекту дуже важлива, особливо у роботі з великими проектами.</p>
 
-                    <p><b>Специфічність</b> - ймовірно найбільша проблема, з якою я стикаюсь щодня. На жаль, більшість розробників мають розмите розуміння специфіки CSS і це призводить до поганого CSS... !important всюди. Тож, як нам виправити цю ситуацію? Є багато іменувань, які
-                    спрямовані на зведення до мінімуму потреб в специфічних CSS селекторах, однак, якщо це не ваша справа, я б рекомендував
-                    уникати селекторів з більш ніж трьома елементами/класами.
+                    <p><b>Специфічність</b> - ймовірно найбільша проблема, з якою я стикаюсь щодня. На жаль, більшість
+                        розробників мають розмите розуміння специфіки CSS і це призводить до поганого CSS... !important
+                        всюди. Тож, як нам виправити цю ситуацію? Є багато іменувань, які
+                        спрямовані на зведення до мінімуму потреб в специфічних CSS селекторах, однак, якщо це не ваша
+                        справа, я б рекомендував
+                        уникати селекторів з більш ніж трьома елементами/класами.
                     </p>
 
                     <p>Конвенція імен дуже важлива для будь-яких великих CSS проектів. Без них CSS стає не
@@ -98,21 +100,28 @@
                         невикористані ділянки CSS,
                         якщо це необхідно. Деякі популярні конвенцій імен: BEM, OOCSS, SMACSS.</p>
 
-                    <p> <b>Тестування</b>, це річ на яку більшість розробників не звертають уваги. Знаєте, що є дійсно крутим в back-end розробці? Те, що ви
-                    розробляєте для одного середовища (сервер, на якому буде встановлений ваш сайт). А що є поганим в front-end розробці? Це
-                    5+ браузерів і тисячі різних мобільних пристроїв... Якісне front-end тестування є завданням, яке займає багато часу. Але
-                    я помітив, що все ж таки проекти, на які не відводиться час на тестування, загалом виконуються довше, ніж проекти з ним.</p>
+                    <p> <b>Тестування</b>, це річ на яку більшість розробників не звертають уваги. Знаєте, що є дійсно
+                        крутим в back-end розробці? Те, що ви
+                        розробляєте для одного середовища (сервер, на якому буде встановлений ваш сайт). А що є поганим
+                        в front-end розробці? Це
+                        5+ браузерів і тисячі різних мобільних пристроїв... Якісне front-end тестування є завданням, яке
+                        займає багато часу. Але
+                        я помітив, що все ж таки проекти, на які не відводиться час на тестування, загалом виконуються
+                        довше, ніж проекти з ним.</p>
 
                     <h2>Як виправити такі ситуації, працюючи з CSS?</h2>
 
-                    <p>Досить їм це пробачати. Ми, як front-end розробники, не пишемо кривий неадаптивний код, використовуючи CSS для back-end
-                    колег. То чому вони надають нечітку абияку розмітку і намагаються втулити туди наш CSS, де він не працює? Я не кажу
-                    змушувати їх власне писати на CSS, нехай краще цього не роблять взагалі. Просто не давайте думати іншим розробникам про
-                    те, що ваша робота легка, бо це не так. Ви працюєте так само важко, як і всі інші, і не дозволяйте їм вважати, що ви
-                    відрізняєтесь.</p>
+                    <p>Досить їм це пробачати. Ми, як front-end розробники, не пишемо кривий неадаптивний код,
+                        використовуючи CSS для back-end
+                        колег. То чому вони надають нечітку абияку розмітку і намагаються втулити туди наш CSS, де він
+                        не працює? Я не кажу
+                        змушувати їх власне писати на CSS, нехай краще цього не роблять взагалі. Просто не давайте
+                        думати іншим розробникам про
+                        те, що ваша робота легка, бо це не так. Ви працюєте так само важко, як і всі інші, і не
+                        дозволяйте їм вважати, що ви
+                        відрізняєтесь.</p>
 
-                    <p class="article-info"> <b>Джерело:</b> <span
-                            class="span-link">http://surl.li/gvkno</span>
+                    <p class="article-info"> <b>Джерело:</b> <span class="span-link">http://surl.li/gvkno</span>
                         <br>
                         <b>Переклад українською мовою:</b> Аліна Берестень <br>
                         <b>Адміністратор:</b> Дмитро Берестень
@@ -124,135 +133,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                                        <!-- <article>
-                                                                                    							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                                                    									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                                                    							<a href="./assets/articles/node/node-need/node-need.html">
-                                                                                    								<h3>Коли застосовують Node.js?</h3>
-                                                                                    							</a>
-                                                                                    							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                                                    						</article> -->
-                                        <article>
-                                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                                                class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                                                <h3>Вивчайте програмування безкоштовно</h3>
-                                            </a>
-                                            <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                                                розробці на
-                                                Android та iOS та інших.</p>
-                                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                                                target="_blank">Перейти</a>
-                                        </article>
-                                        <article>
-                                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                                    src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                                                <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                                            </a>
-                                            <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                                                працевлаштування.</p>
-                                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                                                target="_blank">Перейти</a>
-                                        </article>
-
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->
