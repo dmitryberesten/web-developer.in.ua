@@ -5,11 +5,15 @@
     <title>Чому варто вивчати Node.js?</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../node-articles.html" class="button small btn-back">Назад</a>
+                <a href="../node-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -49,35 +40,61 @@
                     <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
                     <div id="updown"></div>
 
-                    <p>Node.JS – це програмна платформа, що робить JavaScript мовою загального призначення. Її також називають середовищем виконання JS. Вона вміє зв’язуватися з зовнішніми бібліотеками, викликати команди з коду та виконувати роль вебсервера.</p>
+                    <p>Node.JS – це програмна платформа, що робить JavaScript мовою загального призначення. Її також
+                        називають середовищем виконання JS. Вона вміє зв’язуватися з зовнішніми бібліотеками, викликати
+                        команди з коду та виконувати роль вебсервера.</p>
 
-                        <h2>Особливості платформи</h2>
+                    <h2>Особливості платформи</h2>
 
-                        <p>На сьогодні Node по праву вважається однією з лідерських платформ для веброзробки, і більша частина вебінструментів, серверних та клієнтських, працюють саме з цим інструментом.</p>
+                    <p>На сьогодні Node по праву вважається однією з лідерських платформ для веброзробки, і більша
+                        частина вебінструментів, серверних та клієнтських, працюють саме з цим інструментом.</p>
 
-                        <p>Одним з важливіших плюсів платформи є асинхронність, поєднана з дієвим підходом. На відміну від потокового, дієво орієнтоване програмування базується на певних зовнішніх процесах. Тобто реалізація програми залежить від дій користувача або мережевого пакета, що надійшов в програму, тощо. Таке рішення – це лайт-версія програмування інтерактивних додатків, основаних на роботі з використанням вводу-виводу. Це можуть бути онлайн-чати або ігрові додатки, барвисті інтерактивні вебсервіси чи будь-які калькулятори, рейтинги, голосування тощо.</p>
+                    <p>Одним з важливіших плюсів платформи є асинхронність, поєднана з дієвим підходом. На відміну від
+                        потокового, дієво орієнтоване програмування базується на певних зовнішніх процесах. Тобто
+                        реалізація програми залежить від дій користувача або мережевого пакета, що надійшов в програму,
+                        тощо. Таке рішення – це лайт-версія програмування інтерактивних додатків, основаних на роботі з
+                        використанням вводу-виводу. Це можуть бути онлайн-чати або ігрові додатки, барвисті інтерактивні
+                        вебсервіси чи будь-які калькулятори, рейтинги, голосування тощо.</p>
 
-                        <h2>Крім цього, до переваг платформи можна віднести:</h2>
+                    <h2>Крім цього, до переваг платформи можна віднести:</h2>
 
-                        <p>&#10003; простий та широко відомий JavaScript</p>
+                    <p>&#10003; простий та широко відомий JavaScript</p>
 
-                        <p>&#10003; багата стандартна бібліотека, а особливо у нових версіях</p>
+                    <p>&#10003; багата стандартна бібліотека, а особливо у нових версіях</p>
 
-                        <p>&#10003; величезна кількість зовнішніх бібліотек та готових модулів</p>
+                    <p>&#10003; величезна кількість зовнішніх бібліотек та готових модулів</p>
 
-                        <h2>Для чого застосовують Node.JS</h2>
+                    <h2>Для чого застосовують Node.JS</h2>
 
-                        <p>На відміну від звичного усім браузерного JavaScript, із використанням Node додаток може торкатися широкого ряду глобальних об’єктів типу document або window. У підсумку програма посилається до вінчестера та файлової системи юзера, а також до бібліотек та програмних рішень, що розташовані на комп’ютері, а це помітно урізноманітнює можливості взаємодії.</p>
+                    <p>На відміну від звичного усім браузерного JavaScript, із використанням Node додаток може торкатися
+                        широкого ряду глобальних об’єктів типу document або window. У підсумку програма посилається до
+                        вінчестера та файлової системи юзера, а також до бібліотек та програмних рішень, що розташовані
+                        на комп’ютері, а це помітно урізноманітнює можливості взаємодії.</p>
 
-                        <p>Ця платформа є найчастішим об’єктом реалізації та створення вебсервісів, що потребують інтенсивної взаємодії з великим обсягом різноманітної інформації з користувачами наприклад для функціоналу чатів, систем спільної діяльності, соцмереж тощо. Більшість програмних продуктів, створених на Node.JS, мають серверну та клієнтську частини.</p>
+                    <p>Ця платформа є найчастішим об’єктом реалізації та створення вебсервісів, що потребують
+                        інтенсивної взаємодії з великим обсягом різноманітної інформації з користувачами наприклад для
+                        функціоналу чатів, систем спільної діяльності, соцмереж тощо. Більшість програмних продуктів,
+                        створених на Node.JS, мають серверну та клієнтську частини.</p>
 
-                        <p>Додаток може робити звернення із запитом до серверної бази даних, а під час періоду очікування відповід, обробляти будь-які інші запити. Таким чином, у той самий час обробляється велика кількість з’єднань, і кожне витрачає зовсім мало часових та інших ресурсів. Прискорений обмін інформацією з сервером пришвидшує роботу браузерного додатка.</p>
+                    <p>Додаток може робити звернення із запитом до серверної бази даних, а під час періоду очікування
+                        відповід, обробляти будь-які інші запити. Таким чином, у той самий час обробляється велика
+                        кількість з’єднань, і кожне витрачає зовсім мало часових та інших ресурсів. Прискорений обмін
+                        інформацією з сервером пришвидшує роботу браузерного додатка.</p>
 
-                        <h2>Перспективність професії</h2>
+                    <h2>Перспективність професії</h2>
 
-                        <p>На сьогоднішній день у мови JavaScript немає конкурентів у сфері frontend-розробки, адже вибір Node.JS для створення серверної частини дає безліч переваг. Node.JS-програміст – затребуваний IT- спеціаліст, і попит на такі кадри буде лише зростати.</p>
+                    <p>На сьогоднішній день у мови JavaScript немає конкурентів у сфері frontend-розробки, адже вибір
+                        Node.JS для створення серверної частини дає безліч переваг. Node.JS-програміст – затребуваний
+                        IT- спеціаліст, і попит на такі кадри буде лише зростати.</p>
 
-                        <p>У розробника-початківця є декілька сценаріїв розвитку кар’єри: робота в штаті, свій бізнес, переїзд в іншу країну. В професії можна розвиватися поетапно – почати з джуніора, оволодівати новими технологіями. За декілька років можна досягти рівня middle+ або senior-спеціаліста та претендувати на посаду технічного директора чи керівника відділу розробки в IT-компанії/банку. Якщо офісна робота не приваблює, то можна розглянути фріланс, наприклад зібрати команду і з часом відкрити власну фірму, а згодом IT-агентство, яке стане прибутковим бізнесом у сфері веброзробки. І ще один варіант – розвиток кар’єри за кордоном, при цьому з роботодавцями є можливість віддаленої співпраці.</p>
+                    <p>У розробника-початківця є декілька сценаріїв розвитку кар’єри: робота в штаті, свій бізнес,
+                        переїзд в іншу країну. В професії можна розвиватися поетапно – почати з джуніора, оволодівати
+                        новими технологіями. За декілька років можна досягти рівня middle+ або senior-спеціаліста та
+                        претендувати на посаду технічного директора чи керівника відділу розробки в IT-компанії/банку.
+                        Якщо офісна робота не приваблює, то можна розглянути фріланс, наприклад зібрати команду і з
+                        часом відкрити власну фірму, а згодом IT-агентство, яке стане прибутковим бізнесом у сфері
+                        веброзробки. І ще один варіант – розвиток кар’єри за кордоном, при цьому з роботодавцями є
+                        можливість віддаленої співпраці.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/TNP3i</span>
                         <br>
@@ -91,134 +108,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                    <!-- <article>
-                                                                							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                                									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                                							<a href="./assets/articles/node/node-need/node-need.html">
-                                                                								<h3>Коли застосовують Node.js?</h3>
-                                                                							</a>
-                                                                							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                                						</article> -->
-                    <article>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                            class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                            <h3>Вивчайте програмування безкоштовно</h3>
-                        </a>
-                        <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                            розробці на
-                            Android та iOS та інших.</p>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                    <article>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                            <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                        </a>
-                        <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                            працевлаштування.</p>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->

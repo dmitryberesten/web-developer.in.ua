@@ -5,11 +5,15 @@
     <title>React робить розробку дешевшою</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../react-articles.html" class="button small btn-back">Назад</a>
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -49,58 +40,91 @@
                     <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
                     <div id="updown"></div>
 
-                    <P>Коли нам хочеться дізнатися про складні речі, але отримати пояснення простою мовою, на допомогу приходить науковець. Майже без використання понять Virtual DOM, «іммутабельність», «життєвий цикл компонента» та «детермінований рендеринг» розповідаємо, що таке React, як він з'явився і в чому його плюси для бізнесу та команди.</P>
+                    <P>Коли нам хочеться дізнатися про складні речі, але отримати пояснення простою мовою, на допомогу
+                        приходить науковець. Майже без використання понять Virtual DOM, «іммутабельність», «життєвий
+                        цикл компонента» та «детермінований рендеринг» розповідаємо, що таке React, як він з'явився і в
+                        чому його плюси для бізнесу та команди.</P>
 
                     <h2>&#9733; Що таке React?</h2>
 
-                    <p>Reaсt - це бібліотека, що відповідає за побудову інтерфейсу користувача сайту. Причому такого інтерфейсу, де є не лише текст, а й інтерактивні елементи, динаміка, різні події.
+                    <p>Reaсt - це бібліотека, що відповідає за побудову інтерфейсу користувача сайту. Причому такого
+                        інтерфейсу, де є не лише текст, а й інтерактивні елементи, динаміка, різні події.
 
-                        Про що мова? Про можливість поставити лайк, наприклад. Або надіслати заповнену контактну форму. Або працювати з картами, напханими інфографікою. Або з адміністративною панеллю в інтернет-магазині, де товар, кошик і процес відправки платежу мають кілька станів.</p>
+                        Про що мова? Про можливість поставити лайк, наприклад. Або надіслати заповнену контактну форму.
+                        Або працювати з картами, напханими інфографікою. Або з адміністративною панеллю в
+                        інтернет-магазині, де товар, кошик і процес відправки платежу мають кілька станів.</p>
 
-                        <p>Отже, якщо одна дія користувача на сайті повинна призводити до якихось змін, то відбуватимуться ці зміни за певними сценаріями — тими самими скриптами. Щоб розробка сайту з великою кількістю JavaScript-коду йшла швидше та зручніше для розробника, використовують React.
+                    <p>Отже, якщо одна дія користувача на сайті повинна призводити до якихось змін, то відбуватимуться
+                        ці зміни за певними сценаріями — тими самими скриптами. Щоб розробка сайту з великою кількістю
+                        JavaScript-коду йшла швидше та зручніше для розробника, використовують React.
 
-                            Чим складніший сайт, тим більш примарний шанс зробити його без використання React та його основних конкурентів — фреймворків Angular та Vue.js.</p>
+                        Чим складніший сайт, тим більш примарний шанс зробити його без використання React та його
+                        основних конкурентів — фреймворків Angular та Vue.js.</p>
 
-                            <h2>&#9733; У чому переваги додатків, написаних на React?</h2>
-                            <h3>&#8882; Знижується навантаження на сервер та час розробки</h3>
-                            <p>Підвищується продуктивність сайту: швидше відкриваються сторінки та відгукується дії користувачів інтерфейс. Якщо звичайна веб-програма на запит від браузера повертає йому HTML-розмітку з CSS, щоб браузер відмалював сторінку, то у разі додатків на React браузер спочатку завантажує набір скриптів, які виконуються на пристрої користувача. Це знімає навантаження із сервера та підвищує продуктивність.</p>
+                    <h2>&#9733; У чому переваги додатків, написаних на React?</h2>
+                    <h3>&#8882; Знижується навантаження на сервер та час розробки</h3>
+                    <p>Підвищується продуктивність сайту: швидше відкриваються сторінки та відгукується дії користувачів
+                        інтерфейс. Якщо звичайна веб-програма на запит від браузера повертає йому HTML-розмітку з CSS,
+                        щоб браузер відмалював сторінку, то у разі додатків на React браузер спочатку завантажує набір
+                        скриптів, які виконуються на пристрої користувача. Це знімає навантаження із сервера та підвищує
+                        продуктивність.</p>
 
-                            <h3>&#8882; На React необов'язково розробляти весь сайт, якщо динамічні блоки займають лише малу частину</h3>
-                            <p>Поки статичні сторінки працюють як завжди, ми можемо зробити на React конкретний блок та вставити скрипти так, щоб вони виконувались лише в ньому. Є багато компаній, які переписують свій продукт на React.</p>
+                    <h3>&#8882; На React необов'язково розробляти весь сайт, якщо динамічні блоки займають лише малу
+                        частину</h3>
+                    <p>Поки статичні сторінки працюють як завжди, ми можемо зробити на React конкретний блок та вставити
+                        скрипти так, щоб вони виконувались лише в ньому. Є багато компаній, які переписують свій продукт
+                        на React.</p>
 
-                            <h3>&#8882; У порівнянні зі звичайними сайтами у сайтів на React чистіша архітектура</h3>
-                            <p>Чиста архітектура, в якій простіше виявляти та виправляти баги і яку простіше підтримувати. Розробник контролює потоки даних, розмітку та стилізацію та в ідеалі знайомий з патернами програмування, що дозволяють збирати програми швидше та гнучкіше.</p>
+                    <h3>&#8882; У порівнянні зі звичайними сайтами у сайтів на React чистіша архітектура</h3>
+                    <p>Чиста архітектура, в якій простіше виявляти та виправляти баги і яку простіше підтримувати.
+                        Розробник контролює потоки даних, розмітку та стилізацію та в ідеалі знайомий з патернами
+                        програмування, що дозволяють збирати програми швидше та гнучкіше.</p>
 
-                            <h3>&#8882; Якщо команди фронтенд та бекенд-розробки заздалегідь опишуть у документації формат отримання та відправлення даних</h3>
-                            <p>Вони можуть працювати паралельно: доки серверна частина розробляється, фронтенд-розробники на основі документації імітують дані, які приходитимуть із сервера.</p>
+                    <h3>&#8882; Якщо команди фронтенд та бекенд-розробки заздалегідь опишуть у документації формат
+                        отримання та відправлення даних</h3>
+                    <p>Вони можуть працювати паралельно: доки серверна частина розробляється, фронтенд-розробники на
+                        основі документації імітують дані, які приходитимуть із сервера.</p>
 
-                            <h2>&#9733; React та односторінкові додатки</h2>
-                            <p>Якщо навантаження знімається із сервера, то воно зростає на стороні користувача. Але статистика каже, що у клієнтських машин достатньо оперативної пам'яті для відтворення сторінок сайту на React у браузері. Однак, якщо потрібно отримати максимально швидкий відгук від інтерфейсу, використовують підхід SPA (Single Page Application). Його суть у тому, що весь сайт – це одна сторінка, яку React постійно перемальовує. Але не цілком.</p>
+                    <h2>&#9733; React та односторінкові додатки</h2>
+                    <p>Якщо навантаження знімається із сервера, то воно зростає на стороні користувача. Але статистика
+                        каже, що у клієнтських машин достатньо оперативної пам'яті для відтворення сторінок сайту на
+                        React у браузері. Однак, якщо потрібно отримати максимально швидкий відгук від інтерфейсу,
+                        використовують підхід SPA (Single Page Application). Його суть у тому, що весь сайт – це одна
+                        сторінка, яку React постійно перемальовує. Але не цілком.</p>
 
-                            <h3>Як зазвичай відбувається перехід зі сторінки на сторінку у простій програмі?</h3>
+                    <h3>Як зазвичай відбувається перехід зі сторінки на сторінку у простій програмі?</h3>
 
-                            <p>При переході на іншу сторінку користувач робить до неї запит на сервер і сервер повертає розмітку, стилі та файли скриптів (тобто HTML, CSS та JavaScript).
+                    <p>При переході на іншу сторінку користувач робить до неї запит на сервер і сервер повертає
+                        розмітку, стилі та файли скриптів (тобто HTML, CSS та JavaScript).
 
-                                У випадку SPA користувач, переходячи між розділами сайту, формально знаходиться на одній сторінці, але файли скриптів і стилі в нього вже є - залишається дотягнути те, чого не вистачає. Наприклад, якщо шапка сайту однакова на кожній сторінці, а змінився лише якийсь блок сторінки, то не потрібно знову малювати шапку.</p>
+                        У випадку SPA користувач, переходячи між розділами сайту, формально знаходиться на одній
+                        сторінці, але файли скриптів і стилі в нього вже є - залишається дотягнути те, чого не вистачає.
+                        Наприклад, якщо шапка сайту однакова на кожній сторінці, а змінився лише якийсь блок сторінки,
+                        то не потрібно знову малювати шапку.</p>
 
-                                <h2>&#9733; Які відомі сайти та додатки розроблені на React.js?</h2>
-                                <p>Мільярди людей щодня мають справу з результатами роботи React.js. Серед них:</p>
+                    <h2>&#9733; Які відомі сайти та додатки розроблені на React.js?</h2>
+                    <p>Мільярди людей щодня мають справу з результатами роботи React.js. Серед них:</p>
 
-                                <ul>
-                                    <li>&#9734; Стрічка новин у Facebook</li>
-                                    <li>&#9734; Більшість клієнтської сторони Instagram</li>
-                                    <li>&#9734; Частково WhatsApp</li>
-                                    <li>&#9734; Netflix</li>
-                                    <li>&#9734; New York Times</li>
-                                    <li>&#9734; Yahoo! Mail</li>
-                                    <li>&#9734; Dropbox</li>
-                                    <li>&#9734; Codecademy</li>
-                                </ul> <br>
+                    <ul>
+                        <li>&#9734; Стрічка новин у Facebook</li>
+                        <li>&#9734; Більшість клієнтської сторони Instagram</li>
+                        <li>&#9734; Частково WhatsApp</li>
+                        <li>&#9734; Netflix</li>
+                        <li>&#9734; New York Times</li>
+                        <li>&#9734; Yahoo! Mail</li>
+                        <li>&#9734; Dropbox</li>
+                        <li>&#9734; Codecademy</li>
+                    </ul> <br>
 
-                                <h2>Висновок</h2>
-                                <p>JavaScript робить із простого сайту корисний робочий інструмент. Але він обійдеться вам дорожче, якщо команда використовує класичний підхід до веб-розробки. Та команда, яка знає React, заощадить гроші.</p>
+                    <h2>Висновок</h2>
+                    <p>JavaScript робить із простого сайту корисний робочий інструмент. Але він обійдеться вам дорожче,
+                        якщо команда використовує класичний підхід до веб-розробки. Та команда, яка знає React,
+                        заощадить гроші.</p>
 
-                                <p>Ця бібліотека відмінно підходить для додатків з великою кількістю інтерактивних елементів і дозволяє розробнику працювати швидше і повністю контролювати те, що відбувається на стороні клієнта. Якщо на вашому сайті передбачається багато динамічного контенту, вибирайте команду, яка знає React.</p>
+                    <p>Ця бібліотека відмінно підходить для додатків з великою кількістю інтерактивних елементів і
+                        дозволяє розробнику працювати швидше і повністю контролювати те, що відбувається на стороні
+                        клієнта. Якщо на вашому сайті передбачається багато динамічного контенту, вибирайте команду, яка
+                        знає React.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/PtArxJ</span>
                         <br>
@@ -114,134 +138,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                <!-- <article>
-                                                            							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                            									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                            							<a href="./assets/articles/node/node-need/node-need.html">
-                                                            								<h3>Коли застосовують Node.js?</h3>
-                                                            							</a>
-                                                            							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                            						</article> -->
-                <article>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                        class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                        <h3>Вивчайте програмування безкоштовно</h3>
-                    </a>
-                    <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                        розробці на
-                        Android та iOS та інших.</p>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                        target="_blank">Перейти</a>
-                </article>
-                <article>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                            src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                        <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                    </a>
-                    <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                        працевлаштування.</p>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                        target="_blank">Перейти</a>
-                </article>
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->

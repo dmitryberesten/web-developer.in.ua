@@ -5,11 +5,15 @@
     <title>Цикли в SCSS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../sass-articles.html" class="button small btn-back">Назад</a>
+                <a href="../sass-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -104,7 +95,8 @@
 
                         Почнемо з прогону в циклі простого списку кольорів, щоб зрозуміти принцип роботи.</p>
 
-                    <p>У Sass для одержання кольрів нам знадобиться скористатися директивою @each (@each $item in $list):
+                    <p>У Sass для одержання кольрів нам знадобиться скористатися директивою @each (@each $item in
+                        $list):
                     </p>
 
                     <div>
@@ -130,202 +122,247 @@
                         синтаксис @each $key,
                         $value in $array. Нижче представлений повний цикл:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="Sass Social Media Loop"
-                                src="https://codepen.io/miriamsuzanne/embed/ObzLNN?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/ObzLNN">
-                                    Sass Social Media Loop</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div><br>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no" title="Sass Social Media Loop"
+                            src="https://codepen.io/miriamsuzanne/embed/ObzLNN?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/ObzLNN">
+                                Sass Social Media Loop</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div><br>
 
-                        <h2>Додаткові цикли for</h2>
+                    <h2>Додаткові цикли for</h2>
 
-                        <p>Цикли for можуть повторюватися набагато більше, ніж довжина об’єкта. З їх допомогою можна створювати grid макети (for
-                        columns from 1 through 12), пробігатись колірним колесом (for from hue 1 through 360) і рахувати кількість тегів div
+                    <p>Цикли for можуть повторюватися набагато більше, ніж довжина об’єкта. З їх допомогою можна
+                        створювати grid макети (for
+                        columns from 1 through 12), пробігатись колірним колесом (for from hue 1 through 360) і рахувати
+                        кількість тегів div
                         з псевдоклассом nth-child і згенерованим контентом.
-                        
-                        Давайте почнемо з того, що пробіжимося в циклі через 36 елементів div, будемо присвоювати їм номери і задавати фон за
+
+                        Давайте почнемо з того, що пробіжимося в циклі через 36 елементів div, будемо присвоювати їм
+                        номери і задавати фон за
                         допомогою :nth-child.</p>
 
-                        <p>У Sass для цього є спеціальний синтаксис for: @for $count from $start through $finish, де $start і $finish –
+                    <p>У Sass для цього є спеціальний синтаксис for: @for $count from $start through $finish, де $start
+                        і $finish –
                         цілочисельні значення. Якщо перше значення більше другого, Sass запустить зворотний відлік.</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="Sass &quot;for&quot; loop"
-                                src="https://codepen.io/miriamsuzanne/embed/BQyYRb?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/BQyYRb">
-                                    Sass &quot;for&quot; loop</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no" title="Sass &quot;for&quot; loop"
+                            src="https://codepen.io/miriamsuzanne/embed/BQyYRb?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/BQyYRb">
+                                Sass &quot;for&quot; loop</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div>
 
-                        <p>Ключове слово through означає, що наш цикл буде повторюватися 36 разів. Також можна використовувати ключове слово to,
-                        але тоді останнє значення не буде включатися: @for $i from 1 to 36 повториться тільки 35 разів.</p>
+                    <p>Ключове слово through означає, що наш цикл буде повторюватися 36 разів. Також можна
+                        використовувати ключове слово to,
+                        але тоді останнє значення не буде включатися: @for $i from 1 to 36 повториться тільки 35 разів.
+                    </p>
 
-                        <p>Варто відзначити, що нумерацію з допомогою nth-child в CSS можна написати і без препроцесорів. В CSS немає структури
-                        циклів, але в ньому є counter() – функція, яку можна інкрементувати за будь-яких DOM умов. Дану функцію можна
-                        використовувати в генерованому контенті. На жаль, її не можна використовувати за межами властивості content (поки що),
+                    <p>Варто відзначити, що нумерацію з допомогою nth-child в CSS можна написати і без препроцесорів. В
+                        CSS немає структури
+                        циклів, але в ньому є counter() – функція, яку можна інкрементувати за будь-яких DOM умов. Дану
+                        функцію можна
+                        використовувати в генерованому контенті. На жаль, її не можна використовувати за межами
+                        властивості content (поки що),
                         тобто наш фон не застосується:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="CSS counter"
-                                src="https://codepen.io/miriamsuzanne/embed/jVEzva?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/jVEzva">
-                                    CSS counter</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div><br>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no" title="CSS counter"
+                            src="https://codepen.io/miriamsuzanne/embed/jVEzva?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/jVEzva">
+                                CSS counter</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div><br>
 
-                        <h2>Система сіток</h2>
-                        <p>Час від часу я використовую інкрементні цикли в абстрактному Sass, але майже ніколи в цих стилях. Виняток становлять
-                        тільки генеровані нумеровані селектори, створювані з допомогою nth-child (як у прикладі вище) або за допомогою
-                        автоматичного генерувння класів (часто використовуються в системах сіток). Давайте побудуємо просту систему сіток
+                    <h2>Система сіток</h2>
+                    <p>Час від часу я використовую інкрементні цикли в абстрактному Sass, але майже ніколи в цих стилях.
+                        Виняток становлять
+                        тільки генеровані нумеровані селектори, створювані з допомогою nth-child (як у прикладі вище)
+                        або за допомогою
+                        автоматичного генерувння класів (часто використовуються в системах сіток). Давайте побудуємо
+                        просту систему сіток
                         без роздільників, щоб ускладнити обчислення:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="Sass For-Loop Grids"
-                                src="https://codepen.io/miriamsuzanne/embed/PbweNj?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/PbweNj">
-                                    Sass For-Loop Grids</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div><br>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no" title="Sass For-Loop Grids"
+                            src="https://codepen.io/miriamsuzanne/embed/PbweNj?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/PbweNj">
+                                Sass For-Loop Grids</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div><br>
 
-                        <h2>Унікальні аватарки</h2>
-                        <p>Не так давно на сайті OddBird ми проектували додаток з дефолтними аватарками користувачів. Ми хотіли, щоб дефолтні
-                        аватарки були максимально унікальними. Зрештою, ми створили лише 9 унікальних іконок і використовували цикли, щоб
-                        трансформувати їх у 1296 різних аватарок. Більшість користувачів ніколи не побачать дублікат.</p>
+                    <h2>Унікальні аватарки</h2>
+                    <p>Не так давно на сайті OddBird ми проектували додаток з дефолтними аватарками користувачів. Ми
+                        хотіли, щоб дефолтні
+                        аватарки були максимально унікальними. Зрештою, ми створили лише 9 унікальних іконок і
+                        використовували цикли, щоб
+                        трансформувати їх у 1296 різних аватарок. Більшість користувачів ніколи не побачать дублікат.
+                    </p>
 
-                        <p>У всіх аватарів 5 атрибутів:</p>
+                    <p>У всіх аватарів 5 атрибутів:</p>
 
-                        <p class="code-wrapper">&lt;svg class="avatar" data-dark="1" data-light="2" data-reverse="true" data-rotation="3"&gt; <br>
-                        &lt;use xlink:href="#icon-avatar-1" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;&lt;/use&gt;<br>
+                    <p class="code-wrapper">&lt;svg class="avatar" data-dark="1" data-light="2" data-reverse="true"
+                        data-rotation="3"&gt; <br>
+                        &lt;use xlink:href="#icon-avatar-1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"&gt;&lt;/use&gt;<br>
                         &lt;/svg&gt;</p>
 
-                        <ul>
-                            <li>&#129138; форма початкової іконки (9 варіантів);</li>
-                            <li>&#129138; поворот на 0, 90, 180 або 270 градусів (4 варіанти);</li>
-                            <li>&#129138; темний колір заливки (6 варіантів);</li>
-                            <li>&#129138; світлий колір фону (6 варіантів);</li>
-                            <li>&#129138; атрибут true/false, інвертування кольору (2 варіанти).</li>
-                            <li>&#129138; У коді 6 кольорів і три цикли:</li>
-                            <li>&#129138; @for $i from 0 through 3 дає нам 4 повороту;</li>
-                        </ul><br>
+                    <ul>
+                        <li>&#129138; форма початкової іконки (9 варіантів);</li>
+                        <li>&#129138; поворот на 0, 90, 180 або 270 градусів (4 варіанти);</li>
+                        <li>&#129138; темний колір заливки (6 варіантів);</li>
+                        <li>&#129138; світлий колір фону (6 варіантів);</li>
+                        <li>&#129138; атрибут true/false, інвертування кольору (2 варіанти).</li>
+                        <li>&#129138; У коді 6 кольорів і три цикли:</li>
+                        <li>&#129138; @for $i from 0 through 3 дає нам 4 повороту;</li>
+                    </ul><br>
 
-                        <p>@for $i from 1 through length($colors) дозволяє пробігатись по циклу за списком кольорів ($colors) і присвоювати кожному
-                        кольору число ($i). Зазвичай я б скористався циклом @each для колекції кольорів, але з циклом @for легше, коли потрібно
+                    <p>@for $i from 1 through length($colors) дозволяє пробігатись по циклу за списком кольорів
+                        ($colors) і присвоювати кожному
+                        кольору число ($i). Зазвичай я б скористався циклом @each для колекції кольорів, але з циклом
+                        @for легше, коли потрібно
                         присвоїти число кожного елемента;</p>
 
-                        <p>Вкладений @each $in reverse (true, false) дозволяє нам перевертати передній і задній фон для кожної комбінації кольору.
-                        
+                    <p>Вкладений @each $in reverse (true, false) дозволяє нам перевертати передній і задній фон для
+                        кожної комбінації кольору.
+
                         Кінцевий результат Sass:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="1296 avatars using multiple loops"
-                                src="https://codepen.io/miriamsuzanne/embed/BQmXyb?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/BQmXyb">
-                                    1296 avatars using multiple loops</a> by Miriam Suzanne (<a
-                                    href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div><br>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no"
+                            title="1296 avatars using multiple loops"
+                            src="https://codepen.io/miriamsuzanne/embed/BQmXyb?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/BQmXyb">
+                                1296 avatars using multiple loops</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div><br>
 
-                        <h2>Загальні цикли while</h2>
+                    <h2>Загальні цикли while</h2>
 
-                        <p>Цикли while використовуються рідко, але я час від часу використовую їх. Для мене вони найбільш корисні, коли мені
-                        потрібно пройтись по якомусь шляху і дізнатися, що наприкінці. Я не хочу проходитись по циклу через всю колекцію або задане
-                        число ітерацій, я хочу проходитись по циклу доти, поки не знайду те, що шукав. Такі цикли я використовую в абстрактних
+                    <p>Цикли while використовуються рідко, але я час від часу використовую їх. Для мене вони найбільш
+                        корисні, коли мені
+                        потрібно пройтись по якомусь шляху і дізнатися, що наприкінці. Я не хочу проходитись по циклу
+                        через всю колекцію або задане
+                        число ітерацій, я хочу проходитись по циклу доти, поки не знайду те, що шукав. Такі цикли я
+                        використовую в абстрактних
                         засобах, але це не щось, що вам буде потрібно кожен день.</p>
 
-                        <p>Я створив інструмент, який зберігає і маніпулює кольорами в Sass. Зберігання кольорів в змінних – напевно, найчастіший
+                    <p>Я створив інструмент, який зберігає і маніпулює кольорами в Sass. Зберігання кольорів в змінних –
+                        напевно, найчастіший
                         випадок використання в будь-яких препроцессорах. Більшість робить так:</p>
 
-                        <p>
-                            $pink: #E2127A;<br>
-                            $brand-primary: $pink;<br>
-                            $site-background: $brand-primary;
-                        </p>
+                    <p>
+                        $pink: #E2127A;<br>
+                        $brand-primary: $pink;<br>
+                        $site-background: $brand-primary;
+                    </p>
 
-                        <p>Розумію, що pink, швидше за все, не єдиний колір на вашому сайті, але мені поки що знадобиться тільки він. Я спеціально
-                        привласнив кілька імен, так як корисно задавати шар абстракції – від простих кольорів (pink) до більш широких шаблонів
-                        (brand-primary) і конкретних кейсів (site-background). Також я хочу перевести список кольорів у палітру, яку буде
-                        розуміти мій препроцесор. Я повинен сказати, що всі ці значення пов’язані і входять в шаблон. Для цього я зберігаю всі
+                    <p>Розумію, що pink, швидше за все, не єдиний колір на вашому сайті, але мені поки що знадобиться
+                        тільки він. Я спеціально
+                        привласнив кілька імен, так як корисно задавати шар абстракції – від простих кольорів (pink) до
+                        більш широких шаблонів
+                        (brand-primary) і конкретних кейсів (site-background). Також я хочу перевести список кольорів у
+                        палітру, яку буде
+                        розуміти мій препроцесор. Я повинен сказати, що всі ці значення пов’язані і входять в шаблон.
+                        Для цього я зберігаю всі
                         кольори теми у одній карті Sass пар ключ-значення:</p>
 
-                        <p>
-                            $colors: (<br>
-                            pink: #E2127A;<br>
-                            brand-primary: pink;<br>
-                            site-background: brand-primary;<br>
-                            );
-                        </p>
+                    <p>
+                        $colors: (<br>
+                        pink: #E2127A;<br>
+                        brand-primary: pink;<br>
+                        site-background: brand-primary;<br>
+                        );
+                    </p>
 
-                        <p>Навіщо? Так я можу вказати генератор стилів в одну змінну і автоматично створити оновлену палітру кольорів. Але є і
-                        побічні ефекти, спосіб не для всіх. Карта не дозволяє мені робити пряме призначення в парах, як я можу це робити зі
-                        змінними. Щоб знайти значення для кожного кольору, мені потрібно пройти шлях із ключових імен в циклі while:</p>
+                    <p>Навіщо? Так я можу вказати генератор стилів в одну змінну і автоматично створити оновлену палітру
+                        кольорів. Але є і
+                        побічні ефекти, спосіб не для всіх. Карта не дозволяє мені робити пряме призначення в парах, як
+                        я можу це робити зі
+                        змінними. Щоб знайти значення для кожного кольору, мені потрібно пройти шлях із ключових імен в
+                        циклі while:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="Sass &quot;while&quot; loop"
-                                src="https://codepen.io/miriamsuzanne/embed/oYXjKv?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/oYXjKv">
-                                    Sass &quot;while&quot; loop</a> by Miriam Suzanne (<a
-                                    href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no" title="Sass &quot;while&quot; loop"
+                            src="https://codepen.io/miriamsuzanne/embed/oYXjKv?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/oYXjKv">
+                                Sass &quot;while&quot; loop</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div>
 
-                        <p>Я завжди так роблю, але якщо ви спробуєте пошукати мій код для Sass циклу @while, ви не знайдете його. Тому що те ж саме
+                    <p>Я завжди так роблю, але якщо ви спробуєте пошукати мій код для Sass циклу @while, ви не знайдете
+                        його. Тому що те ж саме
                         можна написати з допомогою рекурсивної функції, що зробить код повторно:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="Sass &quot;while&quot; recursive function"
-                                src="https://codepen.io/miriamsuzanne/embed/bBdEXm?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/bBdEXm">
-                                    Sass &quot;while&quot; recursive function</a> by Miriam Suzanne (<a
-                                    href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no"
+                            title="Sass &quot;while&quot; recursive function"
+                            src="https://codepen.io/miriamsuzanne/embed/bBdEXm?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/bBdEXm">
+                                Sass &quot;while&quot; recursive function</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div>
 
-                        <p>Тепер, коли мої кольори успішно зібрані в одній змінній, я можу за допомогою іншого циклу згенерувати палітру кольорів.
+                    <p>Тепер, коли мої кольори успішно зібрані в одній змінній, я можу за допомогою іншого циклу
+                        згенерувати палітру кольорів.
                         Приклад Sass:</p>
 
-                        <div>
-                            <iframe height="300" style="width: 100%;" scrolling="no" title="Sass color palette"
-                                src="https://codepen.io/miriamsuzanne/embed/ZBagqy?default-tab=css%2Cresult" frameborder="no" loading="lazy"
-                                allowtransparency="true" allowfullscreen="true">
-                                See the Pen <a href="https://codepen.io/miriamsuzanne/pen/ZBagqy">
-                                    Sass color palette</a> by Miriam Suzanne (<a href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
-                                on <a href="https://codepen.io">CodePen</a>.
-                            </iframe>
-                        </div>
+                    <div>
+                        <iframe height="300" style="width: 100%;" scrolling="no" title="Sass color palette"
+                            src="https://codepen.io/miriamsuzanne/embed/ZBagqy?default-tab=css%2Cresult"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/miriamsuzanne/pen/ZBagqy">
+                                Sass color palette</a> by Miriam Suzanne (<a
+                                href="https://codepen.io/miriamsuzanne">@miriamsuzanne</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div>
 
-                        <p>Упевнений, ви можете написати набагато краще, ніж я.</p>
+                    <p>Упевнений, ви можете написати набагато краще, ніж я.</p>
 
-                        <h2>Зациклюємося!</h2>
+                    <h2>Зациклюємося!</h2>
 
-                        <p>Якщо ви не впевнені, коли використовувати цикли в своєму коді, а коли ні, слідкуйте за повтореннями. У вас в коді є
-                        безліч селекторів, наступних схожим шаблоном, або обчислення, які постійно повторюються? Як зрозуміти, який цикл краще
+                    <p>Якщо ви не впевнені, коли використовувати цикли в своєму коді, а коли ні, слідкуйте за
+                        повтореннями. У вас в коді є
+                        безліч селекторів, наступних схожим шаблоном, або обчислення, які постійно повторюються? Як
+                        зрозуміти, який цикл краще
                         підходить:
-                       </p>
+                    </p>
 
-                       <ul>
-                        <li>&#129138; Якщо ви можете перерахувати елементи в циклі і присвоїти їм імена, використовуйте цикл for-each.</li>
-                        <li>&#129138; Якщо важливіше кількість повторень, ніж набір вихідних елементів, або якщо потрібно дізнатися загальну кількість
-                        елементів, використовуйте цикл for.</li>
-                        <li>&#129138; Якщо в один цикл потрібно входити з різними даними, спробуйте використовувати рекурсивні функції.</li>
+                    <ul>
+                        <li>&#129138; Якщо ви можете перерахувати елементи в циклі і присвоїти їм імена, використовуйте
+                            цикл for-each.</li>
+                        <li>&#129138; Якщо важливіше кількість повторень, ніж набір вихідних елементів, або якщо
+                            потрібно дізнатися загальну кількість
+                            елементів, використовуйте цикл for.</li>
+                        <li>&#129138; Якщо в один цикл потрібно входити з різними даними, спробуйте використовувати
+                            рекурсивні функції.</li>
                         <li>&#129138; Для всього іншого (майже ніколи) використовуйте цикл while.</li>
-                       </ul> <br>
+                    </ul> <br>
 
-                       <p>Бажаємо успіхів!</p>
+                    <p>Бажаємо успіхів!</p>
 
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/x1A6K</span>
@@ -340,135 +377,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                        
-                <!-- <article>
-                                                            							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                            									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                            							<a href="./assets/articles/node/node-need/node-need.html">
-                                                            								<h3>Коли застосовують Node.js?</h3>
-                                                            							</a>
-                                                            							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                            						</article> -->
-                <article>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                        class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                        <h3>Вивчайте програмування безкоштовно</h3>
-                    </a>
-                    <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                        розробці на
-                        Android та iOS та інших.</p>
-                    <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                        target="_blank">Перейти</a>
-                </article>
-                <article>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                            src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                        <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                    </a>
-                    <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                        працевлаштування.</p>
-                    <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                        target="_blank">Перейти</a>
-                </article>
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->

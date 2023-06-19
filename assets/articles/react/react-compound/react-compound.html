@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,21 +23,8 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
                 <a href="../react-articles.html" class="button small btn-back">Назад</a>
 
@@ -45,8 +36,8 @@
 
                     <p>
                     <figure>
-                        <img class="image-center image img-adaptive mob-adaptive" src="/assets/articles/react/react-compound/1.jpg"
-                            alt="зображення" >
+                        <img class="image-center image img-adaptive mob-adaptive"
+                            src="/assets/articles/react/react-compound/1.jpg" alt="зображення">
                         <figcaption class="photo-src">
                             Джерело:
                             http://surl.li/hsiez
@@ -58,86 +49,112 @@
                     <div id="updown"></div>
 
 
-                    <p>Привіт, ентузіасти та віддані учні React! Настав час ще раз глибоко зануритися у світ React. Сьогодні ми збираємося
-                    розібрати деякі просунуті шаблони React: Compound Components, Render Props та Hooks. Розуміючи та використовуючи ці
-                    шаблони, ви можете вдосконалити свої навички розробки React і створювати більш надійні та масштабовані програми.</p>
+                    <p>Привіт, ентузіасти та віддані учні React! Настав час ще раз глибоко зануритися у світ React.
+                        Сьогодні ми збираємося
+                        розібрати деякі просунуті шаблони React: Compound Components, Render Props та Hooks. Розуміючи
+                        та використовуючи ці
+                        шаблони, ви можете вдосконалити свої навички розробки React і створювати більш надійні та
+                        масштабовані програми.</p>
 
                     <h2>Compound Components</h2>
-                    <p>Compound Components (складові компоненти) — це шаблон дизайну, у якому компоненти використовуються разом, таким чином,
-                    що вони мають спільний неявний стан, що дозволяє вам писати більш декларативні та гнучкі API. Найпоширенішим прикладом
-                    можуть бути елементи <mark>&#60;select&#62;</mark> та <mark>&#60;option&#62;</mark> у HTML.</p>
+                    <p>Compound Components (складові компоненти) — це шаблон дизайну, у якому компоненти
+                        використовуються разом, таким чином,
+                        що вони мають спільний неявний стан, що дозволяє вам писати більш декларативні та гнучкі API.
+                        Найпоширенішим прикладом
+                        можуть бути елементи <mark>&#60;select&#62;</mark> та <mark>&#60;option&#62;</mark> у HTML.</p>
 
                     <p>У React типова реалізація може виглядати так:</p>
                     <p>
                     <figure>
-                        <img class="image-center image image img-adaptive code-img" src="/assets/articles/react/react-compound/2.png"
-                            alt="зображення">
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-compound/2.png" alt="зображення">
                         <figcaption class="photo-src">
                         </figcaption>
                     </figure>
                     </p>
 
-                    <p>Тут компонент <mark>Tabs</mark> ділиться своїм станом із дочірніми елементами <mark>Tab</mark>, контролюючи, яка вкладка є активною.</p>
+                    <p>Тут компонент <mark>Tabs</mark> ділиться своїм станом із дочірніми елементами <mark>Tab</mark>,
+                        контролюючи, яка вкладка є активною.</p>
 
                     <h2>Render Props</h2>
-                    <p>Render Props (рендер-пропс) — це техніка в React для обміну кодом між компонентами використовуючи проп, значення якого є
-                    функція. Це чудовий шаблон для повторного використання поведінки між компонентами. Хорошим прикладом є компонент
-                    <mark>MouseTracker</mark>, який відстежує положення миші:</p>
+                    <p>Render Props (рендер-пропс) — це техніка в React для обміну кодом між компонентами використовуючи
+                        проп, значення якого є
+                        функція. Це чудовий шаблон для повторного використання поведінки між компонентами. Хорошим
+                        прикладом є компонент
+                        <mark>MouseTracker</mark>, який відстежує положення миші:
+                    </p>
 
                     <p>
                     <figure>
-                        <img class="image-center image image img-adaptive code-img" src="/assets/articles/react/react-compound/3.png"
-                            alt="зображення">
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-compound/3.png" alt="зображення">
                         <figcaption class="photo-src">
                         </figcaption>
                     </figure>
                     </p>
 
-                    <p>Тут будь-який компонент, якому потрібно знати положення миші, може використовувати <mark>MouseTracker</mark> і забезпечити функцію
-                    рендеригну, щоб налаштувати те, що він хоче відобразити в цьому стані.</p>
+                    <p>Тут будь-який компонент, якому потрібно знати положення миші, може використовувати
+                        <mark>MouseTracker</mark> і забезпечити функцію
+                        рендеригну, щоб налаштувати те, що він хоче відобразити в цьому стані.
+                    </p>
 
                     <h2>Hooks</h2>
-                    <p>Hooks (хуки), представлені в React 16.8, дозволяють використовувати стан та інші особливості React без написання класу.
-                    Вони дозволяють повторно використовувати логіку стану між компонентами, розбиваючи складні компоненти на менші функції
-                    залежно від того, які частини пов’язані.</p>
+                    <p>Hooks (хуки), представлені в React 16.8, дозволяють використовувати стан та інші особливості
+                        React без написання класу.
+                        Вони дозволяють повторно використовувати логіку стану між компонентами, розбиваючи складні
+                        компоненти на менші функції
+                        залежно від того, які частини пов’язані.</p>
 
                     <p>Ось базовий приклад використання хуків <mark>useState</mark> і <mark>useEffect</mark>:</p>
                     <p>
                     <figure>
-                        <img class="image-center image image img-adaptive code-img" src="/assets/articles/react/react-compound/4.png"
-                            alt="зображення">
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-compound/4.png" alt="зображення">
                         <figcaption class="photo-src">
                         </figcaption>
                     </figure>
                     </p>
 
-                    <p>У цьому прикладі <mark>useState</mark> і <mark>useEffect</mark> дозволяють нам додати стан і побічні ефекти (відповідно) до нашого функціонального
-                    компонента.</p>
+                    <p>У цьому прикладі <mark>useState</mark> і <mark>useEffect</mark> дозволяють нам додати стан і
+                        побічні ефекти (відповідно) до нашого функціонального
+                        компонента.</p>
 
-                    <p>Пам’ятайте, коли справа доходить до хуків, це набагато більше, ніж useState і useEffect. Не забувайте про інші вбудовані
-                    хуки, такі як useContext, useReducer і useRef, і пам’ятайте, що ви також можете створювати власні власні хуки!</p>
+                    <p>Пам’ятайте, коли справа доходить до хуків, це набагато більше, ніж useState і useEffect. Не
+                        забувайте про інші вбудовані
+                        хуки, такі як useContext, useReducer і useRef, і пам’ятайте, що ви також можете створювати
+                        власні власні хуки!</p>
 
                     <h2>Висновок</h2>
-                    <p>Розширені шаблони React такі як Compound Components, Render Props і Hooks, дійсно відкривають новий рівень потужності та
-                    гнучкості в наших додатках. Вони дозволяють нам створювати код, який можна багаторазово використовувати, масштабувати та
-                    підтримувати, що має вирішальне значення для розвитку додатків.</p>
+                    <p>Розширені шаблони React такі як Compound Components, Render Props і Hooks, дійсно відкривають
+                        новий рівень потужності та
+                        гнучкості в наших додатках. Вони дозволяють нам створювати код, який можна багаторазово
+                        використовувати, масштабувати та
+                        підтримувати, що має вирішальне значення для розвитку додатків.</p>
 
-                    <p>Compound Components пропонують декларативний API і більшу гнучкість, Render Props допомагають спільно використовувати
-                    поведінку між компонентами, а Hooks дозволяють використовувати методи стану та життєвого циклу у функціональних
-                    компонентах, а також витягувати логіку компонентів у функції для повторного використання.</p>
+                    <p>Compound Components пропонують декларативний API і більшу гнучкість, Render Props допомагають
+                        спільно використовувати
+                        поведінку між компонентами, а Hooks дозволяють використовувати методи стану та життєвого циклу у
+                        функціональних
+                        компонентах, а також витягувати логіку компонентів у функції для повторного використання.</p>
 
-                    <p>Однак, як і з усіма речами в програмуванні, вони мають свої власні компроміси. Вони можуть ускладнити код, і розуміння
-                    того, як вони працюють, може потребувати серйозного навчання. З огляду на це, після освоєння ці шаблони можуть значно
-                    покращити вашу кодову базу та вашу ефективність як React-розробника.</p>
+                    <p>Однак, як і з усіма речами в програмуванні, вони мають свої власні компроміси. Вони можуть
+                        ускладнити код, і розуміння
+                        того, як вони працюють, може потребувати серйозного навчання. З огляду на це, після освоєння ці
+                        шаблони можуть значно
+                        покращити вашу кодову базу та вашу ефективність як React-розробника.</p>
 
-                    <p>Як завжди, найкращий спосіб вчитися на практиці. Спробуйте інтегрувати ці шаблони у свій наступний проект або візьміть
-                    існуючий проект і подивіться, як ви можете його рефакторити за допомогою цих розширених шаблонів. Ймовірно, ви побачите,
-                    що ці потужні шаблони можуть зробити ваш код чистішим, легшим для читання та цікавішим для написання.</p>
+                    <p>Як завжди, найкращий спосіб вчитися на практиці. Спробуйте інтегрувати ці шаблони у свій
+                        наступний проект або візьміть
+                        існуючий проект і подивіться, як ви можете його рефакторити за допомогою цих розширених
+                        шаблонів. Ймовірно, ви побачите,
+                        що ці потужні шаблони можуть зробити ваш код чистішим, легшим для читання та цікавішим для
+                        написання.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/hskap"
                                 target="_blank">http://surl.li/hskap</a></span>
                         <br>
-                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/polina-krasovska/" target="_blank"> Polina Krasovska</a> <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/polina-krasovska/" target="_blank"> Polina
+                            Krasovska</a> <br>
                         <b>Редактор:</b> Аліна Берестень <br>
                         <b>Адміністратор:</b> Дмитро Берестень
                     </p>
@@ -148,142 +165,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i
-                                    class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i
-                                    class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i
-                                    class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i
-                                    class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i
-                                    class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                        <!-- <article>
-                                                                    							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                                    									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                                    							<a href="./assets/articles/node/node-need/node-need.html">
-                                                                    								<h3>Коли застосовують Node.js?</h3>
-                                                                    							</a>
-                                                                    							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                                    						</article> -->
-                        <article>
-                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                                class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                                <h3>Вивчайте програмування безкоштовно</h3>
-                            </a>
-                            <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                                розробці на
-                                Android та iOS та інших.</p>
-                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                                target="_blank">Перейти</a>
-                        </article>
-                        <article>
-                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                    src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                                <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                            </a>
-                            <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                                працевлаштування.</p>
-                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                                target="_blank">Перейти</a>
-                        </article>
-                </section>
-
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->

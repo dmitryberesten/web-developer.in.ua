@@ -5,11 +5,15 @@
     <title>Що таке Сасс?</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -19,23 +23,10 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
 
-				<a href="../sass-articles.html" class="button small btn-back">Назад</a>
+                <a href="../sass-articles.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
                 <section class="section-article">
@@ -147,53 +138,73 @@
                     </ul><br>
 
                     <p>Sass –watch scss: CSS</p>
-                    <p>Watch - це прапор, який виявляє зміни та збирає файл scss у кінцевий файл CSS, який може бути використаний у вашій
-                    програмі.</p>
+                    <p>Watch - це прапор, який виявляє зміни та збирає файл scss у кінцевий файл CSS, який може бути
+                        використаний у вашій
+                        програмі.</p>
 
                     <h2>Переваги SASS</h2>
                     <ul>
-                        <li>&#129138; SASS дозволяє користувачеві написати чистий код. Це полегшує обробку і менше CSS використовується для побудови програми.</li>
+                        <li>&#129138; SASS дозволяє користувачеві написати чистий код. Це полегшує обробку і менше CSS
+                            використовується для побудови програми.</li>
                         <li>&#129138; Він містить менше коду, що полегшує швидкість роботи відповідного CSS.</li>
-                        <li>&#129138; Він більш стійкий, потужний і елегантний. Він використовується дизайнерами та розробниками та допомагає їм працювати
-                        ефективніше та швидше.</li>
+                        <li>&#129138; Він більш стійкий, потужний і елегантний. Він використовується дизайнерами та
+                            розробниками та допомагає їм працювати
+                            ефективніше та швидше.</li>
                         <li>&#129138; Він сумісний з CSS, і тому всі бібліотеки CSS можуть бути використані.</li>
-                        <li>&#129138; Він пропонує такі засоби, як вкладеність, що допомагає писати вкладений синтаксис та використовувати такі функції, як
-                        маніпуляція кольором, математичні функції та інші значення.</li>
+                        <li>&#129138; Він пропонує такі засоби, як вкладеність, що допомагає писати вкладений синтаксис
+                            та використовувати такі функції, як
+                            маніпуляція кольором, математичні функції та інші значення.</li>
                     </ul><br>
 
                     <h2>Чому ми повинні використовувати SASS?</h2>
                     <p>Нижче наведено п'ять основних моментів, чому слід використовувати SASS:</p>
 
                     <ul>
-                        <li>&#129138;  <b>Змінні</b>: На відміну від CSS, де вам завжди доведеться повертатися назад і перевіряти свої попередні стилі, SASS має
-                        змінні, які зберігають інформацію і можуть бути використані повторно. Усі значення кольорів, стек шрифту тощо можуть
-                        зберігатися та використовуватися коли потрібно.</li> <br>
-                        <li>&#129138; <b>@import:</b> У CSS є @import, який тягне за собою всі інші стилі, але він не створює іншого HTTP-запиту. SASS - це
-                        препроцесор, який витягуватиме всі файли до того, як компілювати CSS. В результаті на сторінку CSS обробляється
-                        один HTTP-запит. Запит може бути розбитий на шматки, і він все ще буде обслуговувати лише одну сторінку для браузера.</li> <br>
-                        <li>&#129138; <b>Кольорові функції:</b> SASS має різні функції, схожі на CSS. Все це можна легко використовувати в SASS.</li><br>
-                        <li>&#129138; <b>@extend:</b> @extend дозволяє нам ділитися набором властивостей CSS від одного селектора до іншого.</li><br>
-                        <li>&#129138; <b>Mixins:</b> Mixins - це декларації, які можна використовувати на всьому сайті.</li>
+                        <li>&#129138; <b>Змінні</b>: На відміну від CSS, де вам завжди доведеться повертатися назад і
+                            перевіряти свої попередні стилі, SASS має
+                            змінні, які зберігають інформацію і можуть бути використані повторно. Усі значення кольорів,
+                            стек шрифту тощо можуть
+                            зберігатися та використовуватися коли потрібно.</li> <br>
+                        <li>&#129138; <b>@import:</b> У CSS є @import, який тягне за собою всі інші стилі, але він не
+                            створює іншого HTTP-запиту. SASS - це
+                            препроцесор, який витягуватиме всі файли до того, як компілювати CSS. В результаті на
+                            сторінку CSS обробляється
+                            один HTTP-запит. Запит може бути розбитий на шматки, і він все ще буде обслуговувати лише
+                            одну сторінку для браузера.</li> <br>
+                        <li>&#129138; <b>Кольорові функції:</b> SASS має різні функції, схожі на CSS. Все це можна легко
+                            використовувати в SASS.</li><br>
+                        <li>&#129138; <b>@extend:</b> @extend дозволяє нам ділитися набором властивостей CSS від одного
+                            селектора до іншого.</li><br>
+                        <li>&#129138; <b>Mixins:</b> Mixins - це декларації, які можна використовувати на всьому сайті.
+                        </li>
                     </ul><br>
 
                     <h2>Навіщо нам потрібен SASS?</h2>
-                    <p>SASS швидший і ефективніший. Код SASS можна повторно використовувати, а значить, це економить час. Перетворення коду з
-                    SASS в CSS не є складним, а тому доцільно використовувати його, щоб можна було економити час.</p>
+                    <p>SASS швидший і ефективніший. Код SASS можна повторно використовувати, а значить, це економить
+                        час. Перетворення коду з
+                        SASS в CSS не є складним, а тому доцільно використовувати його, щоб можна було економити час.
+                    </p>
 
                     <h2>Правильна аудиторія для вивчення технологій SASS</h2>
 
-                    <p>Незалежно від того, який програміст використовує CSS та шукає більш ефективну та менш трудомістку технологію для
-                    створення веб-додатків, може використовувати SASS та відчувати нові функції.</p>
+                    <p>Незалежно від того, який програміст використовує CSS та шукає більш ефективну та менш трудомістку
+                        технологію для
+                        створення веб-додатків, може використовувати SASS та відчувати нові функції.</p>
 
                     <h2>Як ця технологія допомагає вам розвиватися в кар’єрі?</h2>
 
-                    <p>Це вдосконалена версія CSS. Коли ви знаєте SASS, ви можете отримати роботу з великими компаніями. Це
-                    допомагає вам швидше працювати і показувати свої навички за допомогою функцій, які вона надає.</p>
+                    <p>Це вдосконалена версія CSS. Коли ви знаєте SASS, ви можете отримати роботу з великими компаніями.
+                        Це
+                        допомагає вам швидше працювати і показувати свої навички за допомогою функцій, які вона надає.
+                    </p>
 
                     <h2>Висновок</h2>
-                    <p>SASS - це дуже ефективний спосіб заміни CSS. За допомогою змінних, вкладеності, міксинів - стає можливим
-                    забезпечити кращі результати, ніж CSS. Замінивши CSS на SASS, ви можете легко використовувати код замість того, щоб
-                    писати один і той же фрагмент знову і знову. Тому використовуйте SASS і станьте сміливішими у своїх програмах.</p>
+                    <p>SASS - це дуже ефективний спосіб заміни CSS. За допомогою змінних, вкладеності, міксинів - стає
+                        можливим
+                        забезпечити кращі результати, ніж CSS. Замінивши CSS на SASS, ви можете легко використовувати
+                        код замість того, щоб
+                        писати один і той же фрагмент знову і знову. Тому використовуйте SASS і станьте сміливішими у
+                        своїх програмах.</p>
 
                     <p class="article-info"><b>Джерело: </b><span class="span-link">https://goo.su/zHI1f8n</span>
                         <br>
@@ -207,134 +218,8 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-        
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Меню</h2>
-                    </header>
-                    <ul>
-                        <li class="menu-item__btn"><a href="../../../../index.html"><i class="fa-solid fa-house"></i>
-                                Головна</a></li>
-                        <li class="menu-item__btn"><a href="../../../../articles.html"><i class="fa-regular fa-file-lines"></i>
-                                Статті</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../lessons.html"><i class="fa-solid fa-film"></i>
-                                Уроки</a></li>
-                        <li class="menu-item__btn"><a href="../../../../services.html"><i class="fa-solid fa-pen-ruler"></i>
-                                Cервіси</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>
-                                Подкасти</a></li>
-                        <li>
-                            <span class="opener menu-item__btn"><i class="fa-regular fa-lightbulb"></i>
-                                Генератори</span>
-                            <ul>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-memes/generator-memes.html"><i
-                                            class="fa-regular fa-images"></i> Генератор ІТ-мемів</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-jokes/generator-jokes.html"><i
-                                            class="fa-regular fa-face-smile-wink"></i> Генератор ІТ-жартів</a></li>
-                                <li class="menu-item__btn"><a
-                                        href="../../../generators/generator-motivations/generator-motivations.html"><i
-                                            class="fa-solid fa-hand-fist"></i> Генератор ІТ-мотивації</a></li>
-                                <li class="menu-item__btn"><a href="../../../generators/generator-facts/generator-facts.html"><i
-                                            class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../bloggers/bloggers.html"><i class="fa-brands fa-youtube"></i>
-                                Українські ІТ-ютубери</a></li>
-                        <li class="menu-item__btn"><a href="../../../../donate.html"><i
-                                    class="fa-solid fa-hand-holding-dollar"></i>
-                                Донат</a>
-                        </li>
-                        <li class="menu-item__btn"><a href="../../../../about-us.html"><i class="fa-solid fa-user-group"></i>
-                                Про
-                                нас</a>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <section>
-                    <header class="major">
-                        <h2>Люди читають:</h2>
-                    </header>
-                    <div class="mini-posts">
-                        <article>
-                            <a href="../../git/improving-git/improving-git.html" class="image"><img
-                                    src="../../git/improving-git/improving-git.png" alt="" /></a>
-                            <a href="../../git/improving-git/improving-git.html">
-                                <h3>Покращуємо процес роботи з Git</h3>
-                            </a>
-                            <p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
-                        </article>
-                        <article>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html" class="image"><img
-                                    src="../../bootstrap/bootstrap-responsive/1.png" alt="" /></a>
-                            <a href="../../bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-                                <h3>Використання Bootstrap для адаптивної верстки</h3>
-                            </a>
-                            <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
-                        </article>
-                    <!-- <article>
-                                                                							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
-                                                                									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
-                                                                							<a href="./assets/articles/node/node-need/node-need.html">
-                                                                								<h3>Коли застосовують Node.js?</h3>
-                                                                							</a>
-                                                                							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
-                                                                						</article> -->
-                    <article>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                            class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                            <h3>Вивчайте програмування безкоштовно</h3>
-                        </a>
-                        <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                            розробці на
-                            Android та iOS та інших.</p>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                    <article>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                            <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                        </a>
-                        <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                            працевлаштування.</p>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                </section>
-        
-                <!-- Section -->
-                <section>
-                    <header class="major">
-                        <h2>Зв'язатись</h2>
-                    </header>
-                    <p>Якщо у Вас є цікаві ідеї, пропозиції або навіть подяка щодо нашої освітньої платформи - Ви
-                        можете написати адміністратору в зручний для вас спосіб.</p>
-                    <ul class="contact">
-                        <li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
-                        </li>
-                        <li class="icon brands fa-instagram"><a
-                                href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
-                        <li class="icon solid fa-home">Київ, Україна!</li>
-                    </ul>
-                </section>
-        
-                <!-- Footer -->
-                <footer id="footer">
-                    <p class="copyright">&copy; Всі права захищені. <br><br> <span
-                            class="footer-text">web-developer.in.ua</span> <br><br> <a
-                            href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
-                            dmitryberesten</a>.
-                </footer>
-            </div>
-        </div>
-
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
     </div>
 
     <!-- Scripts -->
