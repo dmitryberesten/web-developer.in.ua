@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Найкращі практики React, які повинен знати кожен розробник</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
+</head>
+
+<body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Найкращі практики React, які повинен знати кожен розробник</h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive"
+                            src="/assets/articles/react/react-best-practices/1.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/iixza
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>React являється найбільш популярною мовою у фронтенд розробці.
+                        У цій статті будуть перераховані одні з найкращих практик React, яких варто дотримуватись, щоб
+                        покращити продуктивність
+                        програм.
+                    </p>
+
+                    <h2>1. Малі та специфічні функціональні компоненти</h2>
+                    <p>Як ми знаємо React дозволяє розробляти великі компоненти, які здатні виконувати різні завдання.
+                        Проте, найкраще їх
+                        структурувати так, щоб кожен виконував певну мету, зберігаючи компоненти простими.
+                        Завдяки React, розробники створюють багаторазові UI компоненти. Компоненти меншого розміру легше
+                        читати та розуміти з
+                        точки зору їх функціонування, а також їх простіше оновлювати. В результаті цього, використання
+                        коду стає набагато
+                        зручнішим. Кожен компонент, як правило, короткий (100-200 рядків), тому для інших програмістів
+                        легше розуміти і
+                        налаштовувати код.
+                    </p>
+
+                    <h2>2. Не використувуйтe індекси як Key Prop</h2>
+
+                    <p>Під час візуалізації масивів можна використовувати індекс як ключ.</p>
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-best-practices/2.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Хоча це іноді і спрацьовує, але використання індексу як ключа може викликати проблеми, особливо,
+                        якщо очікується зміна
+                        списку.</p>
+
+                    <h2>3. Використовуйте фрагменти замість &lt;Div&gt;, де це можливо</h2>
+                    <p>Компоненти React повинні повертати код загорнутий в один тег, зазвичай це
+                        &lt;div&gt; або фрагмент React. Потрібно вибирати
+                        фрагменти, де це є можливо.
+                        Використання &lt;div&gt; збільшує розмір DOM, особливо у великих проектах, оскільки чим більше
+                        тегів
+                        або вузлів DOM, тим
+                        більше пам'яті потрібно веб сайту та більше потужності використовує веб браузер для того,
+                        щоб завантажити веб
+                        сайт. Це призводить до зменшення швидкості завантаження сторінки та до потенційно поганого
+                        досвіду користувача
+                        (User Experience).
+                    </p>
+
+                    <h2>4. Віддавайте первагу передачі об'єкта</h2>
+                    <p>Більшість людей передає набір примітивних значень, але щоб обмежити кількість пропсів, що
+                        передаються, потрібно надавати
+                        перевагу передачі об'єкта. Наприклад, ви можете поєднати дані про працівника, а не передавати
+                        кожні окремо. Ця функція
+                        не буде змінена для врахування майбутніх даних, які набуває студент.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-best-practices/3.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>5. Написання чистого та читабельного коду за допомогою JSX</h2>
+                    <p>Як розробники, ви можете захотіти писати чисту структуру коду, яку легко читати і сприймати. В
+                        цьому вам допоможе
+                        розширення JSX, ви можете переміщувати непов’язаний код до одного компонента та розробляти
+                        окремі файли для іншого
+                        компонента. Розробники також можуть групувати функціональні компоненти у хуки.</p>
+
+                    <h2>6. DRY свій React код</h2>
+                    <p>DRY означає “Don't repeat yourself” (“не повторюйся”). Як ви вже здогадались, тут це означає - не
+                        повторюй свій код. Це
+                        спрямовано на те, щоб уникнути випадків повторення коду.
+                        Найкращі практики React пропонують вам точний і стислий код, що робить його придатним і простим.
+                        Питання полягає в тому,
+                        як ви дізнаєтесь, чи збираєтесь об'єднати повторюваний код?
+                        Отже, вам потрібно шукати схожості і якщо ви знайдете їх, то це означає, що ви дублюєте код.
+                    </p>
+
+                    <h2>7. Дотримуйтеся правил іменування</h2>
+                    <p>Варто завжди використувувати PascalCase під час іменування компонентів, щоб відрізнити їх від
+                        інших некомпонентних
+                        файлів JSX. Наприклад: NavMenu, LoginButton…
+                        Використовуйте СamelCase для функцій всередині компонентів React, таких як handleClick() чи
+                        showElement().</p>
+
+                    <h2>8. Використовуйте деструктуризацію об'єктів для Props</h2>
+                    <p>Замість передачі об'єкта props використовуйте деструктурування об'єкта, щоб передати ім’я prop.
+                        Це відкидає потребу
+                        посилатися на об'єкт props кожного разу, коли потрібно його використовувати.
+                        Наприклад, нижче наведено компонент, який використовує props як є.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-best-practices/4.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>При деструктуризації обєкта ви звертаєтесь безпосередньо до тексту.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-best-practices/5.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>9. Динамічно візуалізовуйте масиви (Arrays) використовуючи Map</h2>
+                    <p>Використовуйте map() для динамічного відтворення повторюваних блоків HTML. Наприклад, можна
+                        використовувати map() для
+                        відтворення списку елементів у тегах &lt;li&gt;.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-best-practices/6.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>10. Компоненти вищого порядку (Higher-Order Components (HOC))
+                    </h2>
+
+                    <p>Удосконалена методологія React дозволяє повторно використовувати функціональні можливості
+                        компонентів у техніці
+                        візуалізації. Компонент можна змінити на вищий використовуючи розширений рівень компонента.
+                        Розгляд компонентів вищого
+                        порядку, одна з найкращих практик для Reactjs - розробників. Компоненти вищого порядку служать
+                        як розшерена техніка в
+                        React, що дозволяє повторно використовувати логіку компонентів у методі рендеренгу (render).
+                        Розглядаючи просунутий
+                        рівень трансформуйте компонент у компонент вищого порядку. Наприклад, покажіть деякі компоненти,
+                        коли користувач
+                        залишається в системі і доповнюйте схожий код кожним компонентом.</p>
+
+                    <h2>Висновок</h2>
+                    <p>Найкращі практики, згадані вище: використання деструктуризації JavaScript для позбавлення
+                        надмірності, використання
+                        інструментів (tools) розробника React, практика умовного рендерингу (Conditional rendering).
+                        Ми сподіваємося, що ці найкращі практики допоможуть вам правильно налаштовувати проекти,
+                        вдосконалювати ваш код, навички
+                        програмування та продуктивність програми.
+                    </p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/iixza"
+                                target="_blank">http://surl.li/iixza</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/iryna-tymo-b039b1255/" target="_blank">
+                            Iryna Tymo</a> <br>
+                        <b>Редактор:</b> <a href="https://www.linkedin.com/in/alina-beresten/" target="_blank">Аліна Берестень</a> <br>
+                        <b>Адміністратор:</b> <a href="https://www.linkedin.com/in/dmytrii-beresten/" target="_blank">Дмитро
+                            Берестень</a>
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
