@@ -7,7 +7,7 @@ var pagesData = [
     authorUrl: "0",
   },
   {
-    title: "VS Code, Figma. Перший проект з верстання - як підготуватись?",
+    title: "Перший проект з верстання - як підготуватись?",
     videoSrc: "https://www.youtube.com/embed/YK0cqzXYrJ8",
     description: `В ЦЬОМУ ВІДЕО: програмне забезпечення та його налаштування,
 стартовий шаблон файлів проекту (огляд),

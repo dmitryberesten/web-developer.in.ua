@@ -1,7 +1,7 @@
 // Масив об'єктів з даними
 const posts = [
   {
-    title: "VS Code, Figma. Перший проект з верстання - як підготуватись?",
+    title: "Перший проект з верстання",
     imageSrc: "./preview/1.jpg",
     link: "./1.html",
   },
