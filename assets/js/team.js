@@ -95,6 +95,54 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/margarita-chigrinets-74197225b/",
     photo: "../../images/team/16.jpg",
   },
+  {
+    name: "Valeriia Minchenko",
+    position: "Content Manager",
+    linkedin: "https://www.linkedin.com/in/valeriia-minchenko/",
+    photo: "../../images/team/17.jpg",
+  },
+  {
+    name: "Nataliya Kuhn",
+    position: "English Translator",
+    linkedin: "https://www.linkedin.com/in/nataliya-kuhn/",
+    photo: "../../images/team/18.jpg",
+  },
+  {
+    name: "Kate Proskurniak",
+    position: "Technical Translator",
+    linkedin: "https://www.linkedin.com/in/kate-proskurniak-0a752a178/",
+    photo: "../../images/team/19.jpg",
+  },
+  {
+    name: "Olena Pobehailo",
+    position: "Content Specialist",
+    linkedin: "https://www.linkedin.com/in/olena--pobehailo/",
+    photo: "../../images/team/20.jpg",
+  },
+  {
+    name: "Інга Юрченко",
+    position: "Creative Manager",
+    linkedin: "https://www.linkedin.com/in/inha-yurchenko/",
+    photo: "../../images/team/21.jpg",
+  },
+  {
+    name: "Ірина Федунишин",
+    position: "Translator",
+    linkedin: "https://www.linkedin.com/in/irynaf/",
+    photo: "../../images/team/22.jpg",
+  },
+  {
+    name: "Iryna Grytsaenko",
+    position: "Technical Translator",
+    linkedin: "https://www.linkedin.com/in/iryna-grytsaenko/",
+    photo: "../../images/team/23.jpg",
+  },
+  {
+    name: "Yevheniia Melnychenko",
+    position: "Web Content Specialist",
+    linkedin: "https://www.linkedin.com/in/yevheniia-melnychenko/",
+    photo: "../../images/team/24.jpg",
+  },
   // {
   //   name: "",
   //   position: "",
@@ -102,6 +150,42 @@ const teamMembers = [
   //   photo: "../../images/team/.jpg",
   // },
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const teamContainer = document.querySelector(".team-members");
 
@@ -126,6 +210,7 @@ function createTeamMemberCard(member) {
   linkedin.href = member.linkedin;
   linkedin.classList.add("icon", "brands", "fa-linkedin");
   linkedin.textContent = " LinkedIn";
+  linkedin.target = "_blank";
   card.appendChild(linkedin);
 
   return card;
@@ -139,3 +224,4 @@ function displayTeamMembers() {
 }
 
 displayTeamMembers();
+
