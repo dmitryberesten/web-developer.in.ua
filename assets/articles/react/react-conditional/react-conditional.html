@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Чудовий умовний рендеринг з
+        < RenderWhen /> в React
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
+</head>
+
+<body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Чудовий умовний рендеринг з
+                            < RenderWhen /> в React
+                        </h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive"
+                            src="/assets/articles/react/react-conditional/1.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/icotw
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>Найбільш поширеною технікою у Реакті є рендеринг за умовою. Зі збільшенням та ускладненням
+                        програми, умовні оператори
+                        рендерингу можуть стати менш читабельними. У цій статті ми обговоримо, як правильно та легко
+                        писати умови у Реакті.</p>
+
+                    <h2>Поширені техніки умовного рендерингу</h2>
+                    <p>Ось кілька технік, які використовуються при умовному рендерингу у компонентах React:</p>
+
+                    <h3>Використання &&</h3>
+                    <p>Це є найпоширенішою технікою умовного рендерингу. Також важливо пам'ятати, що її необхідно
+                        використовувати з
+                        обережністю, оскільки можуть виникати непередбачувані помилки.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-conditional/2.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h3>Використання If/Else оператора</h3>
+                    <p>Оператор "if/else" - ще один метод для умовного рендерингу компонентів у React. Однак, це може
+                        призводити до складності
+                        читання коду, якщо використано безліч таких операторів.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-conditional/3.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h3>Використання тернарного оператора</h3>
+                    <p>Тернарний оператор є популярним методом, який використовується для умовного рендерингу у React.
+                        Проблема використання
+                        тернарного оператора у тому, що за наявності кількох умов, необхідно використовувати вкладений
+                        тернарний оператор. Це
+                        робить код менш читабельним і складнішим для розуміння.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-conditional/4.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h3>Написання чистих умов</h3>
+                    <p>
+                        <ReactWhen /> - це простий та невеликий React компонент, який дозволить вам використовувати
+                        умовний рендеринг, що також
+                        підвищить читабельність коду та швидкість його написання. Неважливо, потрібно перевірити одну чи
+                        кілька умов, ви можете
+                        зробити це за допомогою
+                        < RenderWhen />.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-conditional/5.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+                    <p>Компонент
+                        < RenderWhen /> працює за принципом операторів "if/else" та "switch/case". Це дозволяє
+                        перевірити ланцюжок умов для
+                        рендерингу.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-conditional/6.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У наведеному вище прикладі, код відображає повідомлення в залежності від дня тижня. Остання умова
+                        завжди є true, але
+                        вона буде рендеритися тільки в тому випадку, якщо всі інші умови не виконуються. Цей принцип
+                        роботи виконується точно як
+                        оператор default в "switch/case".</p>
+
+                    <p>Компонент
+                        < RenderWhen /> приймає властивість (prop) isTrue, що дозволяє вам виконати вкладені умови. Це
+                        означає, що всі дочірні
+                        умови (children conditionals) будуть перевірятися тільки в тому випадку, якщо умови, передані в
+                        RenderWhen, будуть true.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-conditional/7.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Будова компонованих веб-додатків</h2>
+                    <p>Не будуйте "монолітні" веб-додатки. Використовуйте Bit для створення та компонування роз'єднаних
+                        компонентів програмного
+                        забезпечення у ваших улюблених фреймворках, таких як React або Node. Будуйте масштабовані та
+                        модульні застосунки з
+                        потужним та приємним досвідом розробки.</p>
+
+                    <p>Запросіть свою команду до Bit Cloud, щоб разом організувати роботу та співпрацю над компонентами
+                        для прискорення,
+                        масштабування та стандартизування розробки в команді. Спробуйте компонований фронтенд з Design
+                        System чи Micro
+                        Frontends, або досліджуйте компонований бекенд з серверними компонентами.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/ikysw"
+                                target="_blank">http://surl.li/ikysw</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/margarita-chigrinets-74197225b/"
+                            target="_blank"> Margarita Chigrinets</a> <br>
+                        <b>Редактор:</b> <a href="https://www.linkedin.com/in/alina-beresten/" target="_blank">Аліна
+                            Берестень</a> <br>
+                        <b>Адміністратор:</b> <a href="https://www.linkedin.com/in/dmytrii-beresten/"
+                            target="_blank">Дмитро
+                            Берестень</a>
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
