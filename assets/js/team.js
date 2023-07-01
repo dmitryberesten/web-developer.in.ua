@@ -143,6 +143,86 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/yevheniia-melnychenko/",
     photo: "../../images/team/24.jpg",
   },
+  {
+    name: "Nataliia Kasianova",
+    position: "Content Specialist",
+    linkedin: "https://www.linkedin.com/in/nataliia-kasianova-b7575b22b/",
+    photo: "../../images/team/25.jpg",
+  },
+  {
+    name: "Diana Klymchyk",
+    position: "Technical Translator",
+    linkedin: "https://www.linkedin.com/in/diana-klymchyk-1a8b05155/",
+    photo: "../../images/team/26.jpg",
+  },
+  {
+    name: "Bohdan Ryzhko",
+    position: "Content Developer",
+    linkedin: "https://www.linkedin.com/in/bohdan-ryzhko/",
+    photo: "../../images/team/27.jpg",
+  },
+  {
+    name: "Tetiana Brodiana",
+    position: "English Translator",
+    linkedin: "https://www.linkedin.com/in/tetiana-brodiana-bb620963/",
+    photo: "../../images/team/28.jpg",
+  },
+  {
+    name: "Eduard Povierin",
+    position: "Content Editor",
+    linkedin: "https://www.linkedin.com/in/eduard-povierin-44920a22a/",
+    photo: "../../images/team/29.jpg",
+  },
+  {
+    name: "Iryna Neher",
+    position: "English Translator",
+    linkedin: "https://www.linkedin.com/in/iryna-neher/",
+    photo: "../../images/team/30.jpg",
+  },
+  {
+    name: "Oleksandra Skarha",
+    position: "Technical Translator",
+    linkedin: "https://www.linkedin.com/in/oleksandra-skarha/",
+    photo: "../../images/team/31.jpg",
+  },
+  {
+    name: "Yelyzaveta Unal",
+    position: "Content Specialist",
+    linkedin: "https://www.linkedin.com/in/yelyzaveta-unal/",
+    photo: "../../images/team/32.jpg",
+  },
+  {
+    name: "Inna Mykytiuk",
+    position: "Technical Translator",
+    linkedin: "https://www.linkedin.com/in/inna-mykytiuk/",
+    photo: "../../images/team/33.jpg",
+  },
+  {
+    name: "Yuliya Mykhalkova",
+    position: "English Translator",
+    linkedin: "https://www.linkedin.com/in/yuliya-mykhalkova-b7a539269/",
+    photo: "../../images/team/34.jpg",
+  },
+  {
+    name: "Софія Сабат",
+    position: "Translator",
+    linkedin:
+      "https://www.linkedin.com/in/%D1%81%D0%BE%D1%84%D1%96%D1%8F-%D1%81%D0%B0%D0%B1%D0%B0%D1%82-a4145a226/",
+    photo: "../../images/team/35.jpg",
+  },
+  {
+    name: "Mariia Kovalova",
+    position: "Technical Translator",
+    linkedin:
+      "https://www.linkedin.com/in/%D1%81%D0%BE%D1%84%D1%96%D1%8F-%D1%81%D0%B0%D0%B1%D0%B0%D1%82-a4145a226/",
+    photo: "../../images/team/36.jpg",
+  },
+  // {
+  //   name: "Roman Naumenko",
+  //   position: "English Translator",
+  //   linkedin: "https://www.linkedin.com/in/roman-naumenko-b5bb92261/",
+  //   photo: "../../images/team/37.jpg",
+  // },
   // {
   //   name: "",
   //   position: "",
