@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>State та props в React</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
+</head>
+
+<body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>State та props в React</h1>
+                    </header>
+
+                    <span class="image main"><img src="/assets/articles/react/react-state/1.jpg"
+                            alt="html code" /></span>
+                    <p class="photo-src">Джерело фото: http://surl.li/iqzho</p>
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>React - одна з найпопулярніших бібліотек JavaScript для створення інтерфейсу користувача. Вона
+                        містить потужні
+                        концепції, такі як <b>стан</b> (англ.: state) та <b>властивості</b> (props), які значно
+                        спрощують управління
+                        даними та комунікацію між
+                        компонентами. У цій статті ми зануримося в основи <b>state</b> та <b>props</b> у React,
+                        дослідимо їхні ролі,
+                        переваги та найкращі
+                        практики. Розуміння цих понять є важливим для освоєння React!
+                    </p>
+
+                    <h2>State: динамічне керування даними компонента</h2>
+                    <p>В основі React лежить концепція <b>state</b> - об'єкта JavaScript, який зберігає динамічні дані
+                        всередині компонента. <b>State</b>
+                        дозволяє компонентам підтримувати та оновлювати свої внутрішні дані, створюючи інтерактивний
+                        динамічний інтерфейс
+                        користувача. Використовуючи <b>хук</b> (англ.: <b>hook</b> - гачок) <mark>useState</mark> або
+                        класові компоненти, розробники можуть легко
+                        створювати <b>state</b> та керувати ними.</p>
+
+                    <p>Коли <b>state</b> компонента змінюється, React автоматично перерендерить компонент, оновлюючи
+                        інтерфейс користувача відповідно
+                        до нових даних. Такий декларативний підхід усуває необхідність ручної маніпуляції з DOM, роблячи
+                        код більш
+                        передбачуваним і зручним для подальшого супроводу.</p>
+
+                    <h2>Props: обмін даними між компонентами</h2>
+                    <p><b>Props</b>, - скорочення від слова “properties” (англ.: <b>properties</b> - властивості), -
+                        дозволяють передавати дані між
+                        компонентами. У той час як <b>state</b> використовується для керування внутрішніми даними
+                        компонента, <b>props</b> полегшують зв'язок
+                        між батьківськими та дочірніми компонентами. Вони дозволяють інформації рухатися вниз по дереву
+                        компонентів,
+                        забезпечуючи обмін даними та їх повторне використання.</p>
+
+                    <p><b>Props</b> передаються дочірнім компонентам як атрибути і можуть мати будь-який тип даних -
+                        примітиви, об'єкти, функції або
+                        навіть інші компоненти React. Визначаючи <b>props</b> у батьківському компоненті та передаючи їх
+                        дочірнім, ви встановлюєте
+                        чіткий та ефективний канал зв'язку.</p>
+
+                    <h2>Найкращі практики використання state та props</h2>
+                    <p>Щоб забезпечити ефективне використання <b>state</b> та <b>props</b> у React, зверніть увагу на
+                        наступні найкращі практики:</p>
+
+                    <ul class="norm-li">
+                        <li>1) <b>Незмінність</b> <mark>state</mark> <br>
+                            React заохочує <b>незмінність при оновленні значень</b> <mark>state</mark>. Замість того,
+                            щоб безпосередньо змінювати ,<mark>state</mark>, використовуйте
+                            методи типу <b>setState</b> або хук <b>useState</b> для створення нових об'єктів
+                            <mark>state</mark>. Це допомагає React ефективно відстежувати
+                            зміни та уникати неочікуваних побічних ефектів.
+                        </li> <br>
+                        <li>2) <b>Підйом</b> <mark>state</mark> <br>
+                            Якщо декільком компонентам потрібен доступ до одних і тих самих даних або якщо
+                            <mark>state</mark>
+                            компонента впливає на дочірні
+                            компоненти, доцільно <b>підняти</b> <mark>state</mark> <b>до спільного батьківського
+                                компонента</b>. Такий підхід
+                            сприяє кращій інкапсуляції,
+                            зменшує складність та сприяє повторному використанню компонентів.
+                        </li> <br>
+                        <li>3) <b>Перевірка типів</b> <mark>props</mark> <br>
+                            React забезпечує перевірку типів <mark>props</mark> за допомогою властивості
+                            <b>propTypes</b>. Визначивши очікувані типи props, ви можете
+                            виявити потенційні помилки та забезпечити коректне використання компонентів у вашому
+                            додатку.
+                        </li> <br>
+                        <li><b>Компонування компонентів</b> <br>
+                            Щоб створювати модульні та багаторазові компоненти, дотримуйтесь принципу композиції
+                            компонентів. <b>Розбивайте складні
+                                інтерфейси на менші, більш керовані компоненти</b>, передаючи <mark>props</mark> між
+                            ними, щоб створити цілісний інтерфейс користувача.
+                        </li>
+                    </ul> <br>
+
+                    <p>
+                        <mark>State</mark> і <mark>props</mark> складають основу механізмів управління даними та комунікації в React. <mark>State</mark> дозволяє компонентам
+                        підтримувати динамічні дані, створюючи інтерактивний інтерфейс користувача, в той час як <mark>props</mark> полегшують передачу даних
+                        між компонентами, сприяючи повторному використанню та модульній розробці. Опанувавши ці концепції та застосувавши
+                        найкращі практики, ви зможете створювати надійні, масштабовані додатки React, які надаватимуть винятковий досвід
+                        користувача.
+                    </p>
+
+                <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/iraov"
+                            target="_blank">http://surl.li/iraov</a></span>
+                    <br>
+                    <b>Переклад:</b> <a href="https://www.linkedin.com/in/andrii-tsokur/" target="_blank"> Andrii Tsokur</a> <br>
+                    <b>Редактор:</b> <a href="https://www.linkedin.com/in/alina-beresten/" target="_blank">Аліна
+                        Берестень</a> <br>
+                    <b>Адміністратор:</b> <a href="https://www.linkedin.com/in/dmytrii-beresten/" target="_blank">Дмитро
+                        Берестень</a>
+                </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+</body>
+
+</html>
