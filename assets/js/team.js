@@ -213,8 +213,7 @@ const teamMembers = [
   {
     name: "Mariia Kovalova",
     position: "Technical Translator",
-    linkedin:
-      "https://www.linkedin.com/in/%D1%81%D0%BE%D1%84%D1%96%D1%8F-%D1%81%D0%B0%D0%B1%D0%B0%D1%82-a4145a226/",
+    linkedin: "https://www.linkedin.com/in/mariia-kova-lova/",
     photo: "../../images/team/36.jpg",
   },
   // {
