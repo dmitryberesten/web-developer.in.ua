@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Key Prop викрито: розуміння його ролі у віртуальному DOM в React.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
+</head>
+
+<body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Key Prop викрито: розуміння його ролі у віртуальному DOM в React.</h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/react/react-key/1.jpg"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/irptw
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>
+                        У React "key" (“ключ”) prop відіграє важливу роль у оптимізації продуктивності списків.
+                        Розуміння його значення та
+                        правильна реалізація є важливими для створення ефективних додатків на React. У цій статті ми
+                        розглянемо реальний приклад
+                        використання "key" prop у додатку на React, який отримує список справ з JSONPlaceholder API. Ми
+                        обговоримо важливість
+                        "key" prop, продемонструємо його використання з повним кодом та виділимо переваги, які він
+                        приносить у оптимізацію
+                        продуктивності. Давайте зануримося в це!
+                    </p>
+
+                    <h2>Отримання та відображення списку справ з використанням "key" Prop:</h2>
+
+                    <p>Для ілюстрації важливості "key" Prop давайте створимо додаток на React, який отримує та
+                        відображає список з
+                        JSONPlaceholder API. Кожному елементу списку буде призначений унікальний "key" prop для
+                        оптимізації відображення та
+                        оновлень.</p>
+
+                    <p>Ось повний код нашого додатку на React:
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-key/2.png" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <h2>Пояснення та принцип роботи:</h2>
+                    <p>У вищенаведеному коді ми починаємо з імпорту необхідних залежностей з React. Ми визначаємо
+                        функціональний компонент з
+                        назвою TodoList. Всередині цього компонента ми використовуємо хук useState для ініціалізації
+                        змінної стану todos як
+                        порожній масив.</p>
+
+                    <p>Далі ми використовуємо хук useEffect для отримання даних списку справ з JSONPlaceholder API під
+                        час монтажу компонента.
+                        Отримані дані потім зберігаються в стані todos за допомогою функції setTodos.</p>
+
+                    <p>У JSX-коді ми рендеримо заголовок "Список справ" (“Todo List”) і невпорядкований список. Для
+                        кожного елемента справи у
+                        масиві todos ми використовуємо метод map для створення елемента списку (&lt;li&gt;) з заголовком
+                        справи. Тут ми присвоюємо
+                        кожному елементу списку унікальний "key" prop, використовуючи властивість id об'єкта справи.</p>
+
+                    <p>Присвоюючи унікальний "key" prop кожному елементу списку, React може ефективно відстежувати та
+                        оновлювати окремі
+                        компоненти в межах списку, що призводить до покращення продуктивності під час рендерингу та
+                        наступних оновлень.</p>
+
+                    <h2>Переваги та найкращі практики:</h2>
+                    <p>Використання "key" prop приносить чимало переваг для оптимізації продуктивності в React. Ось
+                        кілька найкращих практик,
+                        які варто пам’ятати:</p>
+
+                    <p><b>Унікальні та стабільні ключі:</b> Переконайтеся, що кожне значення "key" є унікальним у межах
+                        списку і залишається
+                        стабільним під час повторного рендерингу. Це допомагає React точно ідентифікувати та оновлювати
+                        конкретні компоненти.</p>
+
+                    <p><b>Сталість ключів:</b> Під час отримання даних з API переконайтеся, що значення
+                        "key" відповідають унікальним ідентифікаторам на сервері. Це забезпечує
+                        сталість та запобігає непотрібному повторному рендерингу компонентів.
+                    </p>
+
+                    <p><b>Уникайте використання індексу як ключа:</b> Замість того, щоб використовувати індекс масиву як
+                        значення "key", краще
+                        використовувати унікальні ідентифікатори, пов'язані з даними, такі як унікальні ID або інші
+                        внутрішні атрибути.</p>
+
+                    <p><b>Оновлюйте ключі при зміні порядку:</b> Якщо список дозволяє зміну порядку елементів,
+                        переконайтеся, що відповідно оновлюєте
+                        значення "key", щоб
+                        відображати новий порядок та забезпечувати точне відображення та оновлення.
+                    </p>
+
+                    <h2>Висновок:</h2>
+                    <p>У React "key" prop відіграє важливу роль у оптимізації процесу рендерингу та досягненні кращої продуктивності для
+                    списків. Присвоюючи унікальні та стабільні ключі елементам списку, ми дозволяємо React ефективно відстежувати та
+                    оновлювати компоненти, що сприяє покращенню рендерингу та наступних оновлень. Дотримуючись найкращих практик,
+                    обговорених у цій статті, ви можете використовувати потужність "key" prop та будувати високопродуктивні додатки на
+                    React.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/irrgz"
+                                target="_blank">http://surl.li/irrgz</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/viktoriia-hrytchyna-a8067a1a7/" target="_blank">
+                            Вікторія Гритчина</a> <br>
+                        <b>Редактор:</b> <a href="https://www.linkedin.com/in/alina-beresten/" target="_blank">Аліна
+                            Берестень</a> <br>
+                        <b>Адміністратор:</b> <a href="https://www.linkedin.com/in/dmytrii-beresten/"
+                            target="_blank">Дмитро
+                            Берестень</a>
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
