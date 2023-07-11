@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Розбираємося з хуком useReducer у React</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
+    <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
+</head>
+
+<body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
+
+                <a href="../react-articles.html" class="button small btn-back">Назад</a>
+
+                <!-- Content -->
+                <section class="section-article">
+                    <header class="main">
+                        <h1>Розбираємося з хуком useReducer у React</h1>
+                    </header>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image img-adaptive" src="/assets/articles/react/react-reducer/1.jpg"
+                            alt="зображення">
+                        <figcaption class="photo-src">
+                            Джерело:
+                            http://surl.li/izecx
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p id='showScroll' class="paragraph-scroll visually-hidden"></p>
+                    <div id="updown"></div>
+
+                    <p>У React є два основних способи роботи зі станом у вашому додатку: <mark>useState</mark> і
+                        <mark>useReducer</mark>. <mark>useState</mark> є найбільш популярним
+                        і простішим в роботі, тому що це першій хук для керування станом, який ви вивчаєте як
+                        початківець. Проте, з <mark>useState</mark>
+                        далеко не підеш.
+                    </p>
+
+                    <p>Якщо у вас є кілька станів, з якими ви хочете працювати у своєму додатку, вам потрібно оголосити
+                        кілька станів. Згодом
+                        все дуже швидко ускладнюється, особливо якщо ви маєте стани з різними рівнями залежності один
+                        від одного.</p>
+
+                    <p>Щоб навести лад у хаосі, вам не потрібно використовувати зовнішні бібліотеки, такі як Redux.
+                        Натомість, якщо ваш стан не
+                        дуже складний, <mark>useReducer</mark> і контекстний API можуть допомогти виконати цю роботу.
+                    </p>
+
+                    <h2>Розуміння хука <mark>useReducer</mark> в React</h2>
+                    <p>Ви можете почати використовувати useReducer наступним чином:
+                    </p>
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/2.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Він приймає два обов'язкових параметри, функцію <mark>reducer</mark> та початковий стан, і
+                        повертає масив з двох важливих елементів -
+                        поточного стану <mark>state</mark> і функції <mark>dispatch</mark>.</p>
+
+                    <p>Третій аргумент <mark>init</mark> (функція-ініціалізатор, що має повертати початковий стан) є
+                        необов'язковим.</p>
+
+                    <p>Якщо ви хочете наперед встановити свій стан (задати його вручну), ви можете зробити це, передавши
+                        його як другий
+                        аргумент, ігноруючи третій.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/3.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Якщо ви добре розбираєтеся в <mark>useState</mark> ви можете побачити тут знайомий патерн.</p>
+
+                    <p>Нагадуємо, що <mark>useState</mark> приймає один єдиний параметр (ваш початковий стан), і,
+                        викликаючи хук, ви повертаєте масив з
+                        поточним станом і функцією встановлення стану (використовується для оновлення стану).</p>
+
+                    <p>Ось приклад:</p>
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/4.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Подібно до useState, useReducer надає вам поточний стан і функцію оновлення стану, але з
+                        особливостями. У useReducer за
+                        оновлення стану відповідає функція <mark>reducer</mark>. Але щоб оновити стан, ви повинні
+                        "відправити" об'єкт дії за допомогою
+                        функції <mark>dispatch</mark>.</p>
+
+                    <h2>Функція dispatch</h2>
+                    <p>Якщо вам потрібно оновити свій стан, ви повинні викликати функцію <mark>dispatch</mark>. Виклик
+                        функції dispatch також призводить до
+                        повторного рендерингу, що необхідно для того, щоб ваш інтерфейс користувача відобразив поточний
+                        стан компонента. Для
+                        забезпечення оновлення вашого стану, функція dispatch приймає об'єкт дії як єдиний аргумент.</p>
+
+                    <p>Об'єкт визначає дію, яку виконує користувач. Зазвичай об'єкт містить властивість “type”, що
+                        відповідає заданому типу,
+                        вказаному у функції редюсер.
+                    </p>
+
+                    <p>Як правило, ви викликаєте функцію dispatch після того, як користувач виконує будь-яку дію, що
+                        змінює стан, наприклад,
+                        натискає кнопку, або після отримання відповіді від API.</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/5.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>У наведеному вище прикладі ми викликаємо функцію <mark>dispatch</mark> та передаємо об'єкт дії з
+                        типом
+                        «increment_age». Властивість
+                        <mark>type</mark> представляє те, що зробив користувач. Після виклику функції
+                        <mark>dispatch</mark> з дією користувача
+                        функція викличе наш <mark>reducer</mark>
+                        із зазначеним об'єктом дії в якості аргументу.
+                    </p>
+
+                    <h2>Функція редюсер</h2>
+                    <p>Згідно з <a href="https://react.dev/reference/react/useReducer" target="_blank">офіційною документацією
+                            React</a>, редюсер вказує, як оновлюватиметься стан. Він приймає два
+                        параметри: поточний
+                        стан <mark>state</mark> та дію <mark>action</mark>.
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/6.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Об'єкт дії зазвичай має властивість <mark>type</mark>, яка представляє дію, яку викликає функція
+                        dispatch . Ви можете використовувати
+                        оператор <mark>if</mark>, щоб визначити тип дії, але за угодою спільноти краще використовувати
+                        оператор <mark>switch</mark>.</p>
+
+                    <p>У наведеному вище прикладі коду ми шукаємо дію з типом <mark>increment_age</mark>. Усередині
+                        блоку ми вказуємо, як оновлюватиметься
+                        наш стан. У цьому прикладі ми повертаємо об'єкт із нашим поточним станом та модифікуємо
+                        властивість age, додаючи
+                        одиницю.</p>
+
+                    <h2>Використання <mark>useReducer</mark> для оголошення та оновлення стану</h2>
+                    <p>Покінчимо з теорією, розгляньмо приклад із реального життя, щоб допомогти вам отримати повне
+                        уявлення про те, як працює
+                        хук <mark>useReducer</mark> і як ви можете використовувати його у своєму проекті.</p>
+
+                    <p>Припустимо, у нас є об'єкт початкового стану з двома властивостями: name та age. Використовуючи
+                        useReducer, оголосімо
+                        наш початковий стан:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/7.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Далі ми створимо функцію редюсер з логікою для оновлення нашої властивості age:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/8.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Припустимо, що у нас є дві кнопки, що відображаються в інтерфейсі користувача, для збільшення і
+                        зменшення властивості
+                        age, наприклад:</p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/9.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Ми можемо викликати функцію dispatch для оновлення стану відповідним чином, коли користувач
+                        натискає будь-яку кнопку,
+                        передаючи об'єкти дії з певними типами, які відповідають випадкам всередині нашої функції
+                        <mark>reducer</mark> .
+                    </p>
+
+                    <p>
+                    <figure>
+                        <img class="image-center image image img-adaptive code-img"
+                            src="/assets/articles/react/react-reducer/10.jpg" alt="зображення">
+                        <figcaption class="photo-src">
+                        </figcaption>
+                    </figure>
+                    </p>
+
+                    <p>Тепер щоразу, коли ми натискаємо кнопку збільшення чи зменшення, наш стан миттєво
+                        оновлюватиметься. Ось як ви можете
+                        використовувати useReducer для керування станом у React.</p>
+
+                    <p>Ознайомтеся з повним кодом на <a
+                            href="https://codesandbox.io/s/icy-rgb-rgfpk3?file=/src/App.js" target="_blank">codesandbox</a>.</p>
+
+                    <h2>Чому вам слід приділяти увагу <mark>useReducer</mark>?</h2>
+
+                    <p>useReducer особливо важливий у React, оскільки патерн, що використовується для оновлення стану,
+                        чимось схожий на те, що
+                        ви побачите в Redux, найпопулярнішій та найнадійнішій бібліотеці управління станом React.</p>
+
+                    <p>У невеликих проектах використання useReducer може бути достатньо. Але у великих додатках настійно
+                        рекомендується
+                        використовувати спеціальні бібліотеки управління станом.</p>
+
+                    <p class="article-info"><b>Джерело: </b><span class="span-link"><a href="http://surl.li/izfqz"
+                                target="_blank">http://surl.li/izfqz</a></span>
+                        <br>
+                        <b>Переклад:</b> <a href="https://www.linkedin.com/in/olena--pobehailo/"
+                            target="_blank">
+                            Olena Pobehailo</a> <br>
+                        <b>Редактор:</b> <a href="https://www.linkedin.com/in/alina-beresten/" target="_blank">Аліна
+                            Берестень</a> <br>
+                        <b>Адміністратор:</b> <a href="https://www.linkedin.com/in/dmytrii-beresten/"
+                            target="_blank">Дмитро
+                            Берестень</a>
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="component-sidebar"></div>
+        <script src="../../../js/components/component-sidebar.js"></script>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+    <script src="../../../js/image-modal.js"></script>
+
+    <script src="/../assets/js/jquery.min.js"></script>
+    <script src="/../assets/js/browser.min.js"></script>
+    <script src="/../assets/js/breakpoints.min.js"></script>
+    <script src="/../assets/js/util.js"></script>
+    <script src="/../assets/js/main.js"></script>
+    <script src="/../assets/js/scroll.js"></script>
+
+
+    <!-- <script src="/../assets/js/image-modal.js"></script> -->
+
+
+</body>
+
+</html>
