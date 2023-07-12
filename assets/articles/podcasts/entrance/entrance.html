@@ -8,9 +8,13 @@
     <link rel="icon" type="image/ico" href="../../../../images/globe-solid.ico">
     <link rel="stylesheet" href="../player/style.css" />
     <link rel="stylesheet" href="/../assets/css/main.css" />
+    <script src="../../../js/loader.js" async></script>
 </head>
 
 <body class="is-preload">
+    <div class="loader-container" id="spinner-loader">
+        <div class="loader-circle"></div>
+    </div>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -20,22 +24,9 @@
             <div class="inner">
 
                 <!-- Header -->
-                <header id="header">
-                    <a href="/../index.html" class="logo"><strong>Розробив</strong> Дмитро Берестень</a>
-                    <ul class="icons">
-                        <li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram"><span
-                                    class="label">Telegram</span></a></li>
-                        <li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f"><span
-                                    class="label">Facebook</span></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcJ-4Dm1BnjFPxCWxpVzFyg"
-                                class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                        <li><a href="https://www.instagram.com/dmitry_beresten" class="icon brands fa-instagram"><span
-                                    class="label">Instagram</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin"><span
-                                    class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
-
+                <div id="component-header"></div>
+                <script src="../../../js/components/component-header.js"></script>
+                
                 <a href="../podcasts.html" class="button small btn-back">Назад</a>
 
                 <!-- Content -->
@@ -94,9 +85,12 @@
                         </section>
                     </div>
 
-                    <p class="description-podcast">В цьому випуску DOU Podcast говоримо про те, що відбувається з ІТ-ринком праці в Україні, яких нетехнічних спеціалістів
-                    шукають, про IT-систему митниці, чи потрібен бункер у Франківську, штучний інтелект та чи є життя після 30 (є!). В
-                    оновленому форматі подкасту ми запросили Ярослава Ажнюка, щоб він доповнила дуо наших ведучих — Владу та Олекса.</p>
+                    <p class="description-podcast">В цьому випуску DOU Podcast говоримо про те, що відбувається з
+                        ІТ-ринком праці в Україні, яких нетехнічних спеціалістів
+                        шукають, про IT-систему митниці, чи потрібен бункер у Франківську, штучний інтелект та чи є
+                        життя після 30 (є!). В
+                        оновленому форматі подкасту ми запросили Ярослава Ажнюка, щоб він доповнила дуо наших ведучих —
+                        Владу та Олекса.</p>
 
                     <p>Також цей подкаст можна послухати/подивитись за цим <a href="https://youtu.be/Sdmi_oNSihI"
                             target="_blank">посиланням</a></p>
@@ -184,7 +178,7 @@
                             </a>
                             <p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
                         </article>
-                    <!-- <article>
+                        <!-- <article>
                                                                 							<a href="./assets/articles/node/node-need/node-need.html" class="image"><img
                                                                 									src="./assets/articles/node/node-need/node-need.png" alt="" /></a>
                                                                 							<a href="./assets/articles/node/node-need/node-need.html">
@@ -192,29 +186,33 @@
                                                                 							</a>
                                                                 							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
                                                                 						</article> -->
-                    <article>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank"
-                            class="image"><img src="../../../../images/itvdn.png" alt="screen" /></a>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" target="_blank">
-                            <h3>Вивчайте програмування безкоштовно</h3>
-                        </a>
-                        <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++, Java, QA, мобільній
-                            розробці на
-                            Android та iOS та інших.</p>
-                        <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
-                    <article>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank" class="image"><img
-                                src="../../../../images/cyberbionic.png" alt="screen" /></a>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
-                            <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
-                        </a>
-                        <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек, курсові проєкти, стажування та
-                            працевлаштування.</p>
-                        <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" class="button big"
-                            target="_blank">Перейти</a>
-                    </article>
+                        <article>
+                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine"
+                                target="_blank" class="image"><img src="../../../../images/itvdn.png"
+                                    alt="screen" /></a>
+                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine"
+                                target="_blank">
+                                <h3>Вивчайте програмування безкоштовно</h3>
+                            </a>
+                            <p>Відкриваємо доступ до бази IT відео курсів з Python, FrontEnd, JavaScript, C# та C++,
+                                Java, QA, мобільній
+                                розробці на
+                                Android та iOS та інших.</p>
+                            <a href="https://itvdn.com/ua/landing/free-for-ukraine?utm_source=web-developer_free_for_ukraine"
+                                class="button big" target="_blank">Перейти</a>
+                        </article>
+                        <article>
+                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank"
+                                class="image"><img src="../../../../images/cyberbionic.png" alt="screen" /></a>
+                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner" target="_blank">
+                                <h3>Додаткова знижка 10% за промокодом WEBDEV10</h3>
+                            </a>
+                            <p>Вивчай програмування у групі з ментором і асистентом - практичні завдання, фідбек,
+                                курсові проєкти, стажування та
+                                працевлаштування.</p>
+                            <a href="https://edu.cbsystematics.com/ua?utm_source=web-developer_banner"
+                                class="button big" target="_blank">Перейти</a>
+                        </article>
                 </section>
 
                 <!-- Section -->
