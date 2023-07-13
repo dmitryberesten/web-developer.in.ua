@@ -26,7 +26,7 @@ const teamMembers = [
   {
     name: "Vika Holovko",
     position: "Creative Manager",
-    linkedin: "https://www.linkedin.com/in/vika-holovko-981b97245/",
+    linkedin: "https://www.linkedin.com/in/viktoriia-holovko-981b97245/",
     photo: "../../images/team/5.jpg",
   },
   {

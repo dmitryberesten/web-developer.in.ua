@@ -115,7 +115,7 @@ function componentSidebar() {
 						<li class="icon brands fa-telegram"><a href="https://t.me/dmitryberesten">Дмитро в телеграм</a>
 						</li>
 						<li class="icon brands fa-instagram"><a
-								href="https://www.instagram.com/dmitry_beresten">@dmitry_beresten</a></li>
+								href="https://www.instagram.com/dmitry_beresten" target="_blank">@dmitry_beresten</a></li>
 						<li class="icon solid fa-home">Київ, Україна!</li>
 					</ul>
 				</section>
@@ -123,7 +123,7 @@ function componentSidebar() {
 						<footer id="footer">
 					<p class="copyright">&copy; Всі права захищені. <br><br> <span
 							class="footer-text">web-developer.in.ua</span> <br><br> <a
-							href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin">
+							href="https://www.linkedin.com/in/dmytrii-beresten" class="icon brands fa-linkedin" target="_blank">
 							dmitryberesten</a>.
 				        </footer>
 						</div> 
