@@ -53,29 +53,29 @@ function componentSidebar() {
 					</header>
 					<div class="mini-posts">
 						<article>
-							<a href="${currentDir}/assets/articles/git/improving-git/improving-git.html" class="image"><img
-									src="${currentDir}/assets/articles/git/improving-git/improving-git.png" alt="" /></a>
-							<a href="${currentDir}/assets/articles/git/improving-git/improving-git.html">
-								<h3>Покращуємо процес роботи з Git</h3>
+							<a href="${currentDir}/assets/articles/git/git-branching/git-branching.html" class="image"><img
+									src="${currentDir}/assets/articles/git/git-branching/git-branching.jpg" alt="" /></a>
+							<a href="${currentDir}/assets/articles/git/git-branching/git-branching.html">
+								<h3>Ефективна стратегія розгалуження Git</h3>
 							</a>
-							<p>Розповідаємо як краще працювати з комітами, які секрети можна застосовувати.</p>
+							<p>Погляньмо на стратегію розгалуження Git, з якою ви можете бути ще не знайомі.</p>
 						</article>
 						<article>
-							<a href="${currentDir}/assets/articles/bootstrap/bootstrap-responsive/bootstrap-responsive.html"
-								class="image"><img src="${currentDir}/assets/articles/bootstrap/bootstrap-responsive/1.png"
+							<a href="${currentDir}/assets/articles/angular/angular-universal-framework/angular-universal-framework.html"
+								class="image"><img src="${currentDir}/assets/articles/angular/angular-universal-framework/angular-universal-framework.jpg"
 									alt="" /></a>
-							<a href="${currentDir}/assets/articles/bootstrap/bootstrap-responsive/bootstrap-responsive.html">
-								<h3>Використання Bootstrap для адаптивної верстки</h3>
+							<a href="${currentDir}/assets/articles/angular/angular-universal-framework/angular-universal-framework.html">
+								<h3>Angular — універсальний фреймворк</h3>
 							</a>
-							<p>Заощаджує час на розробку, витрачайте час тільки на прописування потрібних класів.</p>
+							<p>Цей фреймворк по праву можна назвати “швейцарським годинником” у світі JavaScript, адже його потужність та спектр можливостей майже не мають меж.</p>
 						</article>
 					    <article>
-							<a href=".${currentDir}assets/articles/node/node-need/node-need.html" class="image"><img
-									src="${currentDir}/assets/articles/node/node-need/node-need.png" alt="" /></a>
-							<a href="${currentDir}/assets/articles/node/node-need/node-need.html">
-								<h3>Коли застосовують Node.js?</h3>
+							<a href=".${currentDir}/assets/articles/node/node-company/node-company.html" class="image">
+							<img src="${currentDir}/assets/articles/node/node-company/node-company.webp" alt="" /></a>
+							<a href="${currentDir}/assets/articles/node/node-company/node-company.html">
+								<h3>Чому топові компанії використовують Node.js?</h3>
 							</a>
-							<p>Web-додаток, побудований з Node.js, буде легким та продуктивним рішенням.</p>
+							<p>Netflix, PayPal, Uber, LinkedIn — лише маленька частина компаній, що обрали середовище Node.js для своїх продуктів. </p>
 						</article>
 					</div>
                     </section>
