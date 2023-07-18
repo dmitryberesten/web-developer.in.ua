@@ -200,7 +200,7 @@ const teamMembers = [
   {
     name: "Yuliya Mykhalkova",
     position: "English Translator",
-    linkedin: "https://www.linkedin.com/in/yuliya-mykhalkova-b7a539269/",
+    linkedin: "https://www.linkedin.com/in/yuliya-mykhalkova/",
     photo: "../../images/team/34.jpg",
   },
   {
