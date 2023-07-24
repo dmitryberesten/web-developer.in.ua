@@ -14,6 +14,8 @@ function componentSidebar() {
 								Статті</a></li>
 						<li class="menu-item__btn"><a href="${currentDir}/lessons.html"><i class="fa-solid fa-film"></i> Уроки</a>
 						</li>
+						<li class="menu-item__btn"><a href="${currentDir}/assets/figma/figma.html"><i class="icon fa-solid brands fa-figma"></i> Макети</a>
+						</li>
 						<li class="menu-item__btn"><a href="${currentDir}/services.html"><i class="fa-solid fa-pen-ruler"></i>
 								Cервіси</a></li>
 						<li class="menu-item__btn"><a href="${currentDir}/assets/articles/podcasts/podcasts.html"><i

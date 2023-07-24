@@ -78,3 +78,50 @@ mark {
 .code-red {
   color: #c92c2c;
 }
+
+.icon-devices {
+      color: #3668e8;
+      margin-right: auto;
+      align-self: center;
+      font-size: larger;
+}
+
+.soc-icon {
+      color: #3668e8;
+}
+
+.name-author {
+  color: #7f888f;
+}
+
+.figma-btn {
+  display: flex;
+}
+
+.template-btn {
+  align-self: flex-end;
+}
+
+.figma-block {
+      border: solid 2px rgba(210, 215, 217, 0.75);
+      padding: 10px;
+      border-radius: 5px;
+}
+
+.div-none {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 1680px) {
+.div-none {
+  display: none;    
+  }
+}
+
+/* @media screen and (min-width: 1681px) { .posts article:nth-last-child(1),
+.posts article:nth-last-child(2),
+.posts article:nth-last-child(3) {
+  margin-bottom: 0;
+}
+} */
