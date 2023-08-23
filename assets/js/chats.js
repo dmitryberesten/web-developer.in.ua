@@ -104,6 +104,11 @@ const chats = [
     name: "ANGULAR СПІЛЬНОТА",
     link: "https://t.me/angular_community_ua",
   },
+  {
+    logo: "../../images/chats/21.jpg",
+    name: "WebGL UA",
+    link: "https://t.me/webgl_ua",
+  },
   // {
   //   logo: "../../images/chats/.jpg",
   //   name: "",
