@@ -1,5 +1,10 @@
 const chats = [
   {
+    logo: "../../images/chats/0.jpg",
+    name: "web-developer.in.ua CПІЛЬНОТА",
+    link: "https://t.me/web_developer_in_ua",
+  },
+  {
     logo: "../../images/chats/1.jpg",
     name: "Чат - Фрілансер по життю 🇺🇦",
     link: "https://t.me/flschat",
@@ -59,13 +64,52 @@ const chats = [
     name: "Code Ukraine // Програмування Chat",
     link: "https://t.me/itua_chat",
   },
+  {
+    logo: "../../images/chats/13.jpg",
+    name: "Frontend Спільнота",
+    link: "https://t.me/frontend_community_ua",
+  },
+  {
+    logo: "../../images/chats/14.jpg",
+    name: "Кодимо Солов'їною",
+    link: "https://t.me/codymoChat",
+  },
+  {
+    logo: "../../images/chats/15.jpg",
+    name: "Web Overflow Chat 🇺🇦",
+    link: "https://t.me/web_overflow_chat",
+  },
+  {
+    logo: "../../images/chats/16.jpg",
+    name: "Спілкування ITmentor",
+    link: "https://t.me/profrontendua",
+  },
+  {
+    logo: "../../images/chats/17.jpg",
+    name: "NestJS Ukraine 🇺🇦",
+    link: "https://t.me/nest_ukraine",
+  },
+  {
+    logo: "../../images/chats/18.jpg",
+    name: "TeaJS 🇺🇦",
+    link: "https://t.me/teajsukraine",
+  },
+  {
+    logo: "../../images/chats/19.jpg",
+    name: "Фронтярня",
+    link: "https://t.me/frontiarnia",
+  },
+  {
+    logo: "../../images/chats/20.jpg",
+    name: "ANGULAR СПІЛЬНОТА",
+    link: "https://t.me/angular_community_ua",
+  },
   // {
   //   logo: "../../images/chats/.jpg",
   //   name: "",
   //   link: "",
   // },
 ];
-
 
 function createChatCard(chat) {
   const card = document.createElement("div");
@@ -91,9 +135,6 @@ function createChatCard(chat) {
 
   return card;
 }
-
-
-
 
 function renderChatCards() {
   const chatContainer = document.querySelector(".chat-container");
