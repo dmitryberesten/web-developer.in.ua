@@ -5,7 +5,7 @@ function componentHeader() {
 					<a href="https://www.instagram.com/dmitry_beresten" class="logo" target="_blank"><strong>Розробив</strong> Дмитро Берестень
 						</a>
 					<ul class="icons">
-						<li><a href="https://t.me/dmitryberesten" class="icon brands fa-telegram" target="_blank"><span
+						<li><a href="https://t.me/web_developer_in_ua" class="icon brands fa-telegram" target="_blank"><span
 									class="label">Telegram</span></a></li>
 						<li><a href="https://www.facebook.com/berestendmitry" class="icon brands fa-facebook-f" target="_blank"><span
 									class="label">Facebook</span></a></li>

@@ -39,9 +39,12 @@ function componentSidebar() {
 											class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
 							</ul>
 						</li>
-						<li class="menu-item__btn"><a href="${currentDir}/assets/articles/bloggers/bloggers.html"><i
+						<li class="menu-item__btn"><a href="${currentDir}/chats.html"><i
 									class="fa-brands fa-youtube"></i>
 								Українські ІТ-ютубери</a></li>
+								<li class="menu-item__btn"><a href="${currentDir}/chats.html"><i
+									class="fa-brands fa-telegram"></i>
+								ІТ-чати</a></li>
 						<li class="menu-item__btn"><a href="${currentDir}/donate.html"><i
 									class="fa-solid fa-hand-holding-dollar"></i> Донат</a></li>
 						<li class="menu-item__btn"><a href="${currentDir}/about-us.html"><i class="fa-solid fa-user-group"></i> Про
