@@ -39,7 +39,7 @@ function componentSidebar() {
 											class="fa-solid fa-scroll"></i> Генератор ІТ-фактів</a></li>
 							</ul>
 						</li>
-						<li class="menu-item__btn"><a href="${currentDir}/chats.html"><i
+						<li class="menu-item__btn"><a href="${currentDir}/assets/articles/bloggers/bloggers.html"><i
 									class="fa-brands fa-youtube"></i>
 								Українські ІТ-ютубери</a></li>
 								<li class="menu-item__btn"><a href="${currentDir}/chats.html"><i
