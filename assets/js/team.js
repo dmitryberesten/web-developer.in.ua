@@ -264,6 +264,12 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/vlad-virchenko/",
     photo: "../../images/team/44.jpg",
   },
+  {
+    name: "Ira Kuziv",
+    position: "Content Manager",
+    linkedin: "https://www.linkedin.com/in/ira-kuziv-31703a273/",
+    photo: "../../images/team/45.jpg",
+  },
   // {
   //   name: "",
   //   position: "",
