@@ -75,13 +75,20 @@ function componentSidebar() {
 							<p>Цей фреймворк по праву можна назвати “швейцарським годинником” у світі JavaScript, адже його потужність та спектр можливостей майже не мають меж.</p>
 						</article>
 						<article>
-							<a href="${currentDir}/assets/articles/node/node-company/node-company.html"
-								class="image"><img src="${currentDir}/assets/articles/node/node-company/node-company.webp"
-									alt="" /></a>
-							<a href="${currentDir}/assets/articles/node/node-company/node-company.html">
-								<h3>Чому топові компанії використовують Node.js?</h3>
+							<a href="https://solid.com.ua"
+								class="image" target="_blank"><img src="${currentDir}/assets/articles/blog/schooll/3.png"
+									alt="" target="_blank" /></a>
+							<a href="https://solid.com.ua" target="_blank">
+								<h3>Зроби англійську Solid Skill</h3>
 							</a>
-							<p>Netflix, PayPal, Uber, LinkedIn — лише маленька частина компаній, що обрали середовище Node.js для своїх продуктів.</p>
+							<p>Ми навчаємо спілкуватися з командою і замовниками англійською, чатитися і проходити співбесіди</p>
+							 <a
+       href="https://solid.com.ua"
+       class="button big"
+       target="_blank"
+     >
+       Перейти
+     </a>
 						</article>
 					</div>
                     </section>
@@ -141,3 +148,22 @@ bannerContainer.innerHTML = componentSidebar();
 //       Перейти
 //     </a>
 //   </article>;
+
+			// 			<article>
+            //   <a
+            //     href="${currentDir}/assets/articles/node/node-company/node-company.html"
+            //     class="image"
+            //   >
+            //     <img
+            //       src="${currentDir}/assets/articles/node/node-company/node-company.webp"
+            //       alt=""
+            //     />
+            //   </a>
+            //   <a href="${currentDir}/assets/articles/node/node-company/node-company.html">
+            //     <h3>Чому топові компанії використовують Node.js?</h3>
+            //   </a>
+            //   <p>
+            //     Netflix, PayPal, Uber, LinkedIn — лише маленька частина
+            //     компаній, що обрали середовище Node.js для своїх продуктів.
+            //   </p>
+            // </article>;
