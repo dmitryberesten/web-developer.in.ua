@@ -75,15 +75,15 @@ function componentSidebar() {
 							<p>Цей фреймворк по праву можна назвати “швейцарським годинником” у світі JavaScript, адже його потужність та спектр можливостей майже не мають меж.</p>
 						</article>
 						<article>
-							<a href="https://solid.com.ua"
-								class="image" target="_blank"><img src="${currentDir}/assets/articles/blog/schooll/3.png"
+							<a href="https://solid.com.ua/?utm_source=ads_site&utm_medium=referral&utm_campaign=web_dev&utm_content=site"
+								class="image" target="_blank"><img src="${currentDir}/assets/articles/blog/schooll/3.jpg"
 									alt="" target="_blank" /></a>
-							<a href="https://solid.com.ua" target="_blank">
-								<h3>Зроби англійську Solid Skill</h3>
+							<a href="https://solid.com.ua/?utm_source=ads_site&utm_medium=referral&utm_campaign=web_dev&utm_content=site" target="_blank">
+								<h3>Забудь про страх говорити англійською в IT-сфері</h3>
 							</a>
-							<p>Ми навчаємо спілкуватися з командою і замовниками англійською, чатитися і проходити співбесіди</p>
+							<p>Курси англійської мови від Solid ES допоможуть тобі презентувати свою роботу, спілкуватися з колегами та замовниками, проходити співбесіди англійською та розуміти технічну документацію.</p>
 							 <a
-       href="https://solid.com.ua"
+       href="https://solid.com.ua/?utm_source=ads_site&utm_medium=referral&utm_campaign=web_dev&utm_content=site"
        class="button big"
        target="_blank"
      >
