@@ -20,6 +20,11 @@ const chats = [
     link: "https://t.me/nodeua",
   },
   {
+    logo: "../../images/chats/23.jpg",
+    name: "Don't Panic Junior IT Jobs",
+    link: "https://t.me/Job_IT_Junior",
+  },
+  {
     logo: "../../images/chats/4.jpg",
     name: "TECH Interview",
     link: "https://t.me/FaangTechInterview",
@@ -108,6 +113,11 @@ const chats = [
     logo: "../../images/chats/21.jpg",
     name: "WebGL UA",
     link: "https://t.me/webgl_ua",
+  },
+  {
+    logo: "../../images/chats/22.jpg",
+    name: "JavaScript & IT - Ukraine",
+    link: "https://t.me/javascriptsUkraine",
   },
   // {
   //   logo: "../../images/chats/.jpg",
